@@ -2,15 +2,27 @@ import SwiftUI
 import UI
 
 struct ImageTitleRowView: View {
-  var title: String
-  var loadingImage: LoadingImage
+  @StateObject private var viewModel: ImageTitleCellViewModel
+
+  public init(viewModel: ImageTitleCellViewModel) {
+    _viewModel = StateObject(wrappedValue: viewModel)
+  }
 
   var body: some View {
     HStack {
       imageView
-      Text(title)
+      if let title = viewModel.title {
+        Text(title)
+          .foregroundColor(Color.font.primary)
+      }
       Spacer()
       rowChevronIcon
+    }
+    .onAppear {
+      viewModel.didAppear()
+    }
+    .onDisappear {
+      viewModel.didDisappear()
     }
   }
 
@@ -23,19 +35,9 @@ struct ImageTitleRowView: View {
   }
 
   @ViewBuilder private var imageView: some View {
-    LoadingImageView(loadingImage: loadingImage)
+    LoadingImageView(loadingImage: viewModel.loadingImage)
       .frame(width: 50, height: 50)
       .clipped()
       .clipShape(RoundedRectangle(cornerRadius: 5))
-  }
-}
-
-struct ImageTitleRowView_Previews: PreviewProvider {
-  static var previews: some View {
-    ImageTitleRowView(
-      title: "Title",
-      loadingImage: .loading
-    )
-    .background(Color.background.primary)
   }
 }
