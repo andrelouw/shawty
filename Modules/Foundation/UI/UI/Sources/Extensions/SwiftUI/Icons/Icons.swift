@@ -5,4 +5,5 @@ extension Icon {
   public static let error = Icon(id: "error", systemName: "exclamationmark.circle")
   public static let noResults = Icon(id: "noResults", systemName: "eye.slash.fill")
   public static let headphones = Icon(id: "headphones", systemName: "headphones")
+  public static let chevron = Icon(id: "chevron", systemName: "chevron.forward")
 }

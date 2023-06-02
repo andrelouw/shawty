@@ -10,11 +10,16 @@ struct ImageTitleRowView: View {
       imageView
       Text(title)
       Spacer()
-      Image(systemName: "chevron.forward")
-        .font(.footnote.bold())
-        .foregroundColor(Color(UIColor.tertiaryLabel))
-        .padding(.leading)
+      rowChevronIcon
     }
+  }
+
+  private var rowChevronIcon: some View {
+    // TODO: Move foreground color to UI module
+    Icon.chevron.asSystemImage()
+      .font(.footnote.bold())
+      .foregroundColor(Color(UIColor.tertiaryLabel))
+      .padding(.leading)
   }
 
   @ViewBuilder private var imageView: some View {
