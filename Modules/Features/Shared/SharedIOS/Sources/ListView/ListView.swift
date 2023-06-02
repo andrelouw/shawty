@@ -88,11 +88,9 @@ public struct ListView<Row: ListRowDisplayable>: View {
 
   private func screenNoticeView(model: ScreenNoticeModel) -> some View {
     ScreenNoticeView(model: model)
-      .offset(y: -50)
   }
 
   private func errorView(with message: String) -> some View {
     ScreenNoticeView(model: .error(message: message))
-      .offset(y: -50)
   }
 }
