@@ -16,7 +16,7 @@ public final class RemoteArtistSearchLoader: ArtistSearchLoader {
     self.client = client
   }
 
-  public func load(with query: String) async throws -> [Artist] {
+  public func load(_ query: String) async throws -> [Artist] {
     guard !query.isEmpty else {
       return []
     }
