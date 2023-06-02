@@ -1,7 +1,7 @@
 import UI
 import UIKit
 
-final class SceneCoordinator: Coordinator {
+final class SceneCoordinator {
   private let window: UIWindow
   private var childCoordinators = [Coordinator]()
 
