@@ -11,13 +11,5 @@ public final class MainCoordinator: Coordinator {
     appWindow.rootViewController = navigationController
   }
 
-  public func start() {
-    let coordinator = SharedCoordinator(
-      appName: Bundle.main.displayName ?? "App",
-      navigationController: navigationController
-    )
-
-    coordinator.start()
-    childCoordinators = [coordinator]
-  }
+  public func start() { }
 }

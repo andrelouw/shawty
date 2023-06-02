@@ -10,13 +10,5 @@ public final class MainCoordinator: Coordinator {
     appWindow.rootViewController = navigationController
   }
 
-  public func start() {
-    //    let welcomeCoordinator = WelcomeCoordinator(
-    //      appName: "\(Bundle.main.displayName ?? .appNameFallback) App",
-    //      navigationController: navigationController
-    //    )
-    //
-    //    welcomeCoordinator.start()
-    //    childCoordinators = [welcomeCoordinator]
-  }
+  public func start() { }
 }
