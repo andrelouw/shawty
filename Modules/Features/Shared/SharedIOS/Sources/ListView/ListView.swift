@@ -6,10 +6,10 @@ public protocol ListRowDisplayable: View {
 }
 
 public struct ListView<Row: ListRowDisplayable>: View {
-  @ObservedObject private var viewModel: ListViewModel<Row.Item>
-
   public typealias ViewModel = ListViewModel<Row.Item>
   public typealias RowView = (Row.Item) -> Row
+
+  @ObservedObject private var viewModel: ViewModel
 
   private let rowView: RowView
 
