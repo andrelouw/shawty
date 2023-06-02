@@ -1,8 +1,6 @@
 import Core
 import SwiftUI
 
-public typealias ContentViewStream<Value> = AsyncStream<ContentViewState<Value>>
-
 public final class ListViewModel<Item: Identifiable>: ObservableObject, MainQueueUpdating {
   public typealias ContentValue = [Item]
   public typealias ContentState = ContentViewState<ContentValue>
