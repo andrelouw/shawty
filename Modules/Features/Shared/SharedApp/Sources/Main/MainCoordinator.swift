@@ -1,5 +1,5 @@
-import Core
 import Shared
+import UI
 import UIKit
 
 public final class MainCoordinator: Coordinator {

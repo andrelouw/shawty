@@ -1,4 +1,4 @@
-import Core
+import UI
 import UIKit
 
 final class SceneCoordinator: Coordinator {
