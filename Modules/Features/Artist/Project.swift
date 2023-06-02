@@ -12,6 +12,7 @@ let project = Project.featureModule(
     .foundation("UI"),
     .foundation("Networking"),
     .feature("Shared"),
+    .featureIOS("Shared"),
   ],
   additionalTargets: [
     .makeTestTarget(

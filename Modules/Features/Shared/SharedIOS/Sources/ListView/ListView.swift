@@ -13,7 +13,7 @@ public struct ListView<Row: ListRowDisplayable>: View {
 
   private let rowView: RowView
 
-  init(
+  public init(
     viewModel: ViewModel,
     rowView: @escaping RowView
   ) {
