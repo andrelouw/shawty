@@ -1,5 +1,5 @@
 import Foundation
 
 public protocol ImageDataLoader {
-  func loadImageData(from url: URL) async throws -> Data
+  func load(with url: URL) async throws -> Data
 }
