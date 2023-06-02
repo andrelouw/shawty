@@ -29,7 +29,6 @@ Choose the `iOS` target and start browsing 🔍.
 
 ## Features
 The app has the following features, and detailed breakdown of each can be found on the respective page:
-> ⚠️ TODO: Link specs
 - [Artist Search](Documentation/ArtistFeatureSpecs.md)
 
 ## Behind the name
