@@ -41,7 +41,12 @@ extension Target {
     platform: PlatformSet,
     dependencies: [TargetDependency] = []
   ) -> Target {
-    Target(
+    var allDependencies = dependencies
+    if name != "Testing" {
+      allDependencies.append(.project(target: "Testing", path: .relativeToRoot("Modules/Foundation/Testing/")))
+    }
+
+    return Target(
       name: "\(name)Tests",
       platform: platform.base,
       product: .unitTests,
@@ -51,7 +56,7 @@ extension Target {
       scripts: [
         .linting,
       ],
-      dependencies: dependencies,
+      dependencies: allDependencies,
       settings: .base(platformSet: platform)
     )
   }
