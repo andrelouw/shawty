@@ -1,12 +1,10 @@
 import SharedIOS
 import SwiftUI
 
-final class ArtistSearchListViewController: UIHostingController<ArtistSearchListView> {
-  typealias ViewModel = ListViewModel<ImageTitleRowViewModel<Int>>
-
-  init(
+public final class ArtistSearchListViewController: UIHostingController<ArtistSearchListView> {
+  public init(
     searchViewModel: SearchViewModel,
-    listViewModel: ViewModel
+    listViewModel: ArtistSearchListViewModel
   ) {
     super.init(
       rootView: ArtistSearchListView(
