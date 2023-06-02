@@ -1,6 +1,6 @@
 import Foundation
 
-public struct ImageTitleCellModel<ID: Hashable>: Identifiable {
+public struct ImageTitleRowModel<ID: Hashable>: Identifiable {
   public let id: ID
   public let title: String
   public let imageURL: URL
@@ -16,4 +16,4 @@ public struct ImageTitleCellModel<ID: Hashable>: Identifiable {
   }
 }
 
-extension ImageTitleCellModel: Equatable { }
+extension ImageTitleRowModel: Equatable { }

@@ -1,8 +1,8 @@
 import SwiftUI
 import UI
 
-struct ImageTitleRowView<ID: Hashable>: View, ListRowDisplayable {
-  typealias Item = ImageTitleRowViewModel<ID>
+public struct ImageTitleRowView<ID: Hashable>: View, ListRowDisplayable {
+  public typealias Item = ImageTitleRowViewModel<ID>
 
   @StateObject private var viewModel: Item
 
@@ -10,7 +10,7 @@ struct ImageTitleRowView<ID: Hashable>: View, ListRowDisplayable {
     _viewModel = StateObject(wrappedValue: viewModel)
   }
 
-  var body: some View {
+  public var body: some View {
     HStack {
       imageView
       if let title = viewModel.title {

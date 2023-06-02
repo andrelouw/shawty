@@ -13,6 +13,9 @@ let project = Project.featureModule(
     .foundation("Networking"),
     .feature("Shared"),
   ],
+  additionalIOSDependencies: [
+    .featureIOS("Shared"),
+  ],
   additionalTargets: [
     .makeTestTarget(
       name: "\(name)APIIntegration",
