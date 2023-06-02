@@ -4,16 +4,7 @@ import Networking
 public final class RemoteImageDataLoader: ImageDataLoader {
   private let client: HTTPClient
 
-  public enum Error: Swift.Error {
-    case connectivity
-    case invalidData(InvalidDataError)
-  }
-
-  public enum InvalidDataError: Swift.Error {
-    case statusCode(Int)
-    case decoding(DecodingError)
-    case unknown(Swift.Error)
-  }
+  public typealias Error = RemoteLoadingError
 
   public init(client: HTTPClient) {
     self.client = client
