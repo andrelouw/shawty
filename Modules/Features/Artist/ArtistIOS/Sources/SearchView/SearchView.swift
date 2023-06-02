@@ -1,6 +1,7 @@
 import SwiftUI
 
-public struct ArtistSearchView<ContentView: View>: View {
+// TODO: Can move this to Shared Module, since it is not coupled to the artist domain
+public struct SearchView<ContentView: View>: View {
   @ObservedObject var viewModel: SearchViewModel
 
   private var contentView: () -> ContentView
