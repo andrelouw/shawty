@@ -1,4 +1,5 @@
 import Core
+import Shared
 import UIKit
 
 public final class MainCoordinator: Coordinator {

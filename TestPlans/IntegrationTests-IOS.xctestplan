@@ -18,6 +18,13 @@
         "identifier" : "A2E8704B2CB7A765B1CEA31F",
         "name" : "ArtistAPIIntegrationTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/Features\/Shared\/Shared.xcodeproj",
+        "identifier" : "4B49EE5737A81106D5B73426",
+        "name" : "SharedAPIIntegrationTests"
+      }
     }
   ],
   "version" : 1
