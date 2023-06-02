@@ -14,7 +14,7 @@ Assuming that you have Xcode installed,
 Open the `Shawty.xcworkspace` file, which will load the whole project in Xcode.
 Choose the `iOS` target and start browsing 🔍.
 
-> Normally `.xcworkspace` and `.xcodeproj` files will be git-ignored, but for the purposes of this exercise it was committed as an alternate solution to view the project. 
+> Normally `.xcworkspace` and `.xcodeproj` files will be git-ignored, but for the purposes of this exercise it was committed as an alternate solution to view the project.
 
 ### Hardcore
 Run the following command in root of the cloned repository:
@@ -26,9 +26,11 @@ make
 The `make` command will set up the dev environment, generate and build the workspace, and finally launch Xcode with the generated workspace.
 Choose the `iOS` target and start browsing 🔍.
 
+> See the [`unbootstrap`](Documentation/Commands.md#unisntalling) command that will reverse all installations done by `make`.
+
 ## Features
 The app has the following features, and detailed breakdown of each can be found on the respective page:
-> ⚠️ TODO: Link specs 
+> ⚠️ TODO: Link specs
 - [Artist Search](Documentation/ArtistFeatureSpecs.md)
 
 ## Behind the name
