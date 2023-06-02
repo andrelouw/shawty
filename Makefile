@@ -33,11 +33,15 @@ module: --tuist
 test_local: --tuist
 	@tuist test --device "iPhone 14" --os 16.4
 
-test_ios:
-	@set -o pipefail && xcodebuild test -workspace ${app_name}.xcworkspace -scheme "CI-iOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=${ios_device},OS=${ios_os}" | mint run xcbeautify
+test_ios: test_unit_ios
 
-test_macos:
-	@set -o pipefail && xcodebuild test -workspace ${app_name}.xcworkspace -scheme "CI-macOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk macosx -destination "platform=macOS" | mint run xcbeautify
+test_macos: test_unit_ios
+
+test_unit_ios:
+	@set -o pipefail && xcodebuild test -workspace ${app_name}.xcworkspace -scheme "UnitTests-iOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=${ios_device},OS=${ios_os}" | mint run xcbeautify
+
+test_unit_macos:
+	@set -o pipefail && xcodebuild test -workspace ${app_name}.xcworkspace -scheme "UnitTests-macOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk macosx -destination "platform=macOS" | mint run xcbeautify
 
 clean:
 	@find . -name "*.xcodeproj" -type d -print0 | xargs -0 /bin/rm -r

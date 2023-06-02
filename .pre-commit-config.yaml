@@ -28,9 +28,15 @@ repos:
         stages: [pre-commit]
 -   repo: local
     hooks:
-        -   id: test-ios
-            name: Local iOS Tests
+        -   id: build
+            name: Build project
             language: system
-            entry: make test_local
+            entry: make build
             stages: [pre-push]
             require_serial: true
+        - id: test-ios
+          name: Local iOS Tests
+          language: system
+          entry: make test_ios
+          stages: [ pre-push ]
+          require_serial: true

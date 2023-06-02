@@ -27,14 +27,6 @@
         "identifier" : "F5B409AA710E5F5513429B5E",
         "name" : "UITests"
       }
-    },
-    {
-      "parallelizable" : true,
-      "target" : {
-        "containerPath" : "container:Modules\/Features\/Welcome\/Welcome.xcodeproj",
-        "identifier" : "AC03EA852191608C960564B1",
-        "name" : "WelcomeTests"
-      }
     }
   ],
   "version" : 1

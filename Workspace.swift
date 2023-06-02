@@ -1,34 +1,23 @@
 import ProjectDescription
 import ProjectDescriptionHelpers
 
-let CIScheme = Scheme(
-  name: "CI",
-  testAction:
-      .testPlans(
-        [
-          "TestPlans/CI.xctestplan",
-        ],
-        attachDebugger: false
-      )
-)
-
-let iosCIScheme = Scheme(
-  name: "CI-iOS",
+let iOSUnitTests = Scheme(
+  name: "UnitTests-iOS",
   testAction:
   .testPlans(
     [
-      "TestPlans/CI-iOS.xctestplan",
+      "TestPlans/UnitTests-iOS.xctestplan",
     ],
     attachDebugger: false
   )
 )
 
-let macCIScheme = Scheme(
-  name: "CI-macOS",
+let macOSUnitTests = Scheme(
+  name: "UnitTests-macOS",
   testAction:
   .testPlans(
     [
-      "TestPlans/CI-macOS.xctestplan",
+      "TestPlans/UnitTests-macOS.xctestplan",
     ],
     attachDebugger: false
   )
@@ -52,9 +41,8 @@ let workspace = Workspace(
     "Apps/iOS",
   ],
   schemes: [
-    macCIScheme,
-    iosCIScheme,
-    CIScheme,
+    macOSUnitTests,
+    iOSUnitTests,
     iOS,
   ],
   fileHeaderTemplate: "",
