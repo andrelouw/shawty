@@ -1,8 +1,8 @@
 import SharedIOS
 import SwiftUI
 
-public final class ArtistSearchListViewController: UIHostingController<ArtistSearchListView> {
-  public init(
+final class ArtistSearchListViewController: UIHostingController<ArtistSearchListView> {
+  init(
     searchViewModel: SearchViewModel,
     listViewModel: ArtistSearchListViewModel
   ) {

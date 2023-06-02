@@ -7,20 +7,20 @@ import SharedIOS
 import UI
 import UIKit
 
-public final class MainCoordinator: Coordinator, FeatureFactory {
-  public var navigationController: UINavigationController
-  public var childCoordinators = [Coordinator]()
+final class MainCoordinator: Coordinator, FeatureFactory {
+  var navigationController: UINavigationController
+  var childCoordinators = [Coordinator]()
 
-  public let baseURL = URL(string: "https://api.deezer.com")!
-  public lazy var httpClient: HTTPClient = URLSessionHTTPClient(session: .shared)
-  public lazy var imageLoader: any ImageDataLoader = RemoteImageDataLoader(client: httpClient)
+  let baseURL = URL(string: "https://api.deezer.com")!
+  lazy var httpClient: HTTPClient = URLSessionHTTPClient(session: .shared)
+  lazy var imageLoader: any ImageDataLoader = RemoteImageDataLoader(client: httpClient)
 
-  public init(appWindow: UIWindow) {
+  init(appWindow: UIWindow) {
     navigationController = UINavigationController()
     appWindow.rootViewController = navigationController
   }
 
-  public func start() {
+  func start() {
     let coordinator = artistSearchCoordinator()
     addChild(coordinator)
     // TODO: WeakReference Proxy
@@ -39,7 +39,7 @@ public final class MainCoordinator: Coordinator, FeatureFactory {
 }
 
 extension MainCoordinator: ArtistSearchCoordinatorDelegate {
-  public func didSelectArtist(withID id: Int) {
+  func didSelectArtist(withID id: Int) {
     let alert = UIAlertController(
       title: "Artist Selected",
       message: "Artist ID: \(id)",

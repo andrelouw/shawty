@@ -4,9 +4,10 @@ import SharedIOS
 import UIKit
 
 extension FeatureFactory {
-  public func makeArtistSearchViewController(
+  func makeArtistSearchViewController(
     onArtistSelection: @escaping (Int) -> Void
   ) -> UIViewController {
+    // FIXME: Very long method body!! Shorten
     let url = ArtistEndpoint.search.url(baseURL: baseURL)
 
     let remoteArtistSearchLoader = RemoteArtistSearchLoader(
