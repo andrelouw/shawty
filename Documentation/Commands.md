@@ -52,13 +52,17 @@ There is also `make ci_macos` and `make ci_ios` to run the above commands for ea
 ### Test
 `make test`
 
-Runs all tests for the project, using `xcodebuild`.
+Runs `test_ios` and `test_macos`.
+
+`make test_local`
+
+Runs all tests for the project, using [Tuist](#tuist).
 
 `make test_ios`
-Runs all the ios tests for the project, using `xcodebuild`.
+Runs the `CI-iOS` test plan, using `xcodebuild`.
 
 `make test_macos`
-Runs all the macos tests for the project, using `xcodebuild`.
+Runs the `CI-macOS` test plan, using `xcodebuild`.
 
 ### Clean
 `make clean`

@@ -27,6 +27,9 @@ workspace: --tuist
 module: --tuist
 	@./Scripts/module.sh
 
+test_local: --tuist
+	@tuist test --device "iPhone 14" --os 16.4
+
 test_ios:
 	@set -o pipefail && xcodebuild test -workspace ${app_name}.xcworkspace -scheme "CI-iOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=${ios_device},OS=${ios_os}" | mint run xcbeautify
 
