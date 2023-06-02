@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "7AB42EAC-E525-4821-9F2E-1EB1CE22C8CC",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/Features\/Artist\/Artist.xcodeproj",
+        "identifier" : "A2E8704B2CB7A765B1CEA31F",
+        "name" : "ArtistAPIIntegrationTests"
+      }
+    }
+  ],
+  "version" : 1
+}
