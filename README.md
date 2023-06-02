@@ -1,6 +1,5 @@
-> ⚠️ TODO: Update badges
-[![CI-iOS](https://github.com/andrelouw/app-template/actions/workflows/ci-ios.yml/badge.svg)](https://github.com/andrelouw/app-template/actions/workflows/ci-ios.yml)
-[![CI-macOS](https://github.com/andrelouw/app-template/actions/workflows/ci-macos.yml/badge.svg)](https://github.com/andrelouw/app-template/actions/workflows/ci-macos.yml)
+[![CI-macOS](https://github.com/annasbananas/shawty/actions/workflows/ci-macos.yml/badge.svg)](https://github.com/annasbananas/shawty/actions/workflows/ci-macos.yml)
+[![CI-iOS](https://github.com/annasbananas/shawty/actions/workflows/ci-ios.yml/badge.svg)](https://github.com/annasbananas/shawty/actions/workflows/ci-ios.yml)
 [![Tuist badge](https://img.shields.io/badge/Powered%20by-Tuist-blue)](https://tuist.io)
 
 # Shawty
