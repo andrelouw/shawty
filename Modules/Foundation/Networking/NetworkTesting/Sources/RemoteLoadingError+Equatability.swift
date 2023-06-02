@@ -1,3 +1,5 @@
+import Networking
+
 extension RemoteLoadingError: Equatable {
   public static func == (lhs: RemoteLoadingError, rhs: RemoteLoadingError) -> Bool {
     switch (lhs, rhs) {

@@ -11,6 +11,15 @@ let project = Project.featureModule(
     .foundation("UI"),
     .foundation("Networking"),
   ],
+  additionalTargets: [
+    .makeTestTarget(
+      name: "\(name)APIIntegration",
+      platform: .iOS.with(supportedPlatforms: .macOS),
+      dependencies: [
+        .target(name: name),
+      ]
+    ),
+  ],
   additionalTestDependencies: [
     .project(target: "NetworkTesting", path: .relativeToRoot("Modules/Foundation/Networking/")),
   ]
