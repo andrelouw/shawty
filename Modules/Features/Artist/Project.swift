@@ -12,6 +12,8 @@ let project = Project.featureModule(
     .foundation("UI"),
     .foundation("Networking"),
     .feature("Shared"),
+  ],
+  additionalIOSDependencies: [
     .featureIOS("Shared"),
   ],
   additionalTargets: [
