@@ -1,6 +1,28 @@
 import ProjectDescription
 import ProjectDescriptionHelpers
 
+let iOSIntegrationTests = Scheme(
+  name: "IntegrationTests-iOS",
+  testAction:
+  .testPlans(
+    [
+      "TestPlans/IntegrationTests-iOS.xctestplan",
+    ],
+    attachDebugger: false
+  )
+)
+
+let macOSIntegrationTests = Scheme(
+  name: "IntegrationTests-macOS",
+  testAction:
+  .testPlans(
+    [
+      "TestPlans/IntegrationTests-macOS.xctestplan",
+    ],
+    attachDebugger: false
+  )
+)
+
 let iOSUnitTests = Scheme(
   name: "UnitTests-iOS",
   testAction:
@@ -43,6 +65,8 @@ let workspace = Workspace(
   schemes: [
     macOSUnitTests,
     iOSUnitTests,
+    iOSIntegrationTests,
+    macOSIntegrationTests,
     iOS,
   ],
   fileHeaderTemplate: "",
