@@ -27,6 +27,27 @@
         "identifier" : "F5B409AA710E5F5513429B5E",
         "name" : "UITests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/Foundation\/Testing\/Testing.xcodeproj",
+        "identifier" : "6405293005B5271880DD7A61",
+        "name" : "TestingTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/Features\/Artist\/Artist.xcodeproj",
+        "identifier" : "BD4A4026556163565DB5ECAB",
+        "name" : "ArtistTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/Foundation\/Networking\/Networking.xcodeproj",
+        "identifier" : "F37FCD8E01CA56BB3BD87FD6",
+        "name" : "NetworkingTests"
+      }
     }
   ],
   "version" : 1
