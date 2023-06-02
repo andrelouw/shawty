@@ -1,6 +1,5 @@
 import Core
 import UIKit
-import WelcomeIOS
 
 public final class MainCoordinator: Coordinator {
   private var navigationController: UINavigationController
@@ -12,12 +11,12 @@ public final class MainCoordinator: Coordinator {
   }
 
   public func start() {
-    let welcomeCoordinator = WelcomeCoordinator(
-      appName: "\(Bundle.main.displayName ?? .appNameFallback) App",
-      navigationController: navigationController
-    )
-
-    welcomeCoordinator.start()
-    childCoordinators = [welcomeCoordinator]
+    //    let welcomeCoordinator = WelcomeCoordinator(
+    //      appName: "\(Bundle.main.displayName ?? .appNameFallback) App",
+    //      navigationController: navigationController
+    //    )
+    //
+    //    welcomeCoordinator.start()
+    //    childCoordinators = [welcomeCoordinator]
   }
 }
