@@ -1,4 +1,4 @@
-app_name := MyApp
+app_name := Shawty
 ios_device := iPhone 14
 ios_os := 16.4
 
@@ -35,7 +35,7 @@ test_local: --tuist
 
 test_ios: test_unit_ios
 
-test_macos: test_unit_ios
+test_macos: test_unit_macos
 
 test_unit_ios:
 	@set -o pipefail && xcodebuild test -workspace ${app_name}.xcworkspace -scheme "UnitTests-iOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=${ios_device},OS=${ios_os}" | mint run xcbeautify
