@@ -1,6 +1,6 @@
 import Core
 import UIKit
-import Welcome
+import WelcomeIOS
 
 public final class MainCoordinator: Coordinator {
   private var navigationController: UINavigationController

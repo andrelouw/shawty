@@ -1,6 +1,17 @@
 import ProjectDescription
 import ProjectDescriptionHelpers
 
+let CIScheme = Scheme(
+  name: "CI",
+  testAction:
+      .testPlans(
+        [
+          "TestPlans/CI.xctestplan",
+        ],
+        attachDebugger: false
+      )
+)
+
 let iosCIScheme = Scheme(
   name: "CI-iOS",
   testAction:
@@ -43,6 +54,7 @@ let workspace = Workspace(
   schemes: [
     macCIScheme,
     iosCIScheme,
+    CIScheme,
     iOS,
   ],
   fileHeaderTemplate: "",
