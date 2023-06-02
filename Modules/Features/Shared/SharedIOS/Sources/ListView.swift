@@ -1,14 +1,21 @@
 import SwiftUI
 import UI
 
-public struct ListView<RowView: View>: View {
-  @ObservedObject private var viewModel: ListViewModel
+public protocol ListRowDisplayable: View {
+  associatedtype Item: Identifiable
+}
 
-  private let rowView: (String) -> RowView
+public struct ListView<Row: ListRowDisplayable>: View {
+  @ObservedObject private var viewModel: ListViewModel<Row.Item>
+
+  public typealias ViewModel = ListViewModel<Row.Item>
+  public typealias RowView = (Row.Item) -> Row
+
+  private let rowView: RowView
 
   init(
-    viewModel: ListViewModel,
-    rowView: @escaping (String) -> RowView
+    viewModel: ViewModel,
+    rowView: @escaping RowView
   ) {
     self.viewModel = viewModel
     self.rowView = rowView
@@ -55,7 +62,7 @@ public struct ListView<RowView: View>: View {
     }
   }
 
-  private func listView(with items: [String]) -> some View {
+  private func listView(with items: [Row.Item]) -> some View {
     List {
       if let sectionTitle = viewModel.sectionTitle {
         Section(sectionTitle) {
@@ -69,12 +76,12 @@ public struct ListView<RowView: View>: View {
     .listStyle(.grouped)
   }
 
-  private func cells(for items: [String]) -> some View {
+  private func cells(for items: [Row.Item]) -> some View {
     ForEach(items) { item in
       rowView(item)
         .contentShape(Rectangle())
         .onTapGesture {
-          viewModel.didSelect(id: item)
+          viewModel.didSelect(id: item.id)
         }
     }
   }
@@ -87,15 +94,5 @@ public struct ListView<RowView: View>: View {
   private func errorView(with message: String) -> some View {
     ScreenNoticeView(model: .error(message: message))
       .offset(y: -50)
-  }
-}
-
-struct ListView_Previews: PreviewProvider {
-  static var previews: some View {
-    ListView(
-      viewModel: ListViewModel()
-    ) {
-      Text($0)
-    }
   }
 }

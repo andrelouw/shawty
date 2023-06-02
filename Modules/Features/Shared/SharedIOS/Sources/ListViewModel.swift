@@ -1,11 +1,13 @@
 import SwiftUI
 
-public final class ListViewModel: ObservableObject {
+public final class ListViewModel<Item: Identifiable>: ObservableObject {
+  public typealias ContentValue = [Item]
+
   @MainActor
   @Published public var isLoading = false
 
   @MainActor
-  @Published public var contentViewState = ContentViewState<[String]>.loaded(["TEsting"])
+  @Published public var contentViewState = ContentViewState<ContentValue>.idle
 
   @MainActor
   @Published public var navigationTitle: String?
@@ -17,7 +19,7 @@ public final class ListViewModel: ObservableObject {
 
   public func didDisappear() { }
 
-  public func didSelect(id _: String) { }
+  public func didSelect(id _: Item.ID) { }
 }
 
 // TODO: Remove, only temporary
