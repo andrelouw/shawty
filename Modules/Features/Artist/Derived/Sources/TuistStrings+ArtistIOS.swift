@@ -14,6 +14,8 @@ import Foundation
 public enum ArtistIOSStrings {
   /// Search for artists
   public static let artistSearchPrompt = ArtistIOSStrings.tr("Artist", "ARTIST_SEARCH_PROMPT")
+  /// Artist Search
+  public static let artistSearchScreenTitle = ArtistIOSStrings.tr("Artist", "ARTIST_SEARCH_SCREEN_TITLE")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name
