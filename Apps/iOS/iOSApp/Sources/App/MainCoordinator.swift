@@ -2,17 +2,17 @@ import ArtistIOS
 import UI
 import UIKit
 
-final class MainCoordinator: Coordinator {
-  lazy var navigationController = UINavigationController()
-
+public final class MainCoordinator: Coordinator {
+  public lazy var navigationController = UINavigationController()
   public var childCoordinators = [Coordinator]()
+
   private let appWindow: UIWindow
 
-  init(appWindow: UIWindow) {
+  public init(appWindow: UIWindow) {
     self.appWindow = appWindow
   }
 
-  func start() {
+  public func start() {
     appWindow.rootViewController = navigationController
 
     let artistSearchCoordinator = ArtistSearchSceneCoordinator(
