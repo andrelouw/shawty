@@ -13,11 +13,13 @@ only_rules:
   - vertical_whitespace
   - void_return
   - custom_rules
+  - todo
 
 excluded:
   - Carthage
   - Pods
   - .build
+  - Derived
 
 colon:
   apply_to_dictionaries: false
@@ -34,6 +36,6 @@ custom_rules:
     name: "Writing log messages directly to standard out is disallowed"
     regex: "(\\bprint|\\bdebugPrint|\\bdump|Swift\\.print|Swift\\.debugPrint|Swift\\.dump)\\s*\\("
     match_kinds:
-    - identifier
+      - identifier
     message: "Don't commit `print(…)`, `debugPrint(…)`, or `dump(…)` as they write to standard out in release. Either log to a dedicated logging system or silence this warning in debug-only scenarios explicitly using `// swiftlint:disable:next no_direct_standard_out_logs`"
     severity: warning

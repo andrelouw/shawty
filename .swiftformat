@@ -3,6 +3,7 @@
 
 # options
 --swiftversion 5.8
+--acronyms ID,URL,UUID
 --self remove # redundantSelf
 --importgrouping testable-bottom # sortedImports
 --commas always # trailingCommas
@@ -11,7 +12,7 @@
 --ifdef no-indent #indent
 --indentstrings true #indent
 --wraparguments before-first # wrapArguments
---wrapparameters before-first # wrapArguments
+--wrapparameters disabled # wrapArguments
 --wrapcollections before-first # wrapArguments
 --wrapconditions before-first # wrapArguments
 # --wrapreturntype if-multiline #wrapArguments
@@ -38,6 +39,7 @@
 --maxwidth 130 # wrap
 
 # rules
+
 --rules anyObjectProtocol
 --rules blankLinesBetweenScopes
 --rules consecutiveSpaces
@@ -88,3 +90,4 @@
 --rules genericExtensions
 --rules trailingClosures
 --rules elseOnSameLine
+--rules blankLineAfterImports
