@@ -41,8 +41,7 @@ The name was inspired by the song [Replay from Iyaz](https://g.co/kgs/M1eW5e):
 > Replay-ay-ay-ay_  "
 
 ## Break down of work done
-> ⚠️ TODO: Link PRs
-See the [closed PRs]() for a detailed break-down of the work done
+See the [closed PRs](https://github.com/annasbananas/shawty/pulls?q=is%3Apr+is%3Aclosed) for a detailed break-down of the work done
 
 ## Other details
 This (personal and still very much under development) [App template](https://github.com/andrelouw/app-template) was used as a starting point for this project.

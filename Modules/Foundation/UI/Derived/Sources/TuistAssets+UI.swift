@@ -4,14 +4,14 @@
 // Generated using tuist — https://github.com/tuist/tuist
 
 #if os(macOS)
-  import AppKit
+import AppKit
 #elseif os(iOS)
-  import UIKit
+import UIKit
 #elseif os(tvOS) || os(watchOS)
-  import UIKit
+import UIKit
 #endif
 #if canImport(SwiftUI)
-  import SwiftUI
+import SwiftUI
 #endif
 
 // swiftlint:disable superfluous_disable_command file_length implicit_return
@@ -20,11 +20,16 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum UIAsset {
+  public static let backgroundPrimary = UIColors(name: "background.primary")
+  public static let backgroundSecondary = UIColors(name: "background.secondary")
   public static let brandPrimary = UIColors(name: "brand.primary")
   public static let brandSecondary = UIColors(name: "brand.secondary")
-  public static let brandTertiary = UIColors(name: "brand.tertiary")
   public static let fontPrimary = UIColors(name: "font.primary")
   public static let fontSecondary = UIColors(name: "font.secondary")
+  public static let fontTertiary = UIColors(name: "font.tertiary")
+  public static let statusError = UIColors(name: "status.error")
+  public static let statusSuccess = UIColors(name: "status.success")
+  public static let statusWarning = UIColors(name: "status.warning")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
