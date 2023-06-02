@@ -2,8 +2,8 @@ import UI
 
 extension ScreenNoticeModel {
   public static let idle = ScreenNoticeModel(
-    title: "Shawty",
-    subtitle: "...like a melody in my head",
+    title: SharedIOSStrings.appName,
+    subtitle: SharedIOSStrings.appTagLine,
     icon: .headphones,
     iconColor: .brand.primary,
     style: .watermark
@@ -11,7 +11,7 @@ extension ScreenNoticeModel {
 
   public static func error(message: String? = nil) -> ScreenNoticeModel {
     ScreenNoticeModel(
-      title: "Oops!\nI did it again",
+      title: SharedIOSStrings.genericErrorTitle,
       subtitle: message,
       icon: .error,
       iconColor: .red
@@ -20,16 +20,16 @@ extension ScreenNoticeModel {
 
   public static var noResults: ScreenNoticeModel {
     ScreenNoticeModel(
-      title: "Still haven't found \nwhat you're looking for?",
-      subtitle: "Search for an artist",
+      title: SharedIOSStrings.noSearchTitle,
+      subtitle: SharedIOSStrings.noSearchSubtitle,
       icon: .noResults
     )
   }
 
   public static var noSearch: ScreenNoticeModel {
     ScreenNoticeModel(
-      title: "I've got a blank space, baby...",
-      subtitle: "Try a different search term?",
+      title: SharedIOSStrings.noSearchTitle,
+      subtitle: SharedIOSStrings.noSearchSubtitle,
       icon: .search,
       iconColor: .brand.primary
     )
