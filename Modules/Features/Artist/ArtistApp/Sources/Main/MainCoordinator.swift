@@ -21,14 +21,25 @@ public final class MainCoordinator: Coordinator, FeatureFactory {
   }
 
   public func start() {
-    navigationController.show(artistSearchListViewController(), sender: self)
+    let coordinator = artistSearchCoordinator()
+    addChild(coordinator)
+    // TODO: WeakReference Proxy
+    coordinator.delegate = self
+
+    coordinator.start()
   }
 
-  private func artistSearchListViewController() -> UIViewController {
-    makeArtistSearchViewController(onArtistSelection: didSelectTrack)
+  private func artistSearchCoordinator() -> ArtistSearchCoordinator {
+    ArtistSearchCoordinator(
+      navigationController: navigationController,
+      featureFactory: self,
+      removeCoordinatorWith: removeChild
+    )
   }
+}
 
-  private func didSelectTrack(withID id: Int) {
+extension MainCoordinator: ArtistSearchCoordinatorDelegate {
+  public func didSelectArtist(withID id: Int) {
     let alert = UIAlertController(
       title: "Artist Selected",
       message: "Artist ID: \(id)",
