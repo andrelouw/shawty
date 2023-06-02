@@ -5,7 +5,7 @@ public final class ListViewModel: ObservableObject {
   @Published public var isLoading = false
 
   @MainActor
-  @Published public var contentViewState = ContentViewState<[String]>.noSearch
+  @Published public var contentViewState = ContentViewState<[String]>.loaded(["TEsting"])
 
   @MainActor
   @Published public var navigationTitle: String?

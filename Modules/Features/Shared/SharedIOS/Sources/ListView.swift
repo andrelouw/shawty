@@ -1,11 +1,17 @@
 import SwiftUI
 import UI
 
-public struct ListView: View {
+public struct ListView<RowView: View>: View {
   @ObservedObject private var viewModel: ListViewModel
 
-  init(viewModel: ListViewModel) {
+  private let rowView: (String) -> RowView
+
+  init(
+    viewModel: ListViewModel,
+    rowView: @escaping (String) -> RowView
+  ) {
     self.viewModel = viewModel
+    self.rowView = rowView
   }
 
   public var body: some View {
@@ -65,7 +71,7 @@ public struct ListView: View {
 
   private func cells(for items: [String]) -> some View {
     ForEach(items) { item in
-      Text(item)
+      rowView(item)
         .contentShape(Rectangle())
         .onTapGesture {
           viewModel.didSelect(id: item)
@@ -86,6 +92,10 @@ public struct ListView: View {
 
 struct ListView_Previews: PreviewProvider {
   static var previews: some View {
-    ListView(viewModel: ListViewModel())
+    ListView(
+      viewModel: ListViewModel()
+    ) {
+      Text($0)
+    }
   }
 }
