@@ -6,10 +6,10 @@ public protocol ListRowDisplayable: View {
 }
 
 public struct ListView<Row: ListRowDisplayable>: View {
-  @ObservedObject private var viewModel: ListViewModel<Row.Item>
-
   public typealias ViewModel = ListViewModel<Row.Item>
   public typealias RowView = (Row.Item) -> Row
+
+  @ObservedObject private var viewModel: ViewModel
 
   private let rowView: RowView
 
@@ -88,11 +88,9 @@ public struct ListView<Row: ListRowDisplayable>: View {
 
   private func screenNoticeView(model: ScreenNoticeModel) -> some View {
     ScreenNoticeView(model: model)
-      .offset(y: -50)
   }
 
   private func errorView(with message: String) -> some View {
     ScreenNoticeView(model: .error(message: message))
-      .offset(y: -50)
   }
 }

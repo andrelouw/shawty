@@ -13,7 +13,7 @@ final class ArtistAPIIntegrationTests: XCTestCase {
     expectNoMemoryLeaks(for: loader)
 
     do {
-      let artists = try await loader.load(with: "kygo")
+      let artists = try await loader.load("kygo")
 
       XCTAssertEqual(artists.count, 25)
       XCTAssertEqual(artists[0].id, 4768753)

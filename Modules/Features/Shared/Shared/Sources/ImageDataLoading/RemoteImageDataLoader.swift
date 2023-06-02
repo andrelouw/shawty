@@ -10,7 +10,7 @@ public final class RemoteImageDataLoader: ImageDataLoader {
     self.client = client
   }
 
-  public func load(with url: URL) async throws -> Data {
+  public func load(_ url: URL) async throws -> Data {
     let response: HTTPClient.Response
 
     do {

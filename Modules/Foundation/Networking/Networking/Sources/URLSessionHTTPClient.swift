@@ -14,8 +14,6 @@ public final class URLSessionHTTPClient: HTTPClient {
   public func get(from url: URL) async throws -> Response {
     let (data, response) = try await session.data(from: url)
 
-    try await Task.sleep(for: .seconds(2))
-
     if let response = response as? HTTPURLResponse {
       return (data, response)
     } else {

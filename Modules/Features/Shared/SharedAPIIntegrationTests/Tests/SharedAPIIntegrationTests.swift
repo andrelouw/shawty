@@ -14,7 +14,7 @@ final class SharedAPIIntegrationTests: XCTestCase {
     expectNoMemoryLeaks(for: loader)
 
     do {
-      let data = try await loader.load(with: imageURL)
+      let data = try await loader.load(imageURL)
 
       XCTAssertFalse(data.isEmpty)
     } catch {

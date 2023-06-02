@@ -16,6 +16,8 @@ public enum SharedIOSStrings {
   public static let appName = SharedIOSStrings.tr("Shared", "APP_NAME")
   /// ...like a melody in my head
   public static let appTagLine = SharedIOSStrings.tr("Shared", "APP_TAG_LINE")
+  /// Server error
+  public static let fullScreenConnectionError = SharedIOSStrings.tr("Shared", "FULL_SCREEN_CONNECTION_ERROR")
   /// Oops! I did it again...
   public static let genericErrorTitle = SharedIOSStrings.tr("Shared", "GENERIC_ERROR_TITLE")
   /// Try a different search term?

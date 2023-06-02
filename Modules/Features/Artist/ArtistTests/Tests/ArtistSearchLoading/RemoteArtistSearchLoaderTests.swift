@@ -56,7 +56,7 @@ final class RemoteArtistSearchLoaderTests: XCTestCase {
     let (sut, client) = makeSUT(url: search.baseURL)
     client.complete(withStatusCode: 200, data: anyValidJSONData(), for: search.urlWithQuery)
 
-    _ = try await sut.load(with: search.queryString)
+    _ = try await sut.load(search.queryString)
 
     let requestedURL = try XCTUnwrap(client.requestedURLs.first)
     XCTAssertEqual(requestedURL, search.urlWithQuery)
@@ -264,7 +264,7 @@ extension RemoteArtistSearchLoaderTests {
   ) async throws -> [Entity] {
     // FIXME: The `unowned sut` is a weird one. The timeout task is holding onto sut for some reason
     try await timeoutTask(timeout: seconds) { [unowned sut] in
-      try await sut.load(with: query)
+      try await sut.load(query)
     }
   }
 }

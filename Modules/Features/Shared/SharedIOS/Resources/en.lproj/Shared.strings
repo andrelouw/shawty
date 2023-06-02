@@ -5,3 +5,4 @@
 "GENERIC_ERROR_TITLE" = "Oops! I did it again...";
 "NO_SEARCH_TITLE" = "Still haven't found \nwhat you're looking for?";
 "NO_SEARCH_SUBTITLE" = "Search for an artist";
+"FULL_SCREEN_CONNECTION_ERROR" = "Server error";
