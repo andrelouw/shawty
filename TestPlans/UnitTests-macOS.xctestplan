@@ -9,7 +9,8 @@
     }
   ],
   "defaultOptions" : {
-    "codeCoverage" : false
+    "codeCoverage" : false,
+    "testExecutionOrdering" : "random"
   },
   "testTargets" : [
     {
@@ -29,6 +30,7 @@
       }
     },
     {
+      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:Modules\/Foundation\/Testing\/Testing.xcodeproj",
         "identifier" : "6405293005B5271880DD7A61",
@@ -36,6 +38,7 @@
       }
     },
     {
+      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:Modules\/Features\/Artist\/Artist.xcodeproj",
         "identifier" : "BD4A4026556163565DB5ECAB",
@@ -43,6 +46,7 @@
       }
     },
     {
+      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:Modules\/Foundation\/Networking\/Networking.xcodeproj",
         "identifier" : "F37FCD8E01CA56BB3BD87FD6",
@@ -50,6 +54,7 @@
       }
     },
     {
+      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:Modules\/Features\/Shared\/Shared.xcodeproj",
         "identifier" : "1B1376E59ED7F9AA6CB3D0FF",
