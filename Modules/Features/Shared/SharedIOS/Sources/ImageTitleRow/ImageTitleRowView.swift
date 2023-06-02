@@ -1,10 +1,12 @@
 import SwiftUI
 import UI
 
-struct ImageTitleRowView: View {
-  @StateObject private var viewModel: ImageTitleCellViewModel
+struct ImageTitleRowView<ID: Hashable>: View, ListRowDisplayable {
+  typealias Item = ImageTitleCellViewModel<ID>
 
-  public init(viewModel: ImageTitleCellViewModel) {
+  @StateObject private var viewModel: Item
+
+  public init(viewModel: Item) {
     _viewModel = StateObject(wrappedValue: viewModel)
   }
 

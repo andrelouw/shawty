@@ -1,12 +1,20 @@
 import SwiftUI
 import UI
 
-public final class ImageTitleCellViewModel: ObservableObject {
+public final class ImageTitleCellViewModel<ID: Hashable>: ObservableObject, Identifiable {
   @MainActor
-  @Published var loadingImage: LoadingImage = .empty
+  @Published public var loadingImage: LoadingImage = .empty
 
   @MainActor
-  @Published var title: String?
+  @Published public var title: String?
+
+  public var id: ID { model.id }
+
+  private let model: ImageTitleCellModel<ID>
+
+  init(model: ImageTitleCellModel<ID>) {
+    self.model = model
+  }
 
   func didAppear() { }
 
