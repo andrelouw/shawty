@@ -1,0 +1,29 @@
+name: CI-iOS
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches: [ develop ]
+
+concurrency:
+   group: ci-ios.${{ github.head_ref }}
+   cancel-in-progress: true
+
+jobs:
+  build:
+    name: CI for iOS
+    runs-on: macos-13
+
+    # timeout-minutes: 10
+
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v3
+
+      - name: Setup Environment
+        uses: ./.github/actions/setup
+
+      - name: CI for iOS
+        run: make ci_ios
