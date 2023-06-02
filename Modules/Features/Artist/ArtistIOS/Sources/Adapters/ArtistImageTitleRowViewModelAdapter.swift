@@ -1,8 +1,9 @@
 import Artist
+import Shared
 import SharedIOS
 
 /// Adapts ArtistSearchLoading to ImageTitleRowViewModel
-struct ArtistImageTitleRowViewModelAdapter {
+struct ArtistImageTitleRowViewModelAdapter: QueryValueLoader {
   private let artistsSearchLoader: any ArtistSearchLoader
   private let imageDataLoadingImageAdapter: ImageDataLoadingImageAdapter
 
@@ -14,7 +15,7 @@ struct ArtistImageTitleRowViewModelAdapter {
     self.imageDataLoadingImageAdapter = imageDataLoadingImageAdapter
   }
 
-  func load(with query: String) async throws -> [ImageTitleRowViewModel<Int>] {
+  func load(_ query: String) async throws -> [ImageTitleRowViewModel<Int>] {
     let artists = try await artistsSearchLoader.load(query)
 
     return artists.map {
