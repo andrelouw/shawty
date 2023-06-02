@@ -2,7 +2,7 @@ import SwiftUI
 import UI
 
 struct ImageTitleRowView<ID: Hashable>: View, ListRowDisplayable {
-  typealias Item = ImageTitleCellViewModel<ID>
+  typealias Item = ImageTitleRowViewModel<ID>
 
   @StateObject private var viewModel: Item
 
