@@ -45,7 +45,7 @@ public final class PublishedQueryContentStreamAdapter<Loader: QueryValueLoader> 
 
   private func load(_ query: Loader.Input) async -> ContentViewState<Loader.Output> {
     do {
-      guard !query.isValid() else {
+      guard query.isValid() else {
         return .noSearch
       }
 
