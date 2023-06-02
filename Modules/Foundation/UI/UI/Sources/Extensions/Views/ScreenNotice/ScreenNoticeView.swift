@@ -8,9 +8,9 @@ public struct ScreenNoticeView: View {
   }
 
   public var body: some View {
-    VStack(spacing: 5) {
+    VStack(spacing: 20) {
       iconView
-      Spacer().frame(height: 10)
+      Spacer().frame(height: 5)
       titleView
       subtitleView
     }
@@ -20,6 +20,7 @@ public struct ScreenNoticeView: View {
   private var titleView: some View {
     Text(model.title)
       .font(.headline)
+      .multilineTextAlignment(.center)
   }
 
   @ViewBuilder private var subtitleView: some View {
@@ -27,6 +28,7 @@ public struct ScreenNoticeView: View {
       Text(subtitle)
         .font(.subheadline)
         .foregroundColor(model.iconColor)
+        .multilineTextAlignment(.center)
     }
   }
 
@@ -35,5 +37,4 @@ public struct ScreenNoticeView: View {
       .font(.system(size: 50))
       .foregroundColor(model.iconColor)
   }
-
 }

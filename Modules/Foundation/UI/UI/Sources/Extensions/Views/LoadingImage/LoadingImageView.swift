@@ -36,7 +36,7 @@ public struct LoadingImageView: View {
 
   @ViewBuilder private var loaderView: some View {
     RoundedRectangle(cornerRadius: 5)
-      .foregroundColor(.background.secondary)
+      .foregroundColor(Color.black.opacity(0.15))
       .shimmering()
   }
 

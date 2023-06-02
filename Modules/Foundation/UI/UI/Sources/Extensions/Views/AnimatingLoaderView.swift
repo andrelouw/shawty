@@ -2,7 +2,7 @@ import SwiftUI
 
 // Reference: https://betterprogramming.pub/create-an-awesome-loading-state-using-swiftui-9815ff6abb80
 public struct AnimatingLoaderView: View {
-  private var color: Color = .brand.primary
+  private var color: Color = .brand.secondary
   private var diameter: CGFloat = 10
 
   public init() { }
@@ -36,7 +36,7 @@ public struct AnimatingLoaderView: View {
   }
 }
 
-struct ListCellView_Previews: PreviewProvider {
+struct AnimatingLoaderView_Previews: PreviewProvider {
   static var previews: some View {
     AnimatingLoaderView()
   }
