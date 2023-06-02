@@ -14,7 +14,7 @@ extension ScreenNoticeModel {
       title: SharedIOSStrings.genericErrorTitle,
       subtitle: message,
       icon: .error,
-      iconColor: .red
+      iconColor: .status.error
     )
   }
 
@@ -22,7 +22,8 @@ extension ScreenNoticeModel {
     ScreenNoticeModel(
       title: SharedIOSStrings.noSearchTitle,
       subtitle: SharedIOSStrings.noSearchSubtitle,
-      icon: .noResults
+      icon: .noResults,
+      iconColor: .status.warning
     )
   }
 
@@ -31,7 +32,7 @@ extension ScreenNoticeModel {
       title: SharedIOSStrings.noSearchTitle,
       subtitle: SharedIOSStrings.noSearchSubtitle,
       icon: .search,
-      iconColor: .brand.primary
+      iconColor: .brand.secondary
     )
   }
 }

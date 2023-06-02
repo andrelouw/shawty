@@ -7,15 +7,15 @@ public enum ContentViewState<Content> {
   case error(String)
 
   public static var idle: Self {
-    ContentViewState.screenNotice(.init(title: "", icon: .headphones))
+    ContentViewState.screenNotice(.idle)
   }
 
   public static var empty: Self {
-    ContentViewState.screenNotice(.init(title: "", icon: .noResults))
+    ContentViewState.screenNotice(.noResults)
   }
 
   public static var noSearch: Self {
-    ContentViewState.screenNotice(.init(title: "", icon: .search))
+    ContentViewState.screenNotice(.noSearch)
   }
 
   public var isLoading: Bool {
