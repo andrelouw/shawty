@@ -63,6 +63,20 @@
         "identifier" : "6405293005B5271880DD7A61",
         "name" : "TestingTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/Features\/Shared\/Shared.xcodeproj",
+        "identifier" : "37527E40922B0923ACAA0297",
+        "name" : "SharedIOSTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/Features\/Shared\/Shared.xcodeproj",
+        "identifier" : "1B1376E59ED7F9AA6CB3D0FF",
+        "name" : "SharedTests"
+      }
     }
   ],
   "version" : 1

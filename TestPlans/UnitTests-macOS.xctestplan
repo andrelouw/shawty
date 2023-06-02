@@ -48,6 +48,13 @@
         "identifier" : "F37FCD8E01CA56BB3BD87FD6",
         "name" : "NetworkingTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Modules\/Features\/Shared\/Shared.xcodeproj",
+        "identifier" : "1B1376E59ED7F9AA6CB3D0FF",
+        "name" : "SharedTests"
+      }
     }
   ],
   "version" : 1
