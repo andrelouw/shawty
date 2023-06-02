@@ -1,18 +1,15 @@
 import SwiftUI
 
 public struct ArtistSearchView<ContentView: View>: View {
-  @State private var searchText: String
+  @ObservedObject var viewModel: SearchViewModel
 
-  private var promptText: String
   private var contentView: () -> ContentView
 
   public init(
-    searchText: String,
-    promptText: String,
+    viewModel: SearchViewModel,
     contentView: @escaping () -> ContentView
   ) {
-    self.searchText = searchText
-    self.promptText = promptText
+    self.viewModel = viewModel
     self.contentView = contentView
   }
 
@@ -20,9 +17,9 @@ public struct ArtistSearchView<ContentView: View>: View {
     NavigationView {
       contentView()
         .searchable(
-          text: $searchText,
+          text: $viewModel.searchText,
           placement: .navigationBarDrawer(displayMode: .always),
-          prompt: promptText
+          prompt: viewModel.promptText
         )
     }
   }
