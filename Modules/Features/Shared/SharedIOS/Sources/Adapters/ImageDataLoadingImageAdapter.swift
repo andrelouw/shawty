@@ -2,13 +2,14 @@ import Foundation
 import Shared
 import UI
 
-struct ImageDataLoadingImageAdapter: QueryValueLoader {
+/// Adapts ImageDataLoading to an AsyncStream of LoadingImage
+public struct ImageDataLoadingImageAdapter: QueryValueLoader {
   private let imageDataLoader: any ImageDataLoader
-  private let dataImageAdapter: DataImageAdapter
+  private let dataImageAdapter: DataImageTransformer
 
-  init(
+  public init(
     imageDataLoader: any ImageDataLoader,
-    dataImageAdapter: @escaping DataImageAdapter
+    dataImageAdapter: @escaping DataImageTransformer
   ) {
     self.imageDataLoader = imageDataLoader
     self.dataImageAdapter = dataImageAdapter
