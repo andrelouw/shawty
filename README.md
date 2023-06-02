@@ -1,35 +1,54 @@
+> ⚠️ TODO: Update badges
 [![CI-iOS](https://github.com/andrelouw/app-template/actions/workflows/ci-ios.yml/badge.svg)](https://github.com/andrelouw/app-template/actions/workflows/ci-ios.yml)
 [![CI-macOS](https://github.com/andrelouw/app-template/actions/workflows/ci-macos.yml/badge.svg)](https://github.com/andrelouw/app-template/actions/workflows/ci-macos.yml)
 [![Tuist badge](https://img.shields.io/badge/Powered%20by-Tuist-blue)](https://tuist.io)
 
-> ⚠️ This project is still under active development - be warned 😱
+# Shawty
+A sample music app to search for artists and browse albums and tracks for that artist.
 
-# App Template
-This is a basic App template to get up and running with `iOS` or `macOS` projects quickly.
+## Getting started
+To get started you have 2 options, light or **hardcore**:
 
-To get started:
-- Clone this repo using one of the methods described [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-- Run the folloiwng in the cloned repository:
-```
+### Light
+Assuming that you have Xcode installed,
+Open the `Shawty.xcworkspace` file, which will load the whole project in Xcode.
+Choose the `iOS` target and start browsing 🔍.
+
+> Normally `.xcworkspace` and `.xcodeproj` files will be git-ignored, but for the purposes of this exercise it was committed as an alternate solution to view the project. 
+
+### Hardcore
+Run the following command in root of the cloned repository:
+
+```shell
 make
 ```
 
-Running `make` will [bootstrap](Documentation/Commands.md#bootstrap), [rename](Documentation/Commands.md#rename), and [run](Documentation/Commands.md#run) the project for you.
+The `make` command will set up the dev environment, generate and build the workspace, and finally launch Xcode with the generated workspace.
+Choose the `iOS` target and start browsing 🔍.
 
-> ℹ️ All installation can be undone with the [`make unboostrap`](Documentation/Commands.md#uninstall)
+## Features
+The app has the following features, and detailed breakdown of each can be found on the respective page:
+> ⚠️ TODO: Link specs 
+- [Artist Search](Documentation/ArtistFeatureSpecs.md)
 
-🎉 Happy coding
+## Behind the name
+The name was inspired by the song [Replay from Iyaz](https://g.co/kgs/M1eW5e):
 
+>" **Shawty's** _like a melody in my head \
+> That I can't keep out, got me singin' like \
+> Na na na na everyday \
+> It's like my iPod's stuck on replay \
+> Replay-ay-ay-ay_  "
+
+## Break down of work done
+> ⚠️ TODO: Link PRs
+See the [closed PRs]() for a detailed break-down of the work done
 
 ## Other details
+This (personal and still very much under development) [App template](https://github.com/andrelouw/app-template) was used as a starting point for this project.
 
 See the [Commands](Documentation/Commands.md) page for a full list of `make` commands.
 
 See the [Project Structure](Documentation/ProjectStructure.md) page for an overview of the project and directory structure.
 
 See the [Tools](Documentation/Tools.md) page for all the tools used in this project.
-
-
-## Caveats
-- Multiplatform `Feature` modules has not been tested yet, best to keep them to one platform for now
-- See issues list for improvments and outstanding features
