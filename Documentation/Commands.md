@@ -27,6 +27,11 @@ Cleans and builds the project using [Tuist](#tuist).
 
 Generate the project workspace and open it using [Tuist](#tuist).
 
+### Edit
+`make edit`
+
+Opens the Manifest for editing using [Tuist](#tuist).
+
 ### Workspace
 `make workspace`
 

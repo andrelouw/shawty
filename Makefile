@@ -21,6 +21,9 @@ build: --tuist
 run: --tuist
 	@tuist generate
 
+edit: --tuist
+	@tuist edit
+
 workspace: --tuist
 	@tuist generate --no-open
 
