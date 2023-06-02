@@ -13,11 +13,11 @@ public final class ImageTitleRowViewModel<ID: Hashable>: ObservableObject, Ident
 
   private var imageLoadingTask: Task<(), Never>?
   private let imageLoader: ImageLoader
-  private let model: ImageTitleCellModel<ID>
+  private let model: ImageTitleRowModel<ID>
   public var id: ID { model.id }
 
   public init(
-    model: ImageTitleCellModel<ID>,
+    model: ImageTitleRowModel<ID>,
     imageLoader: @escaping ImageLoader
   ) {
     self.model = model
