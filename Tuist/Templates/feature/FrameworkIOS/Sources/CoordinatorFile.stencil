@@ -1,0 +1,25 @@
+import {{ name }}
+import Core
+import UIKit
+
+public protocol {{ name }}CoordinatorDelegate { }
+
+public final class {{ name }}Coordinator: Coordinator {
+  private let baseViewController: UIViewController
+
+  public var delegate: {{ name }}CoordinatorDelegate?
+
+  public init(
+    baseViewController: UIViewController
+  ) {
+    self.baseViewController = baseViewController
+  }
+
+  public func start() {
+    baseViewController.show(viewController(), sender: self)
+  }
+
+  private func viewController() -> UIViewController {
+   {{ name }}ViewController()
+  }
+}

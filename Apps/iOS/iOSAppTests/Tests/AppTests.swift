@@ -1,4 +1,4 @@
-import iOS
+import iOSApp
 import XCTest
 
 final class AppTests: XCTestCase {

@@ -14,4 +14,11 @@ extension TargetDependency {
       path: .relativeToRoot("Modules/Features/\(name)")
     )
   }
+
+  public static func featureIOS(_ name: String) -> TargetDependency {
+    .project(
+      target: "\(name)IOS",
+      path: .relativeToRoot("Modules/Features/\(name)")
+    )
+  }
 }

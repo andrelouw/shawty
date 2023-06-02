@@ -33,37 +33,55 @@ let template = Template(
     ),
     // Framework
     .file(
-      path: modulePath("\(nameAttribute)/Sources/\(nameAttribute)Coordinator.swift"),
-      templatePath: "Framework/Sources/CoordinatorFile.stencil"
-    ),
-    .file(
-      path: modulePath("\(nameAttribute)/Sources/\(nameAttribute)View.swift"),
-      templatePath: "Framework/Sources/ViewFile.stencil"
-    ),
-    .file(
-      path: modulePath("\(nameAttribute)/Sources/\(nameAttribute)ViewController.swift"),
-      templatePath: "Framework/Sources/ViewControllerFile.stencil"
-    ),
-    .file(
-      path: modulePath("\(nameAttribute)/Resources/en.lproj/\(nameAttribute).strings"),
-      templatePath: "Framework/Resources/Feature.strings"
-    ),
-    .directory(
-      path: modulePath("\(nameAttribute)/Resources"),
-      sourcePath: "Framework/Resources/Assets.xcassets"
+      path: modulePath("\(nameAttribute)/Sources/\(nameAttribute).swift"),
+      templatePath: "Framework/Sources/SourceFile.stencil"
     ),
     .file(
       path: modulePath("\(nameAttribute)/Config/Info.plist"),
       templatePath: "Framework/Config/Info.plist"
     ),
-    // Tests
+    // FrameworkTests
     .file(
       path: modulePath("\(nameAttribute)Tests/Config/Info.plist"),
-      templatePath: "Tests/Config/Info.plist"
+      templatePath: "FrameworkTests/Config/Info.plist"
     ),
     .file(
-      path: modulePath("\(nameAttribute)Tests/Tests/\(nameAttribute)CoordinatorTests.swift"),
-      templatePath: "Tests/Tests/CoordinatorTestsFile.stencil"
+      path: modulePath("\(nameAttribute)Tests/Tests/\(nameAttribute)Tests.swift"),
+      templatePath: "FrameworkTests/Tests/TestsFile.stencil"
+    ),
+    // FrameworkIOS
+    .file(
+      path: modulePath("\(nameAttribute)IOS/Sources/\(nameAttribute)Coordinator.swift"),
+      templatePath: "FrameworkIOS/Sources/CoordinatorFile.stencil"
+    ),
+    .file(
+      path: modulePath("\(nameAttribute)IOS/Sources/\(nameAttribute)View.swift"),
+      templatePath: "FrameworkIOS/Sources/ViewFile.stencil"
+    ),
+    .file(
+      path: modulePath("\(nameAttribute)IOS/Sources/\(nameAttribute)ViewController.swift"),
+      templatePath: "FrameworkIOS/Sources/ViewControllerFile.stencil"
+    ),
+    .file(
+      path: modulePath("\(nameAttribute)IOS/Resources/en.lproj/\(nameAttribute).strings"),
+      templatePath: "FrameworkIOS/Resources/Feature.strings"
+    ),
+    .directory(
+      path: modulePath("\(nameAttribute)IOS/Resources"),
+      sourcePath: "FrameworkIOS/Resources/Assets.xcassets"
+    ),
+    .file(
+      path: modulePath("\(nameAttribute)IOS/Config/Info.plist"),
+      templatePath: "FrameworkIOS/Config/Info.plist"
+    ),
+    // Framework iOS Tests
+    .file(
+      path: modulePath("\(nameAttribute)IOSTests/Config/Info.plist"),
+      templatePath: "FrameworkIOSTests/Config/Info.plist"
+    ),
+    .file(
+      path: modulePath("\(nameAttribute)IOSTests/Tests/\(nameAttribute)CoordinatorTests.swift"),
+      templatePath: "FrameworkIOSTests/Tests/IOSTests.stencil"
     ),
     // Example App
     .directory(

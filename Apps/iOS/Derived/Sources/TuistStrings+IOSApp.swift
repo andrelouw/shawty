@@ -11,18 +11,18 @@ import Foundation
 
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
-public enum IOSStrings {
+public enum IOSAppStrings {
   /// My App
-  public static let appNameFallback = IOSStrings.tr("App", "App_name_fallback")
+  public static let appNameFallback = IOSAppStrings.tr("App", "App_name_fallback")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name
 
 // MARK: - Implementation Details
 
-extension IOSStrings {
+extension IOSAppStrings {
   private static func tr(_ table: String, _ key: String, _ args: CVarArg...) -> String {
-    let format = IOSResources.bundle.localizedString(forKey: key, value: nil, table: table)
+    let format = IOSAppResources.bundle.localizedString(forKey: key, value: nil, table: table)
     return String(format: format, locale: Locale.current, arguments: args)
   }
 }

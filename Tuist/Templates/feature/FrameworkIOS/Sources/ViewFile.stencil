@@ -2,17 +2,15 @@ import UI
 import SwiftUI
 
 public struct {{ name }}View: View {
-  var appName: String
-
   public var body: some View {
     ZStack {
       Color.brand.secondary
         .ignoresSafeArea()
       VStack {
-        Text({{ name }}Strings.welcomeMessage)
+        Text({{ name }}IOSStrings.welcomeMessage)
           .font(.headline)
           .foregroundColor(.font.primary)
-        Text(appName)
+        Text("{{ name }}")
           .font(.largeTitle)
           .foregroundColor(.font.secondary)
       }
@@ -23,6 +21,6 @@ public struct {{ name }}View: View {
 
 struct {{ name }}View_Previews: PreviewProvider {
     static var previews: some View {
-        {{ name }}View(appName: "MyApp")
+        {{ name }}View()
     }
 }

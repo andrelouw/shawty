@@ -8,5 +8,6 @@ let project = Project.app(
     .foundation("Core"),
     .foundation("UI"),
     .feature("Welcome"),
+    .featureIOS("Welcome"),
   ]
 )

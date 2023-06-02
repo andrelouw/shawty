@@ -9,7 +9,7 @@ public struct WelcomeView: View {
       Color.brand.secondary
         .ignoresSafeArea()
       VStack {
-        Text(WelcomeStrings.welcomeMessage)
+        Text(WelcomeIOSStrings.welcomeMessage)
           .font(.headline)
           .foregroundColor(.font.primary)
         Text(appName)

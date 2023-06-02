@@ -36,7 +36,7 @@ extension Target {
     )
   }
 
-  static func makeTestTarget(
+  public static func makeTestTarget(
     name: String,
     platform: PlatformSet,
     dependencies: [TargetDependency] = []
@@ -56,7 +56,7 @@ extension Target {
     )
   }
 
-  static func makeFrameworkTarget(
+  public static func makeFrameworkTarget(
     name: String,
     platform: PlatformSet,
     hasResources: Bool = false,

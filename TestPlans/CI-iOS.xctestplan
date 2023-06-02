@@ -28,16 +28,16 @@
     },
     {
       "target" : {
-        "containerPath" : "container:Modules\/Features\/Welcome\/Welcome.xcodeproj",
-        "identifier" : "AC03EA852191608C960564B1",
-        "name" : "WelcomeTests"
+        "containerPath" : "container:Apps\/iOS\/iOS.xcodeproj",
+        "identifier" : "26E6F33D9A2889D035E7E9D6",
+        "name" : "iOSAppTests"
       }
     },
     {
       "target" : {
-        "containerPath" : "container:Apps\/iOS\/iOS.xcodeproj",
-        "identifier" : "26E6F33D9A2889D035E7E9D6",
-        "name" : "iOSAppTests"
+        "containerPath" : "container:Modules\/Features\/Welcome\/Welcome.xcodeproj",
+        "identifier" : "AE572603CF7D88A0B3DBA0E8",
+        "name" : "WelcomeIOSTests"
       }
     }
   ],
