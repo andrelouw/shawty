@@ -1,4 +1,4 @@
-import iOSApp
+import Shawty
 import XCTest
 
 final class AppTests: XCTestCase {

@@ -4,9 +4,10 @@ import SharedIOS
 import UIKit
 
 extension FeatureFactory {
-  public func makeArtistSearchViewController(
+  func makeArtistSearchViewController(
     onArtistSelection: @escaping (Int) -> Void
   ) -> UIViewController {
+    // FIXME: Very long method body!! Shorten
     let url = ArtistEndpoint.search.url(baseURL: baseURL)
 
     let remoteArtistSearchLoader = RemoteArtistSearchLoader(
@@ -19,7 +20,6 @@ extension FeatureFactory {
       dataImageAdapter: UIImage.init(data:)
     )
 
-    // Makes [ListCellVieModel] from [Artist]
     let artistsListCellViewModelAdapter = ArtistImageTitleRowViewModelAdapter(
       artistsSearchLoader: remoteArtistSearchLoader,
       imageDataLoadingImageAdapter: imageDataLoadingImageAdapter
@@ -29,7 +29,6 @@ extension FeatureFactory {
       promptText: ArtistIOSStrings.artistSearchPrompt
     )
 
-    // Makes calls loader on search term update and creates ContentViewStream<[ListCellVieModel]> from [Artist]
     let contentStreamAdapter = PublishedQueryContentStreamAdapter(
       queryPublisher: searchViewModel
         .searchTextPublisher()

@@ -4,14 +4,14 @@
 // Generated using tuist — https://github.com/tuist/tuist
 
 #if os(macOS)
-  import AppKit
+import AppKit
 #elseif os(iOS)
-  import UIKit
+import UIKit
 #elseif os(tvOS) || os(watchOS)
-  import UIKit
+import UIKit
 #endif
 #if canImport(SwiftUI)
-  import SwiftUI
+import SwiftUI
 #endif
 
 // swiftlint:disable superfluous_disable_command file_length implicit_return
@@ -19,15 +19,15 @@
 // MARK: - Asset Catalogs
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
-public enum IOSAppAsset {
-  public static let accentColor = IOSAppColors(name: "AccentColor")
-  public static let app = IOSAppImages(name: "app")
+public enum ShawtyAsset {
+  public static let accentColor = ShawtyColors(name: "AccentColor")
+  public static let app = ShawtyImages(name: "app")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
 // MARK: - Implementation Details
 
-public final class IOSAppColors {
+public final class ShawtyColors {
   public fileprivate(set) var name: String
 
   #if os(macOS)
@@ -66,10 +66,10 @@ public final class IOSAppColors {
   }
 }
 
-public extension IOSAppColors.Color {
+public extension ShawtyColors.Color {
   @available(iOS 11.0, tvOS 11.0, watchOS 4.0, macOS 10.13, *)
-  convenience init?(asset: IOSAppColors) {
-    let bundle = IOSAppResources.bundle
+  convenience init?(asset: ShawtyColors) {
+    let bundle = ShawtyResources.bundle
     #if os(iOS) || os(tvOS)
     self.init(named: asset.name, in: bundle, compatibleWith: nil)
     #elseif os(macOS)
@@ -83,14 +83,14 @@ public extension IOSAppColors.Color {
 #if canImport(SwiftUI)
 @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
 public extension SwiftUI.Color {
-  init(asset: IOSAppColors) {
-    let bundle = IOSAppResources.bundle
+  init(asset: ShawtyColors) {
+    let bundle = ShawtyResources.bundle
     self.init(asset.name, bundle: bundle)
   }
 }
 #endif
 
-public struct IOSAppImages {
+public struct ShawtyImages {
   public fileprivate(set) var name: String
 
   #if os(macOS)
@@ -100,7 +100,7 @@ public struct IOSAppImages {
   #endif
 
   public var image: Image {
-    let bundle = IOSAppResources.bundle
+    let bundle = ShawtyResources.bundle
     #if os(iOS) || os(tvOS)
     let image = Image(named: name, in: bundle, compatibleWith: nil)
     #elseif os(macOS)
@@ -122,12 +122,12 @@ public struct IOSAppImages {
   #endif
 }
 
-public extension IOSAppImages.Image {
+public extension ShawtyImages.Image {
   @available(macOS, deprecated,
-    message: "This initializer is unsafe on macOS, please use the IOSAppImages.image property")
-  convenience init?(asset: IOSAppImages) {
+  message: "This initializer is unsafe on macOS, please use the ShawtyImages.image property")
+  convenience init?(asset: ShawtyImages) {
     #if os(iOS) || os(tvOS)
-    let bundle = IOSAppResources.bundle
+    let bundle = ShawtyResources.bundle
     self.init(named: asset.name, in: bundle, compatibleWith: nil)
     #elseif os(macOS)
     self.init(named: NSImage.Name(asset.name))
@@ -140,18 +140,18 @@ public extension IOSAppImages.Image {
 #if canImport(SwiftUI)
 @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
 public extension SwiftUI.Image {
-  init(asset: IOSAppImages) {
-    let bundle = IOSAppResources.bundle
+  init(asset: ShawtyImages) {
+    let bundle = ShawtyResources.bundle
     self.init(asset.name, bundle: bundle)
   }
 
-  init(asset: IOSAppImages, label: Text) {
-    let bundle = IOSAppResources.bundle
+  init(asset: ShawtyImages, label: Text) {
+    let bundle = ShawtyResources.bundle
     self.init(asset.name, bundle: bundle, label: label)
   }
 
-  init(decorative asset: IOSAppImages) {
-    let bundle = IOSAppResources.bundle
+  init(decorative asset: ShawtyImages) {
+    let bundle = ShawtyResources.bundle
     self.init(decorative: asset.name, bundle: bundle)
   }
 }

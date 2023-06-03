@@ -1,26 +1,20 @@
-import Artist
 import ArtistIOS
-import Core
-import Networking
 import Shared
-import SharedIOS
 import UI
 import UIKit
 
-final class MainCoordinator: Coordinator, FeatureFactory {
-  var navigationController: UINavigationController
-  var childCoordinators = [Coordinator]()
+final class ArtistSearchSceneCoordinator: Coordinator {
+  public var childCoordinators = [Coordinator]()
+  public let navigationController: UINavigationController
+  private lazy var featureFactory: FeatureFactory = .live
 
-  let baseURL = URL(string: "https://api.deezer.com")!
-  lazy var httpClient: HTTPClient = URLSessionHTTPClient(session: .shared)
-  lazy var imageLoader: any ImageDataLoader = RemoteImageDataLoader(client: httpClient)
-
-  init(appWindow: UIWindow) {
-    navigationController = UINavigationController()
-    appWindow.rootViewController = navigationController
+  public init(
+    with navigationController: UINavigationController
+  ) {
+    self.navigationController = navigationController
   }
 
-  func start() {
+  public func start() {
     let coordinator = artistSearchCoordinator()
     addChild(coordinator)
     // TODO: WeakReference Proxy
@@ -32,13 +26,13 @@ final class MainCoordinator: Coordinator, FeatureFactory {
   private func artistSearchCoordinator() -> ArtistSearchCoordinator {
     ArtistSearchCoordinator(
       navigationController: navigationController,
-      featureFactory: self,
+      featureFactory: featureFactory,
       removeCoordinatorWith: removeChild
     )
   }
 }
 
-extension MainCoordinator: ArtistSearchCoordinatorDelegate {
+extension ArtistSearchSceneCoordinator: ArtistSearchCoordinatorDelegate {
   func didSelectArtist(withID id: Int) {
     let alert = UIAlertController(
       title: "Artist Selected",
