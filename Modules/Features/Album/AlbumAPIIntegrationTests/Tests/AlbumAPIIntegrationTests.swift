@@ -24,6 +24,26 @@ final class AlbumAPIIntegrationTests: XCTestCase {
       XCTFail("Expected successful albums result, got \(error) instead")
     }
   }
+
+  func test_albumForAlbumIDReturnsExpectedData() async throws {
+    let albumURL = URL(string: "https://api.deezer.com/album/373401057")!
+
+    let client = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))
+    let loader = RemoteAlbumLoader(url: albumURL, client: client)
+    expectNoMemoryLeaks(for: client)
+    expectNoMemoryLeaks(for: loader)
+
+    do {
+      let album = try await loader.load()
+
+      XCTAssertEqual(album.id, 373401057)
+      XCTAssertEqual(album.title, "Thrill Of The Chase")
+      XCTAssertEqual(album.releaseDate, "2022-11-11".asISO8601FullDate())
+      XCTAssertEqual(album.hasExplicitLyrics, false)
+    } catch {
+      XCTFail("Expected successful albums result, got \(error) instead")
+    }
+  }
 }
 
 // TODO: Move to core
