@@ -29,6 +29,14 @@
         "identifier" : "4B49EE5737A81106D5B73426",
         "name" : "SharedAPIIntegrationTests"
       }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Modules\/Features\/Album\/Album.xcodeproj",
+        "identifier" : "784009B8CBA8301C0F6F7422",
+        "name" : "AlbumAPIIntegrationTests"
+      }
     }
   ],
   "version" : 1

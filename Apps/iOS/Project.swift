@@ -11,5 +11,6 @@ let project = Project.app(
     .feature("Artist"),
     .feature("Shared"),
     .featureIOS("Artist"),
+    .feature("Album"),
   ]
 )
