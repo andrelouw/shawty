@@ -2,6 +2,7 @@ import ArtistIOS
 import UI
 import UIKit
 
+/// The Main coordinator for the app, holding onto the appWindow
 public final class MainCoordinator: Coordinator {
   public lazy var navigationController = UINavigationController()
   public var childCoordinators = [Coordinator]()

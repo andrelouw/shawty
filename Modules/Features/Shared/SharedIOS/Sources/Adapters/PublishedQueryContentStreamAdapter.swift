@@ -1,15 +1,14 @@
 import Combine
 import Shared
 
-public protocol QueryValidating {
-  func isValid() -> Bool
-}
+/// Adapts a published query value to an `AsyncStream` of `ContentViewState<Value>` where Value is the given `Loader`'s `Output`
+public final class PublishedQueryContentStreamAdapter<Loader: QueryValueLoader> {
+  public typealias EmptyQueryEvaluation = (Loader.Input) -> Bool
+  public typealias EmptyOutputEvaluation = (Loader.Output) -> Bool
 
-/// Adapts a published query value to an Async stream of ContentViewState<Value> where Value is the given Loader's output
-public final class PublishedQueryContentStreamAdapter<Loader: QueryValueLoader> where Loader.Input: QueryValidating {
-  public typealias EmptyEvaluation = (Loader.Output) -> Bool
   private let loader: Loader
-  private let isEmptyEvaluation: EmptyEvaluation
+  private let isEmptyQuery: EmptyQueryEvaluation
+  private let isEmptyOutput: EmptyOutputEvaluation
   private let queryPublisher: AnyPublisher<Loader.Input, Never>
 
   private var querySubscription: AnyCancellable?
@@ -17,10 +16,12 @@ public final class PublishedQueryContentStreamAdapter<Loader: QueryValueLoader> 
   public init(
     queryPublisher: AnyPublisher<Loader.Input, Never>,
     loader: Loader,
-    isEmpty isEmptyEvaluation: @escaping EmptyEvaluation
+    isEmptyQuery: @escaping EmptyQueryEvaluation,
+    isEmptyOutput: @escaping EmptyOutputEvaluation
   ) {
     self.loader = loader
-    self.isEmptyEvaluation = isEmptyEvaluation
+    self.isEmptyQuery = isEmptyQuery
+    self.isEmptyOutput = isEmptyOutput
     self.queryPublisher = queryPublisher
   }
 
@@ -45,12 +46,12 @@ public final class PublishedQueryContentStreamAdapter<Loader: QueryValueLoader> 
 
   private func load(_ query: Loader.Input) async -> ContentViewState<Loader.Output> {
     do {
-      guard query.isValid() else {
+      guard isEmptyQuery(query) else {
         return .noSearch
       }
 
       let value = try await loader.load(query)
-      guard !isEmpty(value) else {
+      guard !isEmptyOutput(value) else {
         return .empty
       }
 
@@ -59,13 +60,11 @@ public final class PublishedQueryContentStreamAdapter<Loader: QueryValueLoader> 
       return .error(SharedIOSStrings.fullScreenConnectionError)
     }
   }
-
-  private func isEmpty(_ value: Loader.Output) -> Bool {
-    isEmptyEvaluation(value)
-  }
 }
 
-extension PublishedQueryContentStreamAdapter where Loader.Output: Collection {
+// MARK: - Convenience init
+
+extension PublishedQueryContentStreamAdapter where Loader.Output: Collection, Loader.Input == String {
   public convenience init(
     queryPublisher: AnyPublisher<Loader.Input, Never>,
     loader: Loader
@@ -73,7 +72,8 @@ extension PublishedQueryContentStreamAdapter where Loader.Output: Collection {
     self.init(
       queryPublisher: queryPublisher,
       loader: loader,
-      isEmpty: { $0.isEmpty }
+      isEmptyQuery: { $0.isEmpty },
+      isEmptyOutput: { $0.isEmpty }
     )
   }
 }

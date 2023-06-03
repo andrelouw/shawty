@@ -4,6 +4,7 @@ import Shared
 import UI
 import UIKit
 
+/// The Artist Search Scene, the launching feature of the app
 final class ArtistSearchSceneCoordinator: Coordinator {
   public var childCoordinators = [Coordinator]()
   public let navigationController: UINavigationController
@@ -18,6 +19,7 @@ final class ArtistSearchSceneCoordinator: Coordinator {
   public func start() {
     let coordinator = artistSearchCoordinator()
     addChild(coordinator)
+
     // TODO: WeakReference Proxy
     coordinator.delegate = self
     coordinator.start()
@@ -50,6 +52,7 @@ extension ArtistSearchSceneCoordinator: ArtistSearchCoordinatorDelegate {
 }
 
 extension ArtistSearchSceneCoordinator: AlbumListCoordinatorDelegate {
+  // Simulating playing of a track
   func didSelectTrack(withID id: Int) {
     let alert = UIAlertController(
       title: "'Playing' Track",

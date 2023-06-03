@@ -10,7 +10,11 @@
   ],
   "defaultOptions" : {
     "codeCoverage" : false,
-    "testTimeoutsEnabled" : true
+    "diagnosticCollectionPolicy" : "Never",
+    "testExecutionOrdering" : "random",
+    "testTimeoutsEnabled" : true,
+    "uiTestingScreenshotsLifetime" : "keepNever",
+    "userAttachmentLifetime" : "keepNever"
   },
   "testTargets" : [
     {
@@ -40,7 +44,7 @@
     {
       "parallelizable" : true,
       "target" : {
-        "containerPath" : "container:Track.xcodeproj",
+        "containerPath" : "container:Modules\/Features\/Track\/Track.xcodeproj",
         "identifier" : "6356EAB63F9F189F4F69D007",
         "name" : "TrackAPIIntegrationTests"
       }

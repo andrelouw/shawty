@@ -1,6 +1,7 @@
 import Foundation
 import Shared
 
+/// Adapt `ValueLoader` output to provide `ContentViewStream` where the stream value is `Loader.Output`
 public struct ValueLoaderContentStreamAdapter<Loader: ValueLoader> {
   public typealias EmptyEvaluation = (Loader.Output) -> Bool
   private let loader: Loader
@@ -40,6 +41,8 @@ public struct ValueLoaderContentStreamAdapter<Loader: ValueLoader> {
     isEmptyEvaluation(value)
   }
 }
+
+// MARK: - Convenience init
 
 extension ValueLoaderContentStreamAdapter where Loader.Output: Collection {
   public init(loader: Loader) {

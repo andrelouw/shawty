@@ -6,13 +6,13 @@ public protocol ArtistSearchCoordinatorDelegate {
   func didSelectArtist(withID id: Int)
 }
 
+/// The scene showing a list of `Artist`s based on a given typed search query
 public final class ArtistSearchCoordinator: NSObject, Coordinator {
-  public var navigationController: UINavigationController
+  public let navigationController: UINavigationController
   public var childCoordinators: [Coordinator] = []
-  private let featureFactory: FeatureFactory
-
   public var delegate: ArtistSearchCoordinatorDelegate?
 
+  private let featureFactory: FeatureFactory
   private var removeCoordinatorWhenViewDismissed: (Coordinator) -> Void
 
   public init(
@@ -32,7 +32,11 @@ public final class ArtistSearchCoordinator: NSObject, Coordinator {
   public func start() {
     navigate(to: artistSearchViewController(), with: .push)
   }
+}
 
+// MARK: -- Factory Methods
+
+extension ArtistSearchCoordinator {
   private func artistSearchViewController() -> UIViewController {
     featureFactory.makeArtistSearchViewController { [weak self] id in
       guard let self else { return }
@@ -40,6 +44,8 @@ public final class ArtistSearchCoordinator: NSObject, Coordinator {
     }
   }
 }
+
+// MARK: - UINavigationControllerDelegate
 
 extension ArtistSearchCoordinator: UINavigationControllerDelegate {
   public func navigationController(

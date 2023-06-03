@@ -1,6 +1,7 @@
 import Networking
 import Shared
 
+// The Live instance of the Feature Factory, providing the live global instances
 final class LiveFeatureFactory: FeatureFactory {
   private init() { }
 

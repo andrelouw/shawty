@@ -7,9 +7,9 @@ public protocol AlbumListCoordinatorDelegate {
   func didSelectTrack(withID id: Int)
 }
 
+/// The scene showing a list of `Album`s and showing more detail and `Track`s on a selected `Album`
 public final class AlbumListCoordinator: NSObject, Coordinator {
-  public var navigationController: UINavigationController
-
+  public let navigationController: UINavigationController
   public var childCoordinators: [Coordinator] = []
 
   private let featureFactory: FeatureFactory
@@ -41,7 +41,11 @@ public final class AlbumListCoordinator: NSObject, Coordinator {
   private func showAlbumDetail(for id: Int) {
     navigationController.show(albumDetailViewController(for: id), sender: self)
   }
+}
 
+// MARK: -- Factory Methods
+
+extension AlbumListCoordinator {
   private func albumListViewController() -> UIViewController {
     featureFactory
       .makeAlbumListViewController(for: albumListURL) { [weak self] id in
@@ -57,6 +61,8 @@ public final class AlbumListCoordinator: NSObject, Coordinator {
       }
   }
 }
+
+// MARK: - UINavigationControllerDelegate
 
 extension AlbumListCoordinator: UINavigationControllerDelegate {
   public func navigationController(

@@ -14,5 +14,7 @@ final class AppCoordinator {
     mainCoordinator.start()
     childCoordinators = [mainCoordinator]
     window.makeKeyAndVisible()
+
+    window.windowScene?.keyWindow?.tintColor = TrackAppAsset.accentColor.color
   }
 }

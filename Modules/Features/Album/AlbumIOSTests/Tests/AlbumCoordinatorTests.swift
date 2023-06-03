@@ -1,6 +1,8 @@
-import Album
+import AlbumIOS
+import Shared
+import Testing
 import XCTest
 
 final class AlbumCoordinatorTests: XCTestCase {
-  func test_coordinatorInit() { }
+  func test() { }
 }
