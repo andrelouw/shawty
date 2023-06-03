@@ -25,6 +25,6 @@ public final class RemoteTracksLoader: TracksLoader {
       throw Error.connectivity
     }
 
-    return try TrackMapper.map(response.data, response.httpResponse)
+    return try TracksMapper.map(response.data, response.httpResponse)
   }
 }
