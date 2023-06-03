@@ -11,5 +11,6 @@ public final class MainCoordinator: Coordinator {
     appWindow.rootViewController = navigationController
   }
 
+  // No launching any features, but keeping the app to have an executable target in the module for SwiftUI views etc
   public func start() { }
 }

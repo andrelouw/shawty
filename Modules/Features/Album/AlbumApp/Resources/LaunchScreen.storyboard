@@ -22,7 +22,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app" translatesAutoresizingMaskIntoConstraints="NO" id="KKT-SB-RLv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="KKT-SB-RLv">
                                 <rect key="frame" x="146.66666666666666" y="388.66666666666669" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="GMh-TZ-RPm"/>
@@ -31,7 +31,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
-                        <color key="backgroundColor" name="AccentColor"/>
+                        <color key="backgroundColor" name="brand.secondary"/>
                         <constraints>
                             <constraint firstItem="Bcu-3y-fUS" firstAttribute="centerX" secondItem="obG-Y5-kRd" secondAttribute="centerX" id="5cz-MP-9tL"/>
                             <constraint firstItem="KKT-SB-RLv" firstAttribute="centerY" secondItem="Bcu-3y-fUS" secondAttribute="centerY" id="FVb-pA-yIE"/>
@@ -47,9 +47,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="app" width="747" height="660"/>
-        <namedColor name="AccentColor">
-            <color red="0.41568627450980394" green="0.83137254901960789" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="logo" width="1024" height="1024"/>
+        <namedColor name="brand.secondary">
+            <color red="0.5220000147819519" green="0.2669999897480011" blue="0.43500000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
