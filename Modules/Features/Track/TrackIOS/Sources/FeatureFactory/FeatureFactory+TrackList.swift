@@ -6,18 +6,18 @@ import Track
 extension FeatureFactory {
   func makeTrackListViewController(
     for url: URL,
-    isFirstViewController _: Bool = false,
-    screenTitle _: String? = TrackIOSStrings.trackListScreenTitle,
-    sectionTitle _: String? = nil,
+    sectionTitle: String? = nil,
     onTrackSelection: @escaping (Int) -> Void
   ) -> UIViewController {
-    let view = makeTrackListView(
+    let viewModel = makeTrackListViewModel(
       for: url,
+      sectionTitle: sectionTitle,
       onTrackSelection: onTrackSelection
     )
 
     return TrackListViewController(
-      trackListView: view
+      screenTitle: TrackIOSStrings.trackListScreenTitle,
+      listViewModel: viewModel
     )
   }
 
@@ -26,6 +26,25 @@ extension FeatureFactory {
     sectionTitle: String? = nil,
     onTrackSelection: @escaping (Int) -> Void
   ) -> ListView<TrackRowView<Int>> {
+    let viewModel = makeTrackListViewModel(
+      for: url,
+      sectionTitle: sectionTitle,
+      onTrackSelection: onTrackSelection
+    )
+
+    return ListView(
+      viewModel: viewModel,
+      rowView: { model in
+        TrackRowView(model: model)
+      }
+    )
+  }
+
+  private func makeTrackListViewModel(
+    for url: URL,
+    sectionTitle: String? = nil,
+    onTrackSelection: @escaping (Int) -> Void
+  ) -> TrackListViewModel {
     let remoteTrackLoader = RemoteTracksLoader(
       url: url,
       client: httpClient
@@ -39,17 +58,10 @@ extension FeatureFactory {
       loader: tracksCellModelAdapter
     )
 
-    let viewModel = ListViewModel(
+    return ListViewModel(
       sectionTitle: sectionTitle,
       contentLoader: contentStreamAdapter.load,
       onItemSelection: onTrackSelection
-    )
-
-    return ListView(
-      viewModel: viewModel,
-      rowView: { model in
-        TrackRowView(model: model)
-      }
     )
   }
 }
