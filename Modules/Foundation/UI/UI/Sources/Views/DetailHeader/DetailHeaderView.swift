@@ -24,7 +24,7 @@ public struct DetailHeaderView: View {
   private var title: some View {
     Text(model.title)
       .font(.title2)
-      .foregroundColor(.white)
+      .foregroundColor(.font.onOverlay)
       .lineLimit(2)
       .padding()
   }
@@ -32,14 +32,14 @@ public struct DetailHeaderView: View {
   private var subtitle: some View {
     Text(model.subtitle)
       .font(.subheadline)
-      .foregroundColor(.white)
+      .foregroundColor(.font.onOverlay)
   }
 
   private var icons: some View {
     HStack {
       ForEach(model.icons) {
-        $0.asSystemImage()
-          .foregroundColor(.white)
+        $0.asImage()
+          .foregroundColor(.font.onOverlay)
       }
     }
   }

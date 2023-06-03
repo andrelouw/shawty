@@ -13,9 +13,10 @@ public struct TrackRowView<ID: Hashable>: View, ListRowDisplayable {
   public var body: some View {
     HStack {
       Text(model.title)
+        .foregroundColor(.font.primary)
       Spacer()
-      Icon.play.asSystemImage()
-        .foregroundColor(.status.success)
+      Icon.play.asImage()
+        .foregroundColor(.brand.primary)
         .font(.body)
     }
   }

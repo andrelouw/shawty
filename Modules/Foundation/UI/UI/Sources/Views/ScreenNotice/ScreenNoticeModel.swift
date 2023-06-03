@@ -7,7 +7,7 @@ public struct ScreenNoticeModel: Equatable {
 
     var opacity: Double {
       if case .watermark = self {
-        return 0.5
+        return 0.3
       }
       return 1.0
     }
@@ -23,7 +23,7 @@ public struct ScreenNoticeModel: Equatable {
     title: String,
     subtitle: String? = nil,
     icon: Icon,
-    iconColor: Color = .gray,
+    iconColor: Color = .brand.primary,
     style: Style = .prominent
   ) {
     self.title = title

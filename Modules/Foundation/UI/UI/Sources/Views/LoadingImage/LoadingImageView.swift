@@ -15,17 +15,13 @@ public struct LoadingImageView: View {
       switch loadingImage {
       case .loaded:
         imageView
-          .transition(.opacity.animation(.easeInOut(duration: 0.35)))
-          .zIndex(1)
+          .fadeOnTransition()
       case .loading:
         loaderView
-          .transition(.opacity.animation(.easeInOut(duration: 0.35)))
-          .zIndex(1)
-
+          .fadeOnTransition()
       case .empty:
         placeholderView
-          .transition(.opacity.animation(.easeInOut(duration: 0.35)))
-          .zIndex(1)
+          .fadeOnTransition()
       }
     }
   }

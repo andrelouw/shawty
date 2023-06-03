@@ -10,16 +10,19 @@ public struct ScreenNoticeView: View {
   public var body: some View {
     VStack(spacing: 20) {
       iconView
-      Spacer().frame(height: 5)
+      Spacer()
       titleView
       subtitleView
     }
+    .frame(height: 200)
     .opacity(model.style.opacity)
+    .animation(.easeInOut(duration: 0.35), value: model)
   }
 
   private var titleView: some View {
     Text(model.title)
       .font(.headline)
+      .foregroundColor(.font.primary)
       .multilineTextAlignment(.center)
   }
 
@@ -27,13 +30,13 @@ public struct ScreenNoticeView: View {
     if let subtitle = model.subtitle {
       Text(subtitle)
         .font(.subheadline)
-        .foregroundColor(model.iconColor)
+        .foregroundColor(.font.secondary)
         .multilineTextAlignment(.center)
     }
   }
 
   private var iconView: some View {
-    model.icon.asSystemImage()
+    model.icon.asImage()
       .font(.system(size: 50))
       .foregroundColor(model.iconColor)
   }

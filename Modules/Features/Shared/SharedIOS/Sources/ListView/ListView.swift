@@ -22,11 +22,10 @@ public struct ListView<Row: ListRowDisplayable>: View {
   }
 
   public var body: some View {
-    NavigationView {
-      ZStack {
-        contentView
-        loader
-      }
+    ZStack {
+      Color.background.primary.ignoresSafeArea()
+      contentView
+      loader
     }
     .onViewDidLoad {
       viewModel.didAppear()
@@ -34,8 +33,8 @@ public struct ListView<Row: ListRowDisplayable>: View {
     .onDisappear {
       viewModel.didDisappear()
     }
-    // This position is important has to be after life cycles
-    .optionalNavigationTitle(title: viewModel.navigationTitle, displayMode: .large)
+    .optionalNavigationTitle(title: viewModel.navigationTitle)
+    .navigationBarTitleDisplayMode(.large)
   }
 
   @ViewBuilder private var loader: some View {
@@ -51,8 +50,11 @@ public struct ListView<Row: ListRowDisplayable>: View {
 
   @ViewBuilder private var contentView: some View {
     switch viewModel.contentViewState {
+    case .idle:
+      EmptyView()
     case .screenNotice(let model):
       screenNoticeView(model: model)
+        .fadeOnTransition()
     case .error(let message):
       errorView(with: message)
     case .loaded(let viewModels):
@@ -74,6 +76,7 @@ public struct ListView<Row: ListRowDisplayable>: View {
     }
     .scrollContentBackground(.hidden)
     .listStyle(.grouped)
+    .background(Color.background.primary)
   }
 
   private func cells(for items: [Row.Item]) -> some View {
@@ -82,7 +85,7 @@ public struct ListView<Row: ListRowDisplayable>: View {
         .contentShape(Rectangle())
         .onTapGesture {
           viewModel.didSelect(id: item.id)
-        }
+        }.listRowBackground(Color.background.primary)
     }
   }
 
