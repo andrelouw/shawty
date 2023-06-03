@@ -14,6 +14,7 @@ let project = Project.featureModule(
   ],
   additionalIOSDependencies: [
     .featureIOS("Shared"),
+    .featureIOS("Track"),
   ],
   additionalTargets: [
     .makeTestTarget(

@@ -38,10 +38,10 @@ public final class MainCoordinator: Coordinator, FeatureFactory {
 }
 
 extension MainCoordinator: AlbumListCoordinatorDelegate {
-  public func didSelectAlbum(withID id: Int) {
+  public func didSelectTrack(withID id: Int) {
     let alert = UIAlertController(
-      title: "Album Selected",
-      message: "Album ID: \(id)",
+      title: "Track Selected",
+      message: "Track ID: \(id)",
       preferredStyle: .alert
     )
 

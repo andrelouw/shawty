@@ -12,6 +12,10 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
 public enum AlbumIOSStrings {
+  /// Released: %@
+  public static func albumReleasedDate(_ p1: Any) -> String {
+    return AlbumIOSStrings.tr("Album", "ALBUM_RELEASED_DATE %@", String(describing: p1))
+  }
   /// Albums
   public static let albumSearchScreenTitle = AlbumIOSStrings.tr("Album", "ALBUM_SEARCH_SCREEN_TITLE")
 }

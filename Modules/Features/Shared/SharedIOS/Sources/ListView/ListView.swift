@@ -9,7 +9,7 @@ public struct ListView<Row: ListRowDisplayable>: View {
   public typealias ViewModel = ListViewModel<Row.Item>
   public typealias RowView = (Row.Item) -> Row
 
-  @ObservedObject private var viewModel: ViewModel
+  @StateObject private var viewModel: ViewModel
 
   private let rowView: RowView
 
@@ -17,7 +17,7 @@ public struct ListView<Row: ListRowDisplayable>: View {
     viewModel: ViewModel,
     rowView: @escaping RowView
   ) {
-    self.viewModel = viewModel
+    _viewModel = StateObject(wrappedValue: viewModel)
     self.rowView = rowView
   }
 

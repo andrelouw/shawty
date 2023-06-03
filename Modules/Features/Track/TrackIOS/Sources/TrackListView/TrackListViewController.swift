@@ -3,15 +3,10 @@ import SwiftUI
 
 final class TrackListViewController: UIHostingController<TrackListView> {
   init(
-    listViewModel: TrackListViewModel
+    trackListView: TrackListView
   ) {
     super.init(
-      rootView: TrackListView(
-        viewModel: listViewModel,
-        rowView: { model in
-          TrackRowView(model: model)
-        }
-      )
+      rootView: trackListView
     )
   }
 
