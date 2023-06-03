@@ -43,6 +43,7 @@ extension FeatureFactory {
     )
 
     return ArtistSearchListViewController(
+      screenTitle: ArtistIOSStrings.artistSearchScreenTitle,
       searchViewModel: searchViewModel,
       listViewModel: listViewModel
     )

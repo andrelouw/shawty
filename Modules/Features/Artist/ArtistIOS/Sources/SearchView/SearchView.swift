@@ -15,15 +15,13 @@ struct SearchView<ContentView: View>: View {
   }
 
   var body: some View {
-    NavigationView {
-      ZStack {
-        contentView()
-          .searchable(
-            text: $viewModel.searchText,
-            placement: .navigationBarDrawer(displayMode: .always),
-            prompt: viewModel.promptText
-          )
-      }
+    ZStack {
+      contentView()
+        .searchable(
+          text: $viewModel.searchText,
+          placement: .navigationBarDrawer(displayMode: .always),
+          prompt: viewModel.promptText
+        )
     }
   }
 }
