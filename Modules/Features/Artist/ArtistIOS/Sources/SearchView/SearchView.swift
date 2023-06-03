@@ -17,7 +17,6 @@ struct SearchView<ContentView: View>: View {
   var body: some View {
     NavigationView {
       ZStack {
-        Color.background.primary.ignoresSafeArea()
         contentView()
           .searchable(
             text: $viewModel.searchText,

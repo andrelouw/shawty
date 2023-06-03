@@ -23,6 +23,7 @@ public struct ListView<Row: ListRowDisplayable>: View {
 
   public var body: some View {
     ZStack {
+      Color.background.primary.ignoresSafeArea()
       contentView
       loader
     }
@@ -49,6 +50,8 @@ public struct ListView<Row: ListRowDisplayable>: View {
 
   @ViewBuilder private var contentView: some View {
     switch viewModel.contentViewState {
+    case .idle:
+      EmptyView()
     case .screenNotice(let model):
       screenNoticeView(model: model)
         .fadeOnTransition()

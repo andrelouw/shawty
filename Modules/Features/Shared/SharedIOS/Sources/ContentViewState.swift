@@ -2,13 +2,10 @@ import UI
 
 public enum ContentViewState<Content> {
   case loading
+  case idle
   case screenNotice(ScreenNoticeModel)
   case loaded(Content)
   case error(String)
-
-  public static var idle: Self {
-    ContentViewState.screenNotice(.idle)
-  }
 
   public static var empty: Self {
     ContentViewState.screenNotice(.noResults)
