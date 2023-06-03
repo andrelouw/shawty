@@ -20,8 +20,8 @@ extension ScreenNoticeModel {
 
   public static var noResults: ScreenNoticeModel {
     ScreenNoticeModel(
-      title: SharedIOSStrings.noSearchTitle,
-      subtitle: SharedIOSStrings.noSearchSubtitle,
+      title: SharedIOSStrings.noResultsTitle,
+      subtitle: SharedIOSStrings.noResultsSubtitle,
       icon: .noResults,
       iconColor: .status.warning
     )
