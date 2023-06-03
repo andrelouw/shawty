@@ -30,6 +30,7 @@ Choose the `iOS` target and start browsing 🔍.
 ## Features
 The app has the following features, and detailed breakdown of each can be found on the respective page:
 - [Artist Search](Documentation/ArtistFeatureSpecs.md)
+- [Album List](Documentation/AlbumListFeatureSpecs.md)
 
 ## Behind the name
 The name was inspired by the song [Replay from Iyaz](https://g.co/kgs/M1eW5e):
