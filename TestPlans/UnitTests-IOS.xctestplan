@@ -84,6 +84,22 @@
         "identifier" : "1B1376E59ED7F9AA6CB3D0FF",
         "name" : "SharedTests"
       }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Modules\/Features\/Album\/Album.xcodeproj",
+        "identifier" : "A86BB19F569112806F01AFFF",
+        "name" : "AlbumIOSTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Modules\/Features\/Album\/Album.xcodeproj",
+        "identifier" : "113CA2AB28E7212956A52CD2",
+        "name" : "AlbumTests"
+      }
     }
   ],
   "version" : 1
