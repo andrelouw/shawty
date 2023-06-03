@@ -20,7 +20,6 @@ final class ArtistSearchSceneCoordinator: Coordinator {
     addChild(coordinator)
     // TODO: WeakReference Proxy
     coordinator.delegate = self
-
     coordinator.start()
   }
 
@@ -46,10 +45,8 @@ extension ArtistSearchSceneCoordinator: ArtistSearchCoordinatorDelegate {
 
     // TODO: WeakReference Proxy
     coordinator.delegate = self
-
     coordinator.start()
   }
-
 }
 
 extension ArtistSearchSceneCoordinator: AlbumListCoordinatorDelegate {

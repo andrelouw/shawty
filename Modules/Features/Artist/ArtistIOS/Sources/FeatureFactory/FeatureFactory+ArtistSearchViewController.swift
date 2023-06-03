@@ -7,7 +7,6 @@ extension FeatureFactory {
   func makeArtistSearchViewController(
     onArtistSelection: @escaping (Int) -> Void
   ) -> UIViewController {
-    // FIXME: Very long method body!! Shorten
     let url = ArtistEndpoint.search.url(baseURL: baseURL)
 
     let remoteArtistSearchLoader = RemoteArtistSearchLoader(
