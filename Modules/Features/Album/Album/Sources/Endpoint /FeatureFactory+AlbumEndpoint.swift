@@ -7,6 +7,6 @@ extension FeatureFactory {
   }
 
   public func albumDetailURL(forAlbumID id: Int) -> URL {
-    AlbumEndpoint.tracks(id: id).url(baseURL: baseURL)
+    AlbumEndpoint.album(id: id).url(baseURL: baseURL)
   }
 }
