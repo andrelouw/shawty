@@ -1,6 +1,7 @@
 import UI
 import UIKit
 
+/// The coordinator for the active scene
 final class SceneCoordinator {
   private let window: UIWindow
   private var childCoordinators = [Coordinator]()
