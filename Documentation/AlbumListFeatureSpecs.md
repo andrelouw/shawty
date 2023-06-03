@@ -1,5 +1,5 @@
-# Artist Feature
-This page contains the specs and architecture for the Album feature.
+# Album List Feature
+This page contains the specs and architecture for the Album list feature.
 
 Also see the [API page](API.md#artist-search) for more details on the data being used for this feature.
 
@@ -10,7 +10,7 @@ I want to see all albums for a music artists
 So I can find a specific album for a given music artis
 ```
 
-## Acceptance Criteria
+### Acceptance Criteria
 ```
 Given the customer has connectivity
 	And a non-empty list of music artists is shown

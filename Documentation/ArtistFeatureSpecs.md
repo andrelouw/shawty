@@ -1,5 +1,5 @@
-# Artist Feature
-This page contains the specs and architecture for the Artist feature.
+# Artist Search Feature
+This page contains the specs and architecture for the Artist Search feature.
 
 Also see the [API page](API.md#artist-search) for more details on the data being used for this feature.
 
@@ -10,7 +10,7 @@ I want to search for music artists and be shown a list matching my search
 So I can find a specific music artist
 ```
 
-## Acceptance Criteria
+### Acceptance Criteria
 ```
 Given the customer has connectivity
     When the customer hasn't entered a search term for a music artist
@@ -32,7 +32,7 @@ Given the customer has connectivity
     Then the app should display a message inidicating no artists were found matching the search term
 ```
 
-## Use Case
+### Use Case
 **Load Artists With Search From Remote Use Case**
 
 Data:
