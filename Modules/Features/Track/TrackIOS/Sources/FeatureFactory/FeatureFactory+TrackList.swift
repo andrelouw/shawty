@@ -21,26 +21,7 @@ extension FeatureFactory {
     )
   }
 
-  public func makeTrackListView(
-    for url: URL,
-    sectionTitle: String? = nil,
-    onTrackSelection: @escaping (Int) -> Void
-  ) -> ListView<TrackRowView<Int>> {
-    let viewModel = makeTrackListViewModel(
-      for: url,
-      sectionTitle: sectionTitle,
-      onTrackSelection: onTrackSelection
-    )
-
-    return ListView(
-      viewModel: viewModel,
-      rowView: { model in
-        TrackRowView(model: model)
-      }
-    )
-  }
-
-  private func makeTrackListViewModel(
+  public func makeTrackListViewModel(
     for url: URL,
     sectionTitle: String? = nil,
     onTrackSelection: @escaping (Int) -> Void

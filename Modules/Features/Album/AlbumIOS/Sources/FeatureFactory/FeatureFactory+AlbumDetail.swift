@@ -31,21 +31,20 @@ extension FeatureFactory {
       dataImageAdapter: UIImage.init(data:)
     )
 
-    let viewModel = AlbumDetailViewModel(
+    let albumDetailViewModel = AlbumDetailViewModel(
       detailLoader: albumDetailHeaderModelAdapter.load,
       imageLoader: imageDataLoadingImageAdapter.load
     )
 
-    let view = AlbumDetailView(
-      viewModel: viewModel
-    ) {
-      makeTrackListView(
-        for: albumTracksURL(forAlbumID: id),
-        sectionTitle: TrackIOSStrings.trackListScreenTitle,
-        onTrackSelection: onTrackSelection
-      )
-    }
+    let trackListViewModel = makeTrackListViewModel(
+      for: albumTracksURL(forAlbumID: id),
+      sectionTitle: TrackIOSStrings.trackListScreenTitle,
+      onTrackSelection: onTrackSelection
+    )
 
-    return UIHostingController(rootView: view)
+    return AlbumDetailViewController(
+      albumViewModel: albumDetailViewModel,
+      listViewModel: trackListViewModel
+    )
   }
 }
