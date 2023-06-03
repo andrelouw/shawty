@@ -35,7 +35,8 @@ public struct ListView<Row: ListRowDisplayable>: View {
       viewModel.didDisappear()
     }
     // This position is important has to be after life cycles
-    .optionalNavigationTitle(title: viewModel.navigationTitle, displayMode: .large)
+    .optionalNavigationTitle(title: viewModel.navigationTitle)
+    .navigationBarTitleDisplayMode(.large)
   }
 
   @ViewBuilder private var loader: some View {
@@ -53,6 +54,7 @@ public struct ListView<Row: ListRowDisplayable>: View {
     switch viewModel.contentViewState {
     case .screenNotice(let model):
       screenNoticeView(model: model)
+        .fadeOnTransition()
     case .error(let message):
       errorView(with: message)
     case .loaded(let viewModels):
