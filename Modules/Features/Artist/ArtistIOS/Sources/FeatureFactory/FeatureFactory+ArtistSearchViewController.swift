@@ -38,8 +38,6 @@ extension FeatureFactory {
     )
 
     let listViewModel = ArtistSearchListViewModel(
-      screenTitle: ArtistIOSStrings.artistSearchScreenTitle,
-      shouldCancelTasksOnDisappear: false,
       contentLoader: contentStreamAdapter.load,
       onItemSelection: onArtistSelection
     )

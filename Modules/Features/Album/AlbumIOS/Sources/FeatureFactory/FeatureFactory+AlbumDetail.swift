@@ -41,8 +41,6 @@ extension FeatureFactory {
     ) {
       makeTrackListView(
         for: albumTracksURL(forAlbumID: id),
-        screenTitle: nil,
-        sectionTitle: TrackIOSStrings.trackListScreenTitle,
         onTrackSelection: onTrackSelection
       )
     }

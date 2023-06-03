@@ -13,28 +13,20 @@ public final class ListViewModel<Item: Identifiable>: ObservableObject, MainQueu
   @Published public var contentViewState = ContentViewState<ContentValue>.idle
 
   @MainActor
-  @Published public var navigationTitle: String?
-
-  @MainActor
   @Published public var sectionTitle: String?
 
   private let onItemSelection: (Item.ID) -> Void
   private let contentLoader: () -> ContentStream
-  private let shouldCancelTasksOnDisappear: Bool
   private var contentLoadingTask: Task<(), Never>?
 
   public init(
-    screenTitle: String? = nil,
     sectionTitle: String? = nil,
-    shouldCancelTasksOnDisappear: Bool = true,
     contentLoader: @escaping () -> ContentStream,
     onItemSelection: @escaping (Item.ID) -> Void
   ) {
     self.contentLoader = contentLoader
     self.onItemSelection = onItemSelection
-    self.shouldCancelTasksOnDisappear = shouldCancelTasksOnDisappear
     mainQueueUpdate(\.sectionTitle, with: sectionTitle)
-    mainQueueUpdate(\.navigationTitle, with: screenTitle)
   }
 
   public func didAppear() {
@@ -54,9 +46,7 @@ public final class ListViewModel<Item: Identifiable>: ObservableObject, MainQueu
   }
 
   public func didDisappear() {
-    if shouldCancelTasksOnDisappear {
-      contentLoadingTask?.cancel()
-    }
+    contentLoadingTask?.cancel()
   }
 
   public func didSelect(id: Item.ID) {

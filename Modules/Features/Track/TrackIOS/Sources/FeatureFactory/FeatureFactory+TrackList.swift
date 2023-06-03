@@ -23,8 +23,6 @@ extension FeatureFactory {
 
   public func makeTrackListView(
     for url: URL,
-    isFirstViewController: Bool = false,
-    screenTitle: String? = TrackIOSStrings.trackListScreenTitle,
     sectionTitle: String? = nil,
     onTrackSelection: @escaping (Int) -> Void
   ) -> ListView<TrackRowView<Int>> {
@@ -42,9 +40,7 @@ extension FeatureFactory {
     )
 
     let viewModel = ListViewModel(
-      screenTitle: screenTitle,
       sectionTitle: sectionTitle,
-      shouldCancelTasksOnDisappear: isFirstViewController,
       contentLoader: contentStreamAdapter.load,
       onItemSelection: onTrackSelection
     )
