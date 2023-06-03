@@ -13,5 +13,7 @@ let project = Project.app(
     .featureIOS("Artist"),
     .feature("Album"),
     .featureIOS("Album"),
+    .feature("Track"),
+    .featureIOS("Track"),
   ]
 )
