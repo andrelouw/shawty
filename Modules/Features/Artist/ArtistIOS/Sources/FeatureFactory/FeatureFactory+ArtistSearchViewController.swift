@@ -7,7 +7,6 @@ extension FeatureFactory {
   func makeArtistSearchViewController(
     onArtistSelection: @escaping (Int) -> Void
   ) -> UIViewController {
-    // FIXME: Very long method body!! Shorten
     let url = ArtistEndpoint.search.url(baseURL: baseURL)
 
     let remoteArtistSearchLoader = RemoteArtistSearchLoader(
@@ -38,13 +37,12 @@ extension FeatureFactory {
     )
 
     let listViewModel = ArtistSearchListViewModel(
-      screenTitle: ArtistIOSStrings.artistSearchScreenTitle,
-      shouldCancelTasksOnDisappear: false,
       contentLoader: contentStreamAdapter.load,
       onItemSelection: onArtistSelection
     )
 
     return ArtistSearchListViewController(
+      screenTitle: ArtistIOSStrings.artistSearchScreenTitle,
       searchViewModel: searchViewModel,
       listViewModel: listViewModel
     )

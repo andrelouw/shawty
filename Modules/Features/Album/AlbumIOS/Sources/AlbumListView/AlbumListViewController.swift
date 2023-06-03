@@ -1,20 +1,34 @@
 import SharedIOS
 import SwiftUI
 
-final class AlbumListViewController: UIHostingController<NavigationView<AlbumListView>> {
+final class AlbumListViewController: UIViewController {
+  private let screenTitle: String
+  private let listViewModel: AlbumListViewModel
+
   init(
+    screenTitle: String,
     listViewModel: AlbumListViewModel
   ) {
-    super.init(
-      rootView:
-      NavigationView {
-        AlbumListView(
-          viewModel: listViewModel
-        ) { rowViewModel in
-          ImageTitleRowView(viewModel: rowViewModel)
-        }
+    self.screenTitle = screenTitle
+    self.listViewModel = listViewModel
+    super.init(nibName: nil, bundle: nil)
+  }
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    embed(albumListView())
+  }
+
+  private func albumListView() -> some View {
+    NavigationView {
+      AlbumListView(
+        viewModel: listViewModel
+      ) { rowViewModel in
+        ImageTitleRowView(viewModel: rowViewModel)
       }
-    )
+      .navigationTitle(screenTitle)
+      .navigationBarTitleDisplayMode(.automatic)
+    }
   }
 
   @available(*, unavailable)

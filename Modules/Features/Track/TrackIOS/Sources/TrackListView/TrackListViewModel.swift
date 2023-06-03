@@ -1,3 +1,3 @@
 import SharedIOS
 
-typealias TrackListViewModel = ListViewModel<TrackRowModel<Int>>
+public typealias TrackListViewModel = ListViewModel<TrackRowModel<Int>>

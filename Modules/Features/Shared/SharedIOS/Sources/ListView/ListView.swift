@@ -33,8 +33,6 @@ public struct ListView<Row: ListRowDisplayable>: View {
     .onDisappear {
       viewModel.didDisappear()
     }
-    .optionalNavigationTitle(title: viewModel.navigationTitle)
-    .navigationBarTitleDisplayMode(.large)
   }
 
   @ViewBuilder private var loader: some View {
