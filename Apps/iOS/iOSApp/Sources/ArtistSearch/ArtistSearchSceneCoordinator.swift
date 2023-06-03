@@ -1,3 +1,4 @@
+import AlbumIOS
 import ArtistIOS
 import Shared
 import UI
@@ -33,7 +34,26 @@ final class ArtistSearchSceneCoordinator: Coordinator {
 }
 
 extension ArtistSearchSceneCoordinator: ArtistSearchCoordinatorDelegate {
-  func didSelectArtist(withID id: Int) {
+  public func didSelectArtist(withID id: Int) {
+    let coordinator = AlbumListCoordinator(
+      albumListURL: featureFactory.artistAlbumsURL(forArtistID: id),
+      navigationController: navigationController,
+      featureFactory: featureFactory,
+      removeCoordinatorWith: removeChild
+    )
+
+    addChild(coordinator)
+
+    // TODO: WeakReference Proxy
+    coordinator.delegate = self
+
+    coordinator.start()
+  }
+
+}
+
+extension ArtistSearchSceneCoordinator: AlbumListCoordinatorDelegate {
+  func didSelectAlbum(withID id: Int) {
     let alert = UIAlertController(
       title: "Artist Selected",
       message: "Artist ID: \(id)",
