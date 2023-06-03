@@ -45,9 +45,7 @@ public final class ListViewModel<Item: Identifiable>: ObservableObject, MainQueu
     }
   }
 
-  public func didDisappear() {
-    contentLoadingTask?.cancel()
-  }
+  public func didDisappear() { }
 
   public func didSelect(id: Item.ID) {
     onItemSelection(id)
