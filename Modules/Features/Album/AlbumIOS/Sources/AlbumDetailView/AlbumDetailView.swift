@@ -19,12 +19,10 @@ public struct AlbumDetailView<ContentView: View>: View {
 
   public var body: some View {
     NavigationView {
-      VStack {
+      VStack(spacing: 20) {
         header
           .frame(height: 100)
-        VStack {
-          contentView()
-        }
+        contentView()
       }
       .onViewDidLoad {
         viewModel.didAppear()
