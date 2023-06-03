@@ -38,6 +38,7 @@ extension FeatureFactory {
     )
 
     return AlbumListViewController(
+      screenTitle: AlbumIOSStrings.albumSearchScreenTitle,
       listViewModel: viewModel
     )
   }
