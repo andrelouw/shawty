@@ -10,7 +10,10 @@
   ],
   "defaultOptions" : {
     "codeCoverage" : false,
-    "testExecutionOrdering" : "random"
+    "diagnosticCollectionPolicy" : "Never",
+    "testExecutionOrdering" : "random",
+    "uiTestingScreenshotsLifetime" : "keepNever",
+    "userAttachmentLifetime" : "keepNever"
   },
   "testTargets" : [
     {
@@ -72,7 +75,7 @@
     {
       "parallelizable" : true,
       "target" : {
-        "containerPath" : "container:Track.xcodeproj",
+        "containerPath" : "container:Modules\/Features\/Track\/Track.xcodeproj",
         "identifier" : "766B8971A16669F5859EAA26",
         "name" : "TrackTests"
       }

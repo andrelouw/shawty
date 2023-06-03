@@ -3,4 +3,6 @@ import Shared
 import Testing
 import XCTest
 
-final class AlbumCoordinatorTests: XCTestCase { }
+final class AlbumCoordinatorTests: XCTestCase {
+  func test() { }
+}

@@ -1,4 +1,6 @@
 import Artist
 import XCTest
 
-final class ArtistCoordinatorTests: XCTestCase { }
+final class ArtistCoordinatorTests: XCTestCase {
+  func test() { }
+}

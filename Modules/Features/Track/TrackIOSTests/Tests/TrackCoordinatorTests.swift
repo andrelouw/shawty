@@ -1,4 +1,6 @@
 import Track
 import XCTest
 
-final class TrackCoordinatorTests: XCTestCase { }
+final class TrackCoordinatorTests: XCTestCase {
+  func test() { }
+}
