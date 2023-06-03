@@ -22,6 +22,7 @@ public struct ScreenNoticeView: View {
   private var titleView: some View {
     Text(model.title)
       .font(.headline)
+      .foregroundColor(.font.primary)
       .multilineTextAlignment(.center)
   }
 
@@ -29,7 +30,7 @@ public struct ScreenNoticeView: View {
     if let subtitle = model.subtitle {
       Text(subtitle)
         .font(.subheadline)
-        .foregroundColor(model.iconColor)
+        .foregroundColor(.font.secondary)
         .multilineTextAlignment(.center)
     }
   }

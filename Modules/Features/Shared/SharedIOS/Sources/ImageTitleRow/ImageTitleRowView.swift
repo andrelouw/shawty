@@ -29,10 +29,9 @@ public struct ImageTitleRowView<ID: Hashable>: View, ListRowDisplayable {
   }
 
   private var rowChevronIcon: some View {
-    // TODO: Move foreground color to UI module
     Icon.chevron.asSystemImage()
       .font(.footnote.bold())
-      .foregroundColor(Color(UIColor.tertiaryLabel))
+      .foregroundColor(.font.secondary)
       .padding(.leading)
   }
 

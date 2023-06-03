@@ -24,6 +24,7 @@ public enum UIAsset {
   public static let backgroundSecondary = UIColors(name: "background.secondary")
   public static let brandPrimary = UIColors(name: "brand.primary")
   public static let brandSecondary = UIColors(name: "brand.secondary")
+  public static let fontOverlay = UIColors(name: "font.overlay")
   public static let fontPrimary = UIColors(name: "font.primary")
   public static let fontSecondary = UIColors(name: "font.secondary")
   public static let fontTertiary = UIColors(name: "font.tertiary")
