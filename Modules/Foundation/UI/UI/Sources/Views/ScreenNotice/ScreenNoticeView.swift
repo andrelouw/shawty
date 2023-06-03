@@ -36,7 +36,7 @@ public struct ScreenNoticeView: View {
   }
 
   private var iconView: some View {
-    model.icon.asSystemImage()
+    model.icon.asImage()
       .font(.system(size: 50))
       .foregroundColor(model.iconColor)
   }

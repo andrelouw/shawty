@@ -38,7 +38,7 @@ public struct DetailHeaderView: View {
   private var icons: some View {
     HStack {
       ForEach(model.icons) {
-        $0.asSystemImage()
+        $0.asImage()
           .foregroundColor(.font.onOverlay)
       }
     }

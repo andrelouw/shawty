@@ -21,7 +21,7 @@ import SwiftUI
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum ShawtyAsset {
   public static let accentColor = ShawtyColors(name: "AccentColor")
-  public static let app = ShawtyImages(name: "app")
+  public static let logo = ShawtyImages(name: "logo")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

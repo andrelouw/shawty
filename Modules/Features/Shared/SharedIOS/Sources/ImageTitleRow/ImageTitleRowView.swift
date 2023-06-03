@@ -29,7 +29,7 @@ public struct ImageTitleRowView<ID: Hashable>: View, ListRowDisplayable {
   }
 
   private var rowChevronIcon: some View {
-    Icon.chevron.asSystemImage()
+    Icon.chevron.asImage()
       .font(.footnote.bold())
       .foregroundColor(.font.secondary)
       .padding(.leading)
