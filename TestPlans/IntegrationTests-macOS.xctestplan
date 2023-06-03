@@ -36,6 +36,14 @@
         "identifier" : "784009B8CBA8301C0F6F7422",
         "name" : "AlbumAPIIntegrationTests"
       }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Track.xcodeproj",
+        "identifier" : "6356EAB63F9F189F4F69D007",
+        "name" : "TrackAPIIntegrationTests"
+      }
     }
   ],
   "version" : 1
