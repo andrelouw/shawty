@@ -12,8 +12,8 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
 public enum TrackIOSStrings {
-  /// Welcome to
-  public static let welcomeMessage = TrackIOSStrings.tr("Track", "Welcome_message")
+  /// Tracks
+  public static let trackListScreenTitle = TrackIOSStrings.tr("Track", "TRACK_LIST_SCREEN_TITLE")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name
