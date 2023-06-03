@@ -1,0 +1,1556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01F42A6AE31022E72ACB7FD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7558022313E64DC4FE9907F3 /* AppDelegate.swift */; };
+		03B80A7CCA9A1270CA7D5C1D /* TrackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A42AC9D43D32427AD55BEC /* TrackListViewModel.swift */; };
+		088FE91427AE4E40E7E5B418 /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 47434F05DF2929DB1B1BF6D3 /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1134B6336AB8EBE491393634 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47434F05DF2929DB1B1BF6D3 /* Shared.framework */; };
+		12EB1E6E4FC38DCC4ED7DAA9 /* TuistStrings+TrackIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546B98B9E146D9D4FA75116B /* TuistStrings+TrackIOS.swift */; };
+		16213D472C4C29BC4A2CDF8E /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC546DBD50EE515885FCD4C /* UI.framework */; };
+		16BD4EC1D71CA72FD08A23AC /* Testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289BDEE1A9B1E3494798964E /* Testing.framework */; };
+		217FDC8A2BAFD0D197DBC263 /* TrackRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8441CCF8AE225F23C133955 /* TrackRowView.swift */; };
+		29EB0DF57D328FA42374205F /* TuistBundle+TrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7892C7A9D294D335C57C533A /* TuistBundle+TrackApp.swift */; };
+		316EB42AE964880EF28B48FB /* Track.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8304BCE1EF81761A36D7CDFF /* Track.framework */; };
+		35898D6D5BC86CCF1FF2C303 /* Track.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8304BCE1EF81761A36D7CDFF /* Track.framework */; };
+		4E429FF15B761E0F02719616 /* SharedIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67FF9BF213AF31E8692F0B55 /* SharedIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4FB7AD3F7911296748E752D0 /* SharedIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FF9BF213AF31E8692F0B55 /* SharedIOS.framework */; };
+		518DAA2691C0FD0DD7589772 /* TuistAssets+TrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD4E932D6675152C24071C4 /* TuistAssets+TrackApp.swift */; };
+		5198ED979161D2A11170CB62 /* Track.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8304BCE1EF81761A36D7CDFF /* Track.framework */; };
+		64D27FD41EEE0B07D293F560 /* TuistAssets+TrackIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38D56A3A4A8193F5EBB5B2E /* TuistAssets+TrackIOS.swift */; };
+		651AD59C17143FDECB5BB82E /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC546DBD50EE515885FCD4C /* UI.framework */; };
+		6644416AFB4AB76F67D3F124 /* TracksLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A98207954C66BCAC350A638 /* TracksLoader.swift */; };
+		6772F17D0329E5456B2487DF /* TrackIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE3EA3BEFDBAF6A5FBCA56B /* TrackIOS.framework */; };
+		69C1C22F2813F7C50533440C /* TrackAPIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C49E585A2172F500B2D86E /* TrackAPIIntegrationTests.swift */; };
+		7167620BA5CAC5E6DF484BAC /* TrackIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE3EA3BEFDBAF6A5FBCA56B /* TrackIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		724DBD20E5149C2CBC7B9BA4 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC546DBD50EE515885FCD4C /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7408E93CDB27DFC5818780C9 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23102939CCD07BE95D2AFE04 /* Networking.framework */; };
+		74F1E343C2F662ACB01F266D /* TracksRowModelAdapater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B8080FE0AA7D6E85872F5 /* TracksRowModelAdapater.swift */; };
+		77EC592D6D148D665BE5D34E /* TrackListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CDA8327D9EC5B64783F177 /* TrackListCoordinator.swift */; };
+		7DE12F3125E61838918DAF14 /* Track+TrackRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3169C3E6A6E8618BE9F18344 /* Track+TrackRowModel.swift */; };
+		7F904DC3552391AB2E5BC8AD /* RemoteTracksLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BCD037EAA5224A811E4CCA /* RemoteTracksLoader.swift */; };
+		7FC69C544847FCDFB2D8FEFF /* TrackListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90F627AAC191D2BE02987FA /* TrackListView.swift */; };
+		8179443559509408C006F375 /* TracksMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B75821063CB6674BBAEEC8A /* TracksMapper.swift */; };
+		84E28C44A2E2AA9D2B71B2B6 /* TrackRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CE75CD7FE33BCC7BB7D68E /* TrackRowModel.swift */; };
+		85F005D28B1BE73FE1FF345C /* Testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289BDEE1A9B1E3494798964E /* Testing.framework */; };
+		8A3B53376903D69D50F6B17C /* Track.strings in Resources */ = {isa = PBXBuildFile; fileRef = D833F1C6A0D5F47311A073C7 /* Track.strings */; };
+		8FEB0257D28CEB758DDE1E76 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23102939CCD07BE95D2AFE04 /* Networking.framework */; };
+		909A9E771A75909A75A9A069 /* TrackCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42D9DC94BF8AF2E26C6F6DC /* TrackCoordinatorTests.swift */; };
+		92376A32E5ECC9D47C28022E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7A6C8B19CE7233A4325F62 /* Assets.xcassets */; };
+		9EDACBAD0AD4D3DDC1888FCE /* TuistBundle+TrackIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614D713DFDDBE2712E9B3527 /* TuistBundle+TrackIOS.swift */; };
+		A16752AFF736D4CE54D69A72 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD1A76DDEB768C2769112329 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A2DAB4ADB284B304BB31BBBB /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47434F05DF2929DB1B1BF6D3 /* Shared.framework */; };
+		A531A266EA70D17A8506CC81 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = E618ED108EEBE506BF1F8F60 /* Track.swift */; };
+		A7606FC94BC5FD3BE9679E47 /* Track.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8304BCE1EF81761A36D7CDFF /* Track.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AD987CE69B80FDD2250A3C49 /* Testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289BDEE1A9B1E3494798964E /* Testing.framework */; };
+		B1765C9C026D9490AA8DAE3F /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1A76DDEB768C2769112329 /* Core.framework */; };
+		BBFE7E52DEA1EA780FAA7054 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23102939CCD07BE95D2AFE04 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C32514E99EB2C7A683D6CCAD /* NetworkTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE465591DFB23F9DCA7402B0 /* NetworkTesting.framework */; };
+		C75C0D018E8ED9887D10DE2F /* FeatureFactory+TrackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F992E9ED1A3B20A99B5D91AC /* FeatureFactory+TrackList.swift */; };
+		CB88F26092281939D1EEFC84 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B77390AF3F7EDA97FEC9EDF /* TrackListViewController.swift */; };
+		DBC75A913B9C2B7EE91FFB61 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1A76DDEB768C2769112329 /* Core.framework */; };
+		DD0EF0BEDEA7D24DDB241CF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50F45B3448B34CD91B13386E /* LaunchScreen.storyboard */; };
+		DE745CFA9C6CAC688B365C36 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619007024D2740D86BAA4F66 /* MainCoordinator.swift */; };
+		E82845719F1B4F6B209C038A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2703A4AFAD4F62F1CD66073C /* AppCoordinator.swift */; };
+		F32705C1B2266949D9C1983A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E45BB5A41C67FB4B74702 /* Assets.xcassets */; };
+		F5BDFF0335EE9A5F892D6120 /* RemoteTracksLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC445A045D4F44F9CDAFA26 /* RemoteTracksLoaderTests.swift */; };
+		F7E371D77CB0AC0F929971A9 /* TrackIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE3EA3BEFDBAF6A5FBCA56B /* TrackIOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0B16E3354E283478F712635C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F45BBD943DB8D98F329E6D8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37A264B09076C5780A4760D8;
+			remoteInfo = Track;
+		};
+		6111D94FF7A6BBCA0318C82B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F45BBD943DB8D98F329E6D8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC54DE99803897C890AA2A18;
+			remoteInfo = TrackIOS;
+		};
+		8500C4828DFF1402D8FE9298 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F45BBD943DB8D98F329E6D8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37A264B09076C5780A4760D8;
+			remoteInfo = Track;
+		};
+		C42283CE57A486C96F37287D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F45BBD943DB8D98F329E6D8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37A264B09076C5780A4760D8;
+			remoteInfo = Track;
+		};
+		D2B756FBC7D4715E3664579B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F45BBD943DB8D98F329E6D8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC54DE99803897C890AA2A18;
+			remoteInfo = TrackIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1A908B8E5C4F58D0BBA27C56 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49B80B2D5FCEFEC45C18DE88 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5EC9CA13C53F008DFBAC0FFA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96EF85E86B9E0B5CE4A62B22 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4F4EFE8EAD2E745F1098F4B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C06C5D56A552152F6229532B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A16752AFF736D4CE54D69A72 /* Core.framework in Embed Frameworks */,
+				BBFE7E52DEA1EA780FAA7054 /* Networking.framework in Embed Frameworks */,
+				088FE91427AE4E40E7E5B418 /* Shared.framework in Embed Frameworks */,
+				4E429FF15B761E0F02719616 /* SharedIOS.framework in Embed Frameworks */,
+				A7606FC94BC5FD3BE9679E47 /* Track.framework in Embed Frameworks */,
+				7167620BA5CAC5E6DF484BAC /* TrackIOS.framework in Embed Frameworks */,
+				724DBD20E5149C2CBC7B9BA4 /* UI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0B75821063CB6674BBAEEC8A /* TracksMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksMapper.swift; sourceTree = "<group>"; };
+		18486B457EA30A66C7AEDAFE /* TrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CC546DBD50EE515885FCD4C /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F8E45BB5A41C67FB4B74702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		23102939CCD07BE95D2AFE04 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		262B8080FE0AA7D6E85872F5 /* TracksRowModelAdapater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksRowModelAdapater.swift; sourceTree = "<group>"; };
+		2703A4AFAD4F62F1CD66073C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		289BDEE1A9B1E3494798964E /* Testing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Testing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29CDA8327D9EC5B64783F177 /* TrackListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListCoordinator.swift; sourceTree = "<group>"; };
+		2A98207954C66BCAC350A638 /* TracksLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksLoader.swift; sourceTree = "<group>"; };
+		3169C3E6A6E8618BE9F18344 /* Track+TrackRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Track+TrackRowModel.swift"; sourceTree = "<group>"; };
+		4129CB7708C11D8B81C42EF5 /* TrackAPIIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackAPIIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		430968C6BB30FA6572FEDBD4 /* TrackIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		47434F05DF2929DB1B1BF6D3 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B77390AF3F7EDA97FEC9EDF /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
+		4D8B251F8D54DFC2CE47996B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4FE3EA3BEFDBAF6A5FBCA56B /* TrackIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrackIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50F45B3448B34CD91B13386E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		546B98B9E146D9D4FA75116B /* TuistStrings+TrackIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistStrings+TrackIOS.swift"; sourceTree = "<group>"; };
+		60DACFEB2324E51B16930EF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Track.strings; sourceTree = "<group>"; };
+		614D713DFDDBE2712E9B3527 /* TuistBundle+TrackIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+TrackIOS.swift"; sourceTree = "<group>"; };
+		619007024D2740D86BAA4F66 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		65753C2D6A76D84E3E40DD68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		67FF9BF213AF31E8692F0B55 /* SharedIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70BCE193EDA1AA337A7D238C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7558022313E64DC4FE9907F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7892C7A9D294D335C57C533A /* TuistBundle+TrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+TrackApp.swift"; sourceTree = "<group>"; };
+		8304BCE1EF81761A36D7CDFF /* Track.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Track.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C49E585A2172F500B2D86E /* TrackAPIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackAPIIntegrationTests.swift; sourceTree = "<group>"; };
+		A9D9682CFB00EB0C8BCE27E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AA72F37CF3726336896D7E2F /* TrackApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD7A6C8B19CE7233A4325F62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B38D56A3A4A8193F5EBB5B2E /* TuistAssets+TrackIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+TrackIOS.swift"; sourceTree = "<group>"; };
+		B40B3F31022355DE28255B07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B8BCD037EAA5224A811E4CCA /* RemoteTracksLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTracksLoader.swift; sourceTree = "<group>"; };
+		B9A42AC9D43D32427AD55BEC /* TrackListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewModel.swift; sourceTree = "<group>"; };
+		C6A1F95795A19E424D366894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C6CE75CD7FE33BCC7BB7D68E /* TrackRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRowModel.swift; sourceTree = "<group>"; };
+		C90F627AAC191D2BE02987FA /* TrackListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListView.swift; sourceTree = "<group>"; };
+		CE465591DFB23F9DCA7402B0 /* NetworkTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D42D9DC94BF8AF2E26C6F6DC /* TrackCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCoordinatorTests.swift; sourceTree = "<group>"; };
+		DCD4E932D6675152C24071C4 /* TuistAssets+TrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+TrackApp.swift"; sourceTree = "<group>"; };
+		DD1A76DDEB768C2769112329 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E618ED108EEBE506BF1F8F60 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		F8441CCF8AE225F23C133955 /* TrackRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRowView.swift; sourceTree = "<group>"; };
+		F992E9ED1A3B20A99B5D91AC /* FeatureFactory+TrackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeatureFactory+TrackList.swift"; sourceTree = "<group>"; };
+		FCC445A045D4F44F9CDAFA26 /* RemoteTracksLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTracksLoaderTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0403A9C2F48DF68B23466A17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD987CE69B80FDD2250A3C49 /* Testing.framework in Frameworks */,
+				35898D6D5BC86CCF1FF2C303 /* Track.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1177897029F63C5D7C95ABE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1765C9C026D9490AA8DAE3F /* Core.framework in Frameworks */,
+				7408E93CDB27DFC5818780C9 /* Networking.framework in Frameworks */,
+				1134B6336AB8EBE491393634 /* Shared.framework in Frameworks */,
+				4FB7AD3F7911296748E752D0 /* SharedIOS.framework in Frameworks */,
+				5198ED979161D2A11170CB62 /* Track.framework in Frameworks */,
+				651AD59C17143FDECB5BB82E /* UI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7208641D048F9F33C8E06320 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7E371D77CB0AC0F929971A9 /* TrackIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AE51202E291A7F1367CF2B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC75A913B9C2B7EE91FFB61 /* Core.framework in Frameworks */,
+				8FEB0257D28CEB758DDE1E76 /* Networking.framework in Frameworks */,
+				A2DAB4ADB284B304BB31BBBB /* Shared.framework in Frameworks */,
+				16213D472C4C29BC4A2CDF8E /* UI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89ECFF01BDE9D82C6ED1B462 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C32514E99EB2C7A683D6CCAD /* NetworkTesting.framework in Frameworks */,
+				85F005D28B1BE73FE1FF345C /* Testing.framework in Frameworks */,
+				316EB42AE964880EF28B48FB /* Track.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B09C1DBF3E03BFE98DBA386B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16BD4EC1D71CA72FD08A23AC /* Testing.framework in Frameworks */,
+				6772F17D0329E5456B2487DF /* TrackIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10F362182B091562F4A171CA /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				763333F08BAD324742A6C6B5 /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		1203C3075B0D43ACD972BE52 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				237A985B58B33973EC8100E0 /* App */,
+				D108BEA46EB757F4EC966EFB /* Main */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		1C7EAD9E693956D57DA25699 /* TracksLoading */ = {
+			isa = PBXGroup;
+			children = (
+				B8BCD037EAA5224A811E4CCA /* RemoteTracksLoader.swift */,
+				2A98207954C66BCAC350A638 /* TracksLoader.swift */,
+				0B75821063CB6674BBAEEC8A /* TracksMapper.swift */,
+			);
+			path = TracksLoading;
+			sourceTree = "<group>";
+		};
+		1F578CFEF5CA63E68D69F588 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				65753C2D6A76D84E3E40DD68 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		211EF2DFDBECA7D9BA1F67F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD1A76DDEB768C2769112329 /* Core.framework */,
+				23102939CCD07BE95D2AFE04 /* Networking.framework */,
+				CE465591DFB23F9DCA7402B0 /* NetworkTesting.framework */,
+				47434F05DF2929DB1B1BF6D3 /* Shared.framework */,
+				67FF9BF213AF31E8692F0B55 /* SharedIOS.framework */,
+				289BDEE1A9B1E3494798964E /* Testing.framework */,
+				8304BCE1EF81761A36D7CDFF /* Track.framework */,
+				4129CB7708C11D8B81C42EF5 /* TrackAPIIntegrationTests.xctest */,
+				AA72F37CF3726336896D7E2F /* TrackApp.app */,
+				4FE3EA3BEFDBAF6A5FBCA56B /* TrackIOS.framework */,
+				430968C6BB30FA6572FEDBD4 /* TrackIOSTests.xctest */,
+				18486B457EA30A66C7AEDAFE /* TrackTests.xctest */,
+				1CC546DBD50EE515885FCD4C /* UI.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		237A985B58B33973EC8100E0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2703A4AFAD4F62F1CD66073C /* AppCoordinator.swift */,
+				7558022313E64DC4FE9907F3 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2424CA72C5DC308501E24AD1 = {
+			isa = PBXGroup;
+			children = (
+				B1A1AC4B5536B413FD53B9D0 /* Project */,
+				B173396396EC2874EBA01120 /* Frameworks */,
+				211EF2DFDBECA7D9BA1F67F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26C397EDC8C4B9100872ED09 /* TrackIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				6E8AA69035EE9CD566BF7133 /* Config */,
+				401ED26F2E1993F60B4B7366 /* Tests */,
+			);
+			path = TrackIOSTests;
+			sourceTree = "<group>";
+		};
+		31AB0532AD1313B9899C205B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D833F1C6A0D5F47311A073C7 /* Track.strings */,
+				AD7A6C8B19CE7233A4325F62 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		401ED26F2E1993F60B4B7366 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D42D9DC94BF8AF2E26C6F6DC /* TrackCoordinatorTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		430BB53568BB42608665AB8C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				457BCC574C8706201A0F1A57 /* Adapters */,
+				B25728EF5D4D6915ADB5D104 /* FeatureFactory */,
+				465D41143BE8518B9B3B5F82 /* TrackList */,
+				8171C13DACBA763686F459DF /* TrackRow */,
+				29CDA8327D9EC5B64783F177 /* TrackListCoordinator.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		43478297B1313901D2CDDB6F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A6C49E585A2172F500B2D86E /* TrackAPIIntegrationTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		457BCC574C8706201A0F1A57 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				E69DEB1E5BBE4DB41C737451 /* Track+TrackRowModel */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		465D41143BE8518B9B3B5F82 /* TrackList */ = {
+			isa = PBXGroup;
+			children = (
+				C90F627AAC191D2BE02987FA /* TrackListView.swift */,
+				4B77390AF3F7EDA97FEC9EDF /* TrackListViewController.swift */,
+				B9A42AC9D43D32427AD55BEC /* TrackListViewModel.swift */,
+			);
+			path = TrackList;
+			sourceTree = "<group>";
+		};
+		498209665FC763CA3A287EF5 /* TrackTests */ = {
+			isa = PBXGroup;
+			children = (
+				DFC851EC29A13DF51866E648 /* Config */,
+				4ADED4D80C8A146A24A4C24C /* Tests */,
+			);
+			path = TrackTests;
+			sourceTree = "<group>";
+		};
+		4ADED4D80C8A146A24A4C24C /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E4284B37FF57A65029E57360 /* TrackLoading */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		4BAE7DAAFD1563A8EE51AB60 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				77C180C3A6CD5B09A46FB7F8 /* Entities */,
+				1C7EAD9E693956D57DA25699 /* TracksLoading */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		69EBA8E774A90329EA9D8D82 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				70BCE193EDA1AA337A7D238C /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		6E8AA69035EE9CD566BF7133 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				C6A1F95795A19E424D366894 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		763333F08BAD324742A6C6B5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DCD4E932D6675152C24071C4 /* TuistAssets+TrackApp.swift */,
+				B38D56A3A4A8193F5EBB5B2E /* TuistAssets+TrackIOS.swift */,
+				7892C7A9D294D335C57C533A /* TuistBundle+TrackApp.swift */,
+				614D713DFDDBE2712E9B3527 /* TuistBundle+TrackIOS.swift */,
+				546B98B9E146D9D4FA75116B /* TuistStrings+TrackIOS.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		77C180C3A6CD5B09A46FB7F8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E618ED108EEBE506BF1F8F60 /* Track.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8171C13DACBA763686F459DF /* TrackRow */ = {
+			isa = PBXGroup;
+			children = (
+				C6CE75CD7FE33BCC7BB7D68E /* TrackRowModel.swift */,
+				F8441CCF8AE225F23C133955 /* TrackRowView.swift */,
+			);
+			path = TrackRow;
+			sourceTree = "<group>";
+		};
+		B173396396EC2874EBA01120 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B1A1AC4B5536B413FD53B9D0 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				10F362182B091562F4A171CA /* Derived */,
+				FD64751CBCFF1788600BFD3F /* Track */,
+				F64ACF3CF4E172E3D3CB4793 /* TrackAPIIntegrationTests */,
+				D129A601F3B9C5AB99541D17 /* TrackApp */,
+				B24B49144FDD9D6552698095 /* TrackIOS */,
+				26C397EDC8C4B9100872ED09 /* TrackIOSTests */,
+				498209665FC763CA3A287EF5 /* TrackTests */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		B24B49144FDD9D6552698095 /* TrackIOS */ = {
+			isa = PBXGroup;
+			children = (
+				69EBA8E774A90329EA9D8D82 /* Config */,
+				31AB0532AD1313B9899C205B /* Resources */,
+				430BB53568BB42608665AB8C /* Sources */,
+			);
+			path = TrackIOS;
+			sourceTree = "<group>";
+		};
+		B25728EF5D4D6915ADB5D104 /* FeatureFactory */ = {
+			isa = PBXGroup;
+			children = (
+				F992E9ED1A3B20A99B5D91AC /* FeatureFactory+TrackList.swift */,
+			);
+			path = FeatureFactory;
+			sourceTree = "<group>";
+		};
+		C5A899C178144793B569E2BC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1F8E45BB5A41C67FB4B74702 /* Assets.xcassets */,
+				50F45B3448B34CD91B13386E /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C702332D23CB2BBA0D333E8C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A9D9682CFB00EB0C8BCE27E0 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		D108BEA46EB757F4EC966EFB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				619007024D2740D86BAA4F66 /* MainCoordinator.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D129A601F3B9C5AB99541D17 /* TrackApp */ = {
+			isa = PBXGroup;
+			children = (
+				1F578CFEF5CA63E68D69F588 /* Config */,
+				C5A899C178144793B569E2BC /* Resources */,
+				1203C3075B0D43ACD972BE52 /* Sources */,
+			);
+			path = TrackApp;
+			sourceTree = "<group>";
+		};
+		D6475D96E6A6231FB5415239 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				B40B3F31022355DE28255B07 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		DFC851EC29A13DF51866E648 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				4D8B251F8D54DFC2CE47996B /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		E4284B37FF57A65029E57360 /* TrackLoading */ = {
+			isa = PBXGroup;
+			children = (
+				FCC445A045D4F44F9CDAFA26 /* RemoteTracksLoaderTests.swift */,
+			);
+			path = TrackLoading;
+			sourceTree = "<group>";
+		};
+		E69DEB1E5BBE4DB41C737451 /* Track+TrackRowModel */ = {
+			isa = PBXGroup;
+			children = (
+				3169C3E6A6E8618BE9F18344 /* Track+TrackRowModel.swift */,
+				262B8080FE0AA7D6E85872F5 /* TracksRowModelAdapater.swift */,
+			);
+			path = "Track+TrackRowModel";
+			sourceTree = "<group>";
+		};
+		F64ACF3CF4E172E3D3CB4793 /* TrackAPIIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				D6475D96E6A6231FB5415239 /* Config */,
+				43478297B1313901D2CDDB6F /* Tests */,
+			);
+			path = TrackAPIIntegrationTests;
+			sourceTree = "<group>";
+		};
+		FD64751CBCFF1788600BFD3F /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				C702332D23CB2BBA0D333E8C /* Config */,
+				4BAE7DAAFD1563A8EE51AB60 /* Sources */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37A264B09076C5780A4760D8 /* Track */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 006F00B7F274AD829EDD9C64 /* Build configuration list for PBXNativeTarget "Track" */;
+			buildPhases = (
+				0767CF15A765888E69F6976B /* Sources */,
+				3A5709FE0F339298FC498C52 /* Resources */,
+				49B80B2D5FCEFEC45C18DE88 /* Embed Frameworks */,
+				7AE51202E291A7F1367CF2B4 /* Frameworks */,
+				61D2D826C5D160E57F7A51FC /* Run linting */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Track;
+			productName = Track;
+			productReference = 8304BCE1EF81761A36D7CDFF /* Track.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6356EAB63F9F189F4F69D007 /* TrackAPIIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A7C0646620C5849693EDD72 /* Build configuration list for PBXNativeTarget "TrackAPIIntegrationTests" */;
+			buildPhases = (
+				4B3B8E837F3B516DBC933FA0 /* Sources */,
+				654FDD1EAAFA798CE80A55C9 /* Resources */,
+				A4F4EFE8EAD2E745F1098F4B /* Embed Frameworks */,
+				0403A9C2F48DF68B23466A17 /* Frameworks */,
+				5AED4EF578A0F3DE6C71AD8B /* Run linting */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ABF42C09B10F88A2038DFF4 /* PBXTargetDependency */,
+			);
+			name = TrackAPIIntegrationTests;
+			productName = TrackAPIIntegrationTests;
+			productReference = 4129CB7708C11D8B81C42EF5 /* TrackAPIIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		766B8971A16669F5859EAA26 /* TrackTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ADA951DA04F4ED8EA3E72FA /* Build configuration list for PBXNativeTarget "TrackTests" */;
+			buildPhases = (
+				506F57BEDFE08D3C772AB6DA /* Sources */,
+				BE2BC0D0BB32541ACB9910B9 /* Resources */,
+				1A908B8E5C4F58D0BBA27C56 /* Embed Frameworks */,
+				89ECFF01BDE9D82C6ED1B462 /* Frameworks */,
+				A5E249FC8A10A7288E79DD09 /* Run linting */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				839FD28E26B408629242F60F /* PBXTargetDependency */,
+			);
+			name = TrackTests;
+			productName = TrackTests;
+			productReference = 18486B457EA30A66C7AEDAFE /* TrackTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8CC6C7197E02D66F6192E2AC /* TrackApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C4FFB337A2F01617CFF4B64 /* Build configuration list for PBXNativeTarget "TrackApp" */;
+			buildPhases = (
+				9A8DCD0D358AFE79D1022501 /* Sources */,
+				E168F9BE82C7598DBA95C23F /* Resources */,
+				C06C5D56A552152F6229532B /* Embed Frameworks */,
+				7208641D048F9F33C8E06320 /* Frameworks */,
+				534C07315098996818EA55FF /* Run linting */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88817CBEFE3CB62594C2073E /* PBXTargetDependency */,
+			);
+			name = TrackApp;
+			productName = TrackApp;
+			productReference = AA72F37CF3726336896D7E2F /* TrackApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC54DE99803897C890AA2A18 /* TrackIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80AA0550D5B6A97DB93A33A2 /* Build configuration list for PBXNativeTarget "TrackIOS" */;
+			buildPhases = (
+				CCADEFD0F78BD921B4D596E0 /* Sources */,
+				972F77E7AD64EEA70CBAE367 /* Resources */,
+				96EF85E86B9E0B5CE4A62B22 /* Embed Frameworks */,
+				1177897029F63C5D7C95ABE2 /* Frameworks */,
+				68D3F275E6C6ABFE64233897 /* Run linting */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC7E14AEA9153C641BB2F050 /* PBXTargetDependency */,
+			);
+			name = TrackIOS;
+			productName = TrackIOS;
+			productReference = 4FE3EA3BEFDBAF6A5FBCA56B /* TrackIOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B6DC555A9E17B13437C68A18 /* TrackIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A47F2DF83E341572AF2F2562 /* Build configuration list for PBXNativeTarget "TrackIOSTests" */;
+			buildPhases = (
+				D830E6E8EC4A6023F21A4826 /* Sources */,
+				59FF41EB0E2518563A8C0B89 /* Resources */,
+				5EC9CA13C53F008DFBAC0FFA /* Embed Frameworks */,
+				B09C1DBF3E03BFE98DBA386B /* Frameworks */,
+				08671A53083916F719257F31 /* Run linting */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				08D1B4BF79A5B80A229B7456 /* PBXTargetDependency */,
+			);
+			name = TrackIOSTests;
+			productName = TrackIOSTests;
+			productReference = 430968C6BB30FA6572FEDBD4 /* TrackIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F45BBD943DB8D98F329E6D8B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = D9702FE94D7EAA027FF684B7 /* Build configuration list for PBXProject "Track" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 2424CA72C5DC308501E24AD1;
+			productRefGroup = 211EF2DFDBECA7D9BA1F67F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37A264B09076C5780A4760D8 /* Track */,
+				766B8971A16669F5859EAA26 /* TrackTests */,
+				AC54DE99803897C890AA2A18 /* TrackIOS */,
+				B6DC555A9E17B13437C68A18 /* TrackIOSTests */,
+				8CC6C7197E02D66F6192E2AC /* TrackApp */,
+				6356EAB63F9F189F4F69D007 /* TrackAPIIntegrationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A5709FE0F339298FC498C52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59FF41EB0E2518563A8C0B89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		654FDD1EAAFA798CE80A55C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		972F77E7AD64EEA70CBAE367 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92376A32E5ECC9D47C28022E /* Assets.xcassets in Resources */,
+				8A3B53376903D69D50F6B17C /* Track.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE2BC0D0BB32541ACB9910B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E168F9BE82C7598DBA95C23F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F32705C1B2266949D9C1983A /* Assets.xcassets in Resources */,
+				DD0EF0BEDEA7D24DDB241CF1 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08671A53083916F719257F31 /* Run linting */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run linting";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT\"/../../../Scripts/lint.sh ";
+		};
+		534C07315098996818EA55FF /* Run linting */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run linting";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT\"/../../../Scripts/lint.sh ";
+		};
+		5AED4EF578A0F3DE6C71AD8B /* Run linting */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run linting";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT\"/../../../Scripts/lint.sh ";
+		};
+		61D2D826C5D160E57F7A51FC /* Run linting */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run linting";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT\"/../../../Scripts/lint.sh ";
+		};
+		68D3F275E6C6ABFE64233897 /* Run linting */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run linting";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT\"/../../../Scripts/lint.sh ";
+		};
+		A5E249FC8A10A7288E79DD09 /* Run linting */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run linting";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$SRCROOT\"/../../../Scripts/lint.sh ";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0767CF15A765888E69F6976B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A531A266EA70D17A8506CC81 /* Track.swift in Sources */,
+				7F904DC3552391AB2E5BC8AD /* RemoteTracksLoader.swift in Sources */,
+				6644416AFB4AB76F67D3F124 /* TracksLoader.swift in Sources */,
+				8179443559509408C006F375 /* TracksMapper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B3B8E837F3B516DBC933FA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69C1C22F2813F7C50533440C /* TrackAPIIntegrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		506F57BEDFE08D3C772AB6DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5BDFF0335EE9A5F892D6120 /* RemoteTracksLoaderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A8DCD0D358AFE79D1022501 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				518DAA2691C0FD0DD7589772 /* TuistAssets+TrackApp.swift in Sources */,
+				29EB0DF57D328FA42374205F /* TuistBundle+TrackApp.swift in Sources */,
+				E82845719F1B4F6B209C038A /* AppCoordinator.swift in Sources */,
+				01F42A6AE31022E72ACB7FD2 /* AppDelegate.swift in Sources */,
+				DE745CFA9C6CAC688B365C36 /* MainCoordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCADEFD0F78BD921B4D596E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D27FD41EEE0B07D293F560 /* TuistAssets+TrackIOS.swift in Sources */,
+				9EDACBAD0AD4D3DDC1888FCE /* TuistBundle+TrackIOS.swift in Sources */,
+				12EB1E6E4FC38DCC4ED7DAA9 /* TuistStrings+TrackIOS.swift in Sources */,
+				7DE12F3125E61838918DAF14 /* Track+TrackRowModel.swift in Sources */,
+				74F1E343C2F662ACB01F266D /* TracksRowModelAdapater.swift in Sources */,
+				C75C0D018E8ED9887D10DE2F /* FeatureFactory+TrackList.swift in Sources */,
+				7FC69C544847FCDFB2D8FEFF /* TrackListView.swift in Sources */,
+				CB88F26092281939D1EEFC84 /* TrackListViewController.swift in Sources */,
+				03B80A7CCA9A1270CA7D5C1D /* TrackListViewModel.swift in Sources */,
+				77EC592D6D148D665BE5D34E /* TrackListCoordinator.swift in Sources */,
+				84E28C44A2E2AA9D2B71B2B6 /* TrackRowModel.swift in Sources */,
+				217FDC8A2BAFD0D197DBC263 /* TrackRowView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D830E6E8EC4A6023F21A4826 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				909A9E771A75909A75A9A069 /* TrackCoordinatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		08D1B4BF79A5B80A229B7456 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TrackIOS;
+			target = AC54DE99803897C890AA2A18 /* TrackIOS */;
+			targetProxy = 6111D94FF7A6BBCA0318C82B /* PBXContainerItemProxy */;
+		};
+		1ABF42C09B10F88A2038DFF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Track;
+			target = 37A264B09076C5780A4760D8 /* Track */;
+			targetProxy = 8500C4828DFF1402D8FE9298 /* PBXContainerItemProxy */;
+		};
+		839FD28E26B408629242F60F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Track;
+			target = 37A264B09076C5780A4760D8 /* Track */;
+			targetProxy = 0B16E3354E283478F712635C /* PBXContainerItemProxy */;
+		};
+		88817CBEFE3CB62594C2073E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TrackIOS;
+			target = AC54DE99803897C890AA2A18 /* TrackIOS */;
+			targetProxy = D2B756FBC7D4715E3664579B /* PBXContainerItemProxy */;
+		};
+		DC7E14AEA9153C641BB2F050 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Track;
+			target = 37A264B09076C5780A4760D8 /* Track */;
+			targetProxy = C42283CE57A486C96F37287D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D833F1C6A0D5F47311A073C7 /* Track.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60DACFEB2324E51B16930EF1 /* en */,
+			);
+			name = Track.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18C6579C0564AFA1D3FF5F21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3F2B4E32F5EB716977315F4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = TrackIOSTests/Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.annabananas.Shawty.TrackIOSTests;
+				PRODUCT_NAME = TrackIOSTests;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		47404BC67BAB797AB7FF3F2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TrackIOS/Config/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.annabananas.Shawty.TrackIOS;
+				PRODUCT_NAME = TrackIOS;
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		483F7C25FDF983E12CDC9B5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55C6D3F31EFCDEA968E34DB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TrackApp/Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.annabananas.Shawty.TrackApp;
+				PRODUCT_NAME = TrackApp;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5A7C5B75F5665055C69B55B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				INFOPLIST_FILE = TrackTests/Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.annabananas.Shawty.TrackTests;
+				PRODUCT_NAME = TrackTests;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5C0E780F1B21EE2AB8A02AE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = TrackIOSTests/Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.annabananas.Shawty.TrackIOSTests;
+				PRODUCT_NAME = TrackIOSTests;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66DCE0516660240F6AADC59B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				INFOPLIST_FILE = TrackTests/Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.annabananas.Shawty.TrackTests;
+				PRODUCT_NAME = TrackTests;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7351DDF2668BA00FB0DDF019 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = TrackIOS/Config/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.annabananas.Shawty.TrackIOS;
+				PRODUCT_NAME = TrackIOS;
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7A74E4366D9D22F719AD8904 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = TrackApp/Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.annabananas.Shawty.TrackApp;
+				PRODUCT_NAME = TrackApp;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C0BB03096782FAAE01D8F30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Track/Config/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.annabananas.Shawty.Track;
+				PRODUCT_NAME = Track;
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A828C5E29745B38F49E44F8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				INFOPLIST_FILE = TrackAPIIntegrationTests/Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.annabananas.Shawty.TrackAPIIntegrationTests;
+				PRODUCT_NAME = TrackAPIIntegrationTests;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D1E293098C10B7C1D37BD74E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Track/Config/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.annabananas.Shawty.Track;
+				PRODUCT_NAME = Track;
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F05550B6420277D26A2E0030 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				INFOPLIST_FILE = TrackAPIIntegrationTests/Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.annabananas.Shawty.TrackAPIIntegrationTests;
+				PRODUCT_NAME = TrackAPIIntegrationTests;
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		006F00B7F274AD829EDD9C64 /* Build configuration list for PBXNativeTarget "Track" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1E293098C10B7C1D37BD74E /* Debug */,
+				9C0BB03096782FAAE01D8F30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C4FFB337A2F01617CFF4B64 /* Build configuration list for PBXNativeTarget "TrackApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A74E4366D9D22F719AD8904 /* Debug */,
+				55C6D3F31EFCDEA968E34DB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A7C0646620C5849693EDD72 /* Build configuration list for PBXNativeTarget "TrackAPIIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F05550B6420277D26A2E0030 /* Debug */,
+				A828C5E29745B38F49E44F8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2ADA951DA04F4ED8EA3E72FA /* Build configuration list for PBXNativeTarget "TrackTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66DCE0516660240F6AADC59B /* Debug */,
+				5A7C5B75F5665055C69B55B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80AA0550D5B6A97DB93A33A2 /* Build configuration list for PBXNativeTarget "TrackIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47404BC67BAB797AB7FF3F2C /* Debug */,
+				7351DDF2668BA00FB0DDF019 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A47F2DF83E341572AF2F2562 /* Build configuration list for PBXNativeTarget "TrackIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C0E780F1B21EE2AB8A02AE2 /* Debug */,
+				3F2B4E32F5EB716977315F4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9702FE94D7EAA027FF684B7 /* Build configuration list for PBXProject "Track" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18C6579C0564AFA1D3FF5F21 /* Debug */,
+				483F7C25FDF983E12CDC9B5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F45BBD943DB8D98F329E6D8B /* Project object */;
+}
