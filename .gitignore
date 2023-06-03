@@ -92,6 +92,6 @@ iOSInjectionProject/
 # Xcode Project and Workspace
 #
 # When using tuist to generate `.xcodeproj` and `.xcworkspace` files, it is best to not commit them.
-*.xcodeproj
-*.xcworkspace
+# *.xcodeproj
+# *.xcworkspace
 .idea
