@@ -10,11 +10,13 @@ public struct ScreenNoticeView: View {
   public var body: some View {
     VStack(spacing: 20) {
       iconView
-      Spacer().frame(height: 5)
+      Spacer()
       titleView
       subtitleView
     }
+    .frame(height: 200)
     .opacity(model.style.opacity)
+    .animation(.easeInOut(duration: 0.35), value: model)
   }
 
   private var titleView: some View {

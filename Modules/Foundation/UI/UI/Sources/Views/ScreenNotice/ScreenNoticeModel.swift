@@ -7,7 +7,7 @@ public struct ScreenNoticeModel: Equatable {
 
     var opacity: Double {
       if case .watermark = self {
-        return 0.5
+        return 0.1
       }
       return 1.0
     }
