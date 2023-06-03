@@ -4,7 +4,7 @@ import UI
 import UIKit
 
 public protocol AlbumListCoordinatorDelegate {
-  func didSelectAlbum(withID id: Int)
+  func didSelectTrack(withID id: Int)
 }
 
 public final class AlbumListCoordinator: NSObject, Coordinator {
@@ -38,16 +38,22 @@ public final class AlbumListCoordinator: NSObject, Coordinator {
     navigate(to: albumListViewController(), with: .push)
   }
 
-  private func showAlbumDetail(for _: Int) {
-    // TODO: Hook up album detail
+  private func showAlbumDetail(for id: Int) {
+    navigationController.show(albumDetailViewController(for: id), sender: self)
   }
 
   private func albumListViewController() -> UIViewController {
     featureFactory
       .makeAlbumListViewController(for: albumListURL) { [weak self] id in
         guard let self else { return }
-        delegate?.didSelectAlbum(withID: id)
-        //        showAlbumDetail(for: id)
+        showAlbumDetail(for: id)
+      }
+  }
+
+  private func albumDetailViewController(for id: Int) -> UIViewController {
+    featureFactory
+      .makeAlbumDetailViewController(for: id) { [weak self] id in
+        self?.delegate?.didSelectTrack(withID: id)
       }
   }
 }

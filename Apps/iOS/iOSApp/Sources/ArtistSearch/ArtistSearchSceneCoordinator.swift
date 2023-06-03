@@ -53,10 +53,10 @@ extension ArtistSearchSceneCoordinator: ArtistSearchCoordinatorDelegate {
 }
 
 extension ArtistSearchSceneCoordinator: AlbumListCoordinatorDelegate {
-  func didSelectAlbum(withID id: Int) {
+  func didSelectTrack(withID id: Int) {
     let alert = UIAlertController(
-      title: "Artist Selected",
-      message: "Artist ID: \(id)",
+      title: "'Playing' Track",
+      message: "Track ID: \(id)",
       preferredStyle: .alert
     )
 

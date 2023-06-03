@@ -18,20 +18,22 @@ public struct AlbumDetailView<ContentView: View>: View {
   }
 
   public var body: some View {
-    VStack {
-      header
-        .frame(height: 100)
+    NavigationView {
       VStack {
-        contentView()
+        header
+          .frame(height: 100)
+        VStack {
+          contentView()
+        }
       }
+      .onViewDidLoad {
+        viewModel.didAppear()
+      }
+      .onDisappear {
+        viewModel.didDisappear()
+      }
+      .edgesIgnoringSafeArea(.bottom)
     }
-    .onViewDidLoad {
-      viewModel.didAppear()
-    }
-    .onDisappear {
-      viewModel.didDisappear()
-    }
-    .edgesIgnoringSafeArea(.bottom)
   }
 
   private var header: some View {
