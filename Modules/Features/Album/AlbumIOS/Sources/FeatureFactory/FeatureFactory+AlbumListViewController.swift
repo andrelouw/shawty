@@ -7,6 +7,7 @@ import UIKit
 extension FeatureFactory {
   func makeAlbumListViewController(
     for url: URL,
+    isFirstViewController: Bool = false,
     onAlbumSelection: @escaping (Int) -> Void
   ) -> UIViewController {
     let remoteAlbumLoader = RemoteAlbumsLoader(
@@ -35,7 +36,7 @@ extension FeatureFactory {
     // TODO: Investigate need to passing should cancel false, view called on appear twice
     let viewModel = ListViewModel(
       screenTitle: AlbumIOSStrings.albumSearchScreenTitle,
-      shouldCancelTasksOnDisappear: false,
+      shouldCancelTasksOnDisappear: isFirstViewController,
       contentLoader: contentStreamAdapter.load,
       onItemSelection: onAlbumSelection
     )
