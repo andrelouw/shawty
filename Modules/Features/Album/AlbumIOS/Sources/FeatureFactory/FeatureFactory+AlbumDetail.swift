@@ -14,7 +14,7 @@ extension FeatureFactory {
     onTrackSelection: @escaping (Int) -> Void
   ) -> UIViewController {
     let remoteAlbumLoader = RemoteAlbumLoader(
-      url: albumTracksURL(forAlbumID: id),
+      url: albumDetailURL(forAlbumID: id),
       client: httpClient
     )
 
