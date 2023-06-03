@@ -1,7 +1,9 @@
 import Album
+import Shared
 import UI
 
-struct AlbumDetailHeaderModelAdapter {
+/// Adapt `AlbumLoader` output to provide an optional `DetailHeaderModel`
+struct AlbumDetailHeaderModelAdapter: ValueLoader {
   private let albumLoader: any AlbumLoader
 
   init(

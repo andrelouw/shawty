@@ -19,6 +19,16 @@ final class TrackListViewController: UIViewController {
     embed(trackListView())
   }
 
+  @available(*, unavailable)
+  @MainActor
+  required dynamic init?(coder _: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+}
+
+// MARK: - Track List View
+
+extension TrackListViewController {
   private func trackListView() -> some View {
     NavigationView {
       TrackListView(
@@ -29,11 +39,5 @@ final class TrackListViewController: UIViewController {
       .navigationTitle(screenTitle)
       .navigationBarTitleDisplayMode(.automatic)
     }
-  }
-
-  @available(*, unavailable)
-  @MainActor
-  required dynamic init?(coder _: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
   }
 }

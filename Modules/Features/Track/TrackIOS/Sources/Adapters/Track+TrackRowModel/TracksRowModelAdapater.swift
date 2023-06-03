@@ -1,6 +1,7 @@
 import Shared
 import Track
 
+/// Adapt `TrackLoading` output to provide to `TrackRowModel`s
 final class TracksRowModelAdapter: ValueLoader {
   private let tracksLoader: any TracksLoader
 

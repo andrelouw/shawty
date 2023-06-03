@@ -19,6 +19,16 @@ final class AlbumListViewController: UIViewController {
     embed(albumListView())
   }
 
+  @available(*, unavailable)
+  @MainActor
+  required dynamic init?(coder _: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+}
+
+// MARK: - Album List View
+
+extension AlbumListViewController {
   private func albumListView() -> some View {
     NavigationView {
       AlbumListView(
@@ -29,11 +39,5 @@ final class AlbumListViewController: UIViewController {
       .navigationTitle(screenTitle)
       .navigationBarTitleDisplayMode(.automatic)
     }
-  }
-
-  @available(*, unavailable)
-  @MainActor
-  required dynamic init?(coder _: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
   }
 }

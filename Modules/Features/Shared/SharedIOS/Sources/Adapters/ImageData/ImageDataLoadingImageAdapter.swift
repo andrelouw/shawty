@@ -2,7 +2,7 @@ import Foundation
 import Shared
 import UI
 
-/// Adapts ImageDataLoading to an AsyncStream of LoadingImage
+/// Adapts `ImageDataLoading` output to an `AsyncStream` of `LoadingImage`
 public struct ImageDataLoadingImageAdapter: QueryValueLoader {
   private let imageDataLoader: any ImageDataLoader
   private let dataImageAdapter: DataImageTransformer

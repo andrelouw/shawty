@@ -2,8 +2,7 @@ import Combine
 import Core
 import SwiftUI
 
-// TODO: Can move this to Shared Module, since it is not coupled to the artist domain
-final class SearchViewModel: ObservableObject, MainQueueUpdating {
+public final class SearchViewModel: ObservableObject, MainQueueUpdating {
   @MainActor
   @Published var searchText = ""
 
@@ -13,7 +12,7 @@ final class SearchViewModel: ObservableObject, MainQueueUpdating {
   private var searchTextCurrentValueSubject = CurrentValueSubject<String, Never>("")
   private var subscription: AnyCancellable?
 
-  init(
+  public init(
     promptText: String
   ) {
     mainQueueUpdate(\.promptText, with: promptText)

@@ -7,6 +7,7 @@ public protocol TrackListCoordinatorDelegate {
   func didSelectTrack(withID id: Int)
 }
 
+/// The scene showing a list of `Track`s from a given url
 public final class TrackListCoordinator: NSObject, Coordinator {
   public var navigationController: UINavigationController
   public var childCoordinators: [Coordinator] = []

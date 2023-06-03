@@ -4,8 +4,8 @@ import Shared
 import SharedIOS
 import UIKit
 
+/// Adapts `AlbumsLoader` output to provide `[ImageTitleRowViewModel<Int>]`
 struct AlbumImageTitleRowViewModelAdapter: ValueLoader {
-
   private let albumsLoader: any AlbumsLoader
   private let imageDataLoadingImageAdapter: ImageDataLoadingImageAdapter
 

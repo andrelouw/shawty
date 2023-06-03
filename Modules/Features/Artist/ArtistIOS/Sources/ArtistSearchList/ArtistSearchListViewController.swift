@@ -23,11 +23,21 @@ final class ArtistSearchListViewController: UIViewController {
     embed(artistSearchListView())
   }
 
+  @available(*, unavailable)
+  @MainActor
+  required dynamic init?(coder _: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+}
+
+// MARK: - Album Detail View
+
+extension ArtistSearchListViewController {
   private func artistSearchListView() -> some View {
     NavigationView {
       ArtistSearchListView(
         viewModel: searchViewModel,
-        contentView: { [unowned listViewModel] in // TODO: Check if this is not causing issues
+        contentView: { [unowned listViewModel] in
           ListView(
             viewModel: listViewModel
           ) { rowViewModel in
@@ -38,11 +48,5 @@ final class ArtistSearchListViewController: UIViewController {
       .navigationTitle(screenTitle)
       .navigationBarTitleDisplayMode(.automatic)
     }
-  }
-
-  @available(*, unavailable)
-  @MainActor
-  required dynamic init?(coder _: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
   }
 }

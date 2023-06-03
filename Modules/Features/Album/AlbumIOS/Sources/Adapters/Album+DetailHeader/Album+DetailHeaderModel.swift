@@ -4,6 +4,7 @@ import Foundation
 import UI
 
 extension Album {
+  /// Transforms `Album` to `DetailHeaderModel`
   func asDetailHeaderModel() -> DetailHeaderModel {
     let dateString = DateFormatter.localeFullDayMonthYear().string(from: releaseDate)
     let icons = hasExplicitLyrics ? [Icon.explicit] : []

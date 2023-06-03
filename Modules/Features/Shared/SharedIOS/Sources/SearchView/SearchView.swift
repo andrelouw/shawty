@@ -1,12 +1,11 @@
 import SwiftUI
 
-// TODO: Can move this to Shared Module, since it is not coupled to the artist domain
-struct SearchView<ContentView: View>: View {
-  @ObservedObject var viewModel: SearchViewModel
+public struct SearchView<ContentView: View>: View {
+  @ObservedObject private var viewModel: SearchViewModel
 
   private var contentView: () -> ContentView
 
-  init(
+  public init(
     viewModel: SearchViewModel,
     contentView: @escaping () -> ContentView
   ) {
@@ -14,7 +13,7 @@ struct SearchView<ContentView: View>: View {
     self.contentView = contentView
   }
 
-  var body: some View {
+  public var body: some View {
     ZStack {
       contentView()
         .searchable(

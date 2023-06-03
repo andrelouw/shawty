@@ -21,6 +21,16 @@ final class AlbumDetailViewController: UIViewController {
     embed(albumDetailView())
   }
 
+  @available(*, unavailable)
+  @MainActor
+  required dynamic init?(coder _: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+}
+
+// MARK: - Album Detail View
+
+extension AlbumDetailViewController {
   private func albumDetailView() -> some View {
     NavigationView {
       AlbumDetailView(
@@ -34,11 +44,5 @@ final class AlbumDetailViewController: UIViewController {
         )
       }
     }
-  }
-
-  @available(*, unavailable)
-  @MainActor
-  required dynamic init?(coder _: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
   }
 }
