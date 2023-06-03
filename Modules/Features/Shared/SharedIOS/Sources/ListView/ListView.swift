@@ -22,11 +22,9 @@ public struct ListView<Row: ListRowDisplayable>: View {
   }
 
   public var body: some View {
-    NavigationView {
-      ZStack {
-        contentView
-        loader
-      }
+    ZStack {
+      contentView
+      loader
     }
     .onViewDidLoad {
       viewModel.didAppear()
@@ -34,7 +32,6 @@ public struct ListView<Row: ListRowDisplayable>: View {
     .onDisappear {
       viewModel.didDisappear()
     }
-    // This position is important has to be after life cycles
     .optionalNavigationTitle(title: viewModel.navigationTitle)
     .navigationBarTitleDisplayMode(.large)
   }
@@ -76,6 +73,7 @@ public struct ListView<Row: ListRowDisplayable>: View {
     }
     .scrollContentBackground(.hidden)
     .listStyle(.grouped)
+    .background(Color.background.primary)
   }
 
   private func cells(for items: [Row.Item]) -> some View {
@@ -84,7 +82,7 @@ public struct ListView<Row: ListRowDisplayable>: View {
         .contentShape(Rectangle())
         .onTapGesture {
           viewModel.didSelect(id: item.id)
-        }
+        }.listRowBackground(Color.background.primary)
     }
   }
 

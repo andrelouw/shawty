@@ -1,17 +1,19 @@
 import SharedIOS
 import SwiftUI
 
-final class AlbumListViewController: UIHostingController<AlbumListView> {
+final class AlbumListViewController: UIHostingController<NavigationView<AlbumListView>> {
   init(
     listViewModel: AlbumListViewModel
   ) {
     super.init(
-      rootView: AlbumListView(
-        viewModel: listViewModel,
-        rowView: { rowViewModel in
+      rootView:
+      NavigationView {
+        AlbumListView(
+          viewModel: listViewModel
+        ) { rowViewModel in
           ImageTitleRowView(viewModel: rowViewModel)
         }
-      )
+      }
     )
   }
 
