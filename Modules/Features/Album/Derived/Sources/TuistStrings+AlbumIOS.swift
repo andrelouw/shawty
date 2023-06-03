@@ -12,8 +12,8 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name
 public enum AlbumIOSStrings {
-  /// Welcome to
-  public static let welcomeMessage = AlbumIOSStrings.tr("Album", "Welcome_message")
+  /// Albums
+  public static let albumSearchScreenTitle = AlbumIOSStrings.tr("Album", "ALBUM_SEARCH_SCREEN_TITLE")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name
