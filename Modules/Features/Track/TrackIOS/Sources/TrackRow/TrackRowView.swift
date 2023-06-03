@@ -16,7 +16,7 @@ public struct TrackRowView<ID: Hashable>: View, ListRowDisplayable {
         .foregroundColor(.font.primary)
       Spacer()
       Icon.play.asSystemImage()
-        .foregroundColor(.status.success)
+        .foregroundColor(.brand.primary)
         .font(.body)
     }
   }

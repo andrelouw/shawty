@@ -14,5 +14,7 @@ final class SceneCoordinator {
     mainCoordinator.start()
     childCoordinators = [mainCoordinator]
     window.makeKeyAndVisible()
+
+    window.windowScene?.keyWindow?.tintColor = ShawtyAsset.accentColor.color
   }
 }
