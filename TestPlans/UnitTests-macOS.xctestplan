@@ -68,6 +68,14 @@
         "identifier" : "113CA2AB28E7212956A52CD2",
         "name" : "AlbumTests"
       }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Track.xcodeproj",
+        "identifier" : "766B8971A16669F5859EAA26",
+        "name" : "TrackTests"
+      }
     }
   ],
   "version" : 1
