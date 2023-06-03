@@ -32,8 +32,10 @@ extension FeatureFactory {
       loader: albumsViewModelAdapter
     )
 
+    // TODO: Investigate need to passing should cancel false, view called on appear twice
     let viewModel = ListViewModel(
       screenTitle: AlbumIOSStrings.albumSearchScreenTitle,
+      shouldCancelTasksOnDisappear: false,
       contentLoader: contentStreamAdapter.load,
       onItemSelection: onAlbumSelection
     )

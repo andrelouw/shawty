@@ -46,7 +46,8 @@ public final class AlbumListCoordinator: NSObject, Coordinator {
     featureFactory
       .makeAlbumListViewController(for: albumListURL) { [weak self] id in
         guard let self else { return }
-        showAlbumDetail(for: id)
+        delegate?.didSelectAlbum(withID: id)
+        //        showAlbumDetail(for: id)
       }
   }
 }
