@@ -1,4 +1,4 @@
-## Project Structure
+# Project Structure
 At the root of the folder you will find all the config files, see the [Tools](#tools) section for more info on each config file.
 
 The remaining folders are like follows, see each section below for more detail on each
@@ -12,7 +12,7 @@ The remaining folders are like follows, see each section below for more detail o
 └── Workspace.swift
 ```
 
-### Apps
+## Apps
 The Apps folder contains the main project file for the `iOS` app, and all future apps and app extensions will be added in this folder.
 
 ```
@@ -34,16 +34,16 @@ The `iOSApp` directory contains the [source files](#sources), [resources](#resou
 The `iOSAppTests` directory contains the [test files](#tests) and test target [config](#config).
 See the [Project.swift](#projectswift) and [Derived](#derived) sections for more details on the remaing conponents in the `iOS` directory.
 
-### Modules
+## Modules
 Modules are divided into two categories, namely `Foundation` and `Feature` modules.
 
 - `Foundation` modules contain foundational tools that are combined to build other modules.
 - `Feature` modules contain features that the user can feel and interact with. They are built by combining foundation modules, and sometimes other feature modules.
 
-Refer to [µFeatures Architecture](https://docs.tuist.io/building-at-scale/microfeatures/) for more information on this topic.
+Refer to [Modules Overview](ModulesOverview.md) for more information on the modules separation.
 
 
-#### Foundation
+### Foundation
 Foundation modules has a sources target and a test target. The sources target can have more or less directories depending on the type of module:
 
 Sources Target:
@@ -73,7 +73,7 @@ Modules/Foundation/Core
 See the [Project.swift](#projectswift) and [Derived](#derived) sections for more details on the remaing conponents in the directory.
 
 
-#### Feature
+### Feature
 Feature modules has source, test and example app targets.
 
 Sources Target:
@@ -110,25 +110,28 @@ Modules/Features/Welcome
     └── Tests
 ```
 
-### Tuist
+## Tuist
 The `Tuist` directory holds all the `ProjectDescriptionHelpers` which powers all the `Tuist` commands and automation.
 
 See [the Tuist docs](https://docs.tuist.io/guides/helpers) for more details.
 
-### Test Plans
+## Test Plans
 This directory contains the project's test plans.
 
-### Workspace.swift
+There is a test plan for each platform and unit and integration tests are separated into separate test plans.
+Each test plan is linked to specific scheme for easy selection and running.
+
+## Workspace.swift
 The `Workspace.swift` file serves as the manifest to generate the main workspace for the project using [Tuist](#tuist).
 
 See [the Tuist docs](https://docs.tuist.io/manifests/workspace) for more details.
 
-### Project.swift
+## Project.swift
 The `Project.swift` file serves as the manifest to generate an Xcdoe poject using [Tuist](#tuist). Each module has it's own project file.
 
 See [the Tuist docs](https://docs.tuist.io/manifests/project) for more details.
 
-### Derived
+## Derived
 When generating a project or workspace using tuist, all resources will be turned into swift code so all resources can be accessed in a type safe way. The generated files will be stored in the `Derived` folder of each project respectively.
 
 See [the Tuist docs](https://docs.tuist.io/guides/resources#resourcesynthesizers) for more details.
