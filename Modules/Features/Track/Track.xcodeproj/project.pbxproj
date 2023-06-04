@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		29EB0DF57D328FA42374205F /* TuistBundle+TrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7892C7A9D294D335C57C533A /* TuistBundle+TrackApp.swift */; };
 		316EB42AE964880EF28B48FB /* Track.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8304BCE1EF81761A36D7CDFF /* Track.framework */; };
 		35898D6D5BC86CCF1FF2C303 /* Track.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8304BCE1EF81761A36D7CDFF /* Track.framework */; };
+		46C38C352A2CE93500A8EAE6 /* WeakReferenceProxy+TrackLIstCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C38C342A2CE93500A8EAE6 /* WeakReferenceProxy+TrackLIstCoordinatorDelegate.swift */; };
 		4E429FF15B761E0F02719616 /* SharedIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67FF9BF213AF31E8692F0B55 /* SharedIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4FB7AD3F7911296748E752D0 /* SharedIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FF9BF213AF31E8692F0B55 /* SharedIOS.framework */; };
 		518DAA2691C0FD0DD7589772 /* TuistAssets+TrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD4E932D6675152C24071C4 /* TuistAssets+TrackApp.swift */; };
@@ -184,6 +185,7 @@
 		3169C3E6A6E8618BE9F18344 /* Track+TrackRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Track+TrackRowModel.swift"; sourceTree = "<group>"; };
 		4129CB7708C11D8B81C42EF5 /* TrackAPIIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackAPIIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		430968C6BB30FA6572FEDBD4 /* TrackIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		46C38C342A2CE93500A8EAE6 /* WeakReferenceProxy+TrackLIstCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeakReferenceProxy+TrackLIstCoordinatorDelegate.swift"; sourceTree = "<group>"; };
 		47434F05DF2929DB1B1BF6D3 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B77390AF3F7EDA97FEC9EDF /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
 		4D8B251F8D54DFC2CE47996B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 		430BB53568BB42608665AB8C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				46C38C322A2CE91700A8EAE6 /* Extensions */,
 				457BCC574C8706201A0F1A57 /* Adapters */,
 				B25728EF5D4D6915ADB5D104 /* FeatureFactory */,
 				465D41143BE8518B9B3B5F82 /* TrackList */,
@@ -419,6 +422,14 @@
 				B9A42AC9D43D32427AD55BEC /* TrackListViewModel.swift */,
 			);
 			path = TrackList;
+			sourceTree = "<group>";
+		};
+		46C38C322A2CE91700A8EAE6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				46C38C342A2CE93500A8EAE6 /* WeakReferenceProxy+TrackLIstCoordinatorDelegate.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		498209665FC763CA3A287EF5 /* TrackTests */ = {
@@ -746,8 +757,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1430;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = D9702FE94D7EAA027FF684B7 /* Build configuration list for PBXProject "Track" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -991,6 +1000,7 @@
 				7FC69C544847FCDFB2D8FEFF /* TrackListView.swift in Sources */,
 				CB88F26092281939D1EEFC84 /* TrackListViewController.swift in Sources */,
 				03B80A7CCA9A1270CA7D5C1D /* TrackListViewModel.swift in Sources */,
+				46C38C352A2CE93500A8EAE6 /* WeakReferenceProxy+TrackLIstCoordinatorDelegate.swift in Sources */,
 				77EC592D6D148D665BE5D34E /* TrackListCoordinator.swift in Sources */,
 				84E28C44A2E2AA9D2B71B2B6 /* TrackRowModel.swift in Sources */,
 				217FDC8A2BAFD0D197DBC263 /* TrackRowView.swift in Sources */,
