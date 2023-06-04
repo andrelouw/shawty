@@ -6,7 +6,7 @@
 A sample music app to search for artists and browse albums and tracks for that artist.
 
 <p align="center">
-  <img src=".github/assets/AppShowcase.gif" />
+  <img src="Documentation/assets/AppShowcase.gif" />
 </p>
 
 ## Getting started
