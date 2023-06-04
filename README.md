@@ -5,17 +5,27 @@
 # Shawty
 A sample music app to search for artists and browse albums and tracks for that artist.
 
-## Getting started
-To get started you have 2 options, light or **hardcore**:
+<p align="center">
+  <img src=".github/assets/AppShowcase.gif" />
+</p>
 
-### Light
-Assuming that you have Xcode installed,
-Open the `Shawty.xcworkspace` file, which will load the whole project in Xcode.
+## Getting started
+To get started you have 2 options, light or **hardcore**, choose an option below:
+
+<details>
+  <summary>Light</summary>
+
+Assuming that you have Xcode installed, open the `Shawty.xcworkspace` file, which will load the whole project in Xcode.
+
 Choose the `iOS` target and start browsing 🔍.
 
 > Normally `.xcworkspace` and `.xcodeproj` files will be git-ignored, but for the purposes of this exercise it was committed as an alternate solution to view the project.
+---
+</details>
 
-### Hardcore
+
+<details>
+  <summary>Hardcore</summary>
 Run the following command in root of the cloned repository:
 
 ```shell
@@ -23,9 +33,12 @@ make
 ```
 
 The `make` command will set up the dev environment, generate and build the workspace, and finally launch Xcode with the generated workspace.
+
 Choose the `iOS` target and start browsing 🔍.
 
 > See the [`unbootstrap`](Documentation/Commands.md#unisntalling) command that will reverse all installations done by `make`.
+---
+</details>
 
 ## Features
 The app has the following features, and detailed breakdown of each can be found on the respective page:
@@ -37,7 +50,11 @@ The app has the following features, and detailed breakdown of each can be found 
 See the following pages for more information on the app Architecture:
 - [Architecture Overview](Documentation/ArchitectureOverview.md)
 - [Navigation Overview](Documentation/NavigationOverview.md)
+- [Modules Overview](Documentation/ModulesOverview.md)
 - [Project Structure](Documentation/ProjectStructure.md)
+
+## Break down of work done
+See the [closed PRs](https://github.com/annasbananas/shawty/pulls?q=is%3Apr+is%3Aclosed) for a detailed break-down of the work done
 
 ## Behind the name
 The name was inspired by the song [Replay from Iyaz](https://g.co/kgs/M1eW5e):
@@ -48,8 +65,6 @@ The name was inspired by the song [Replay from Iyaz](https://g.co/kgs/M1eW5e):
 > It's like my iPod's stuck on replay \
 > Replay-ay-ay-ay_  "
 
-## Break down of work done
-See the [closed PRs](https://github.com/annasbananas/shawty/pulls?q=is%3Apr+is%3Aclosed) for a detailed break-down of the work done
 
 ## Other details
 This (personal and still very much under development) [App template](https://github.com/andrelouw/app-template) was used as a starting point for this project.
