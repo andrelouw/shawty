@@ -23,8 +23,7 @@ final class MainCoordinator: Coordinator, FeatureFactory {
   func start() {
     let coordinator = artistSearchCoordinator()
     addChild(coordinator)
-    // TODO: Implement WeakRefProxy
-    coordinator.delegate = self
+    coordinator.delegate = WeakRefVirtualProxy(self)
 
     coordinator.start()
   }
