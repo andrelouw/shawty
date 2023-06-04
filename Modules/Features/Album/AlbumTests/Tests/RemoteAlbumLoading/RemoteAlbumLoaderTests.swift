@@ -72,10 +72,9 @@ final class RemoteAlbumLoaderTests: XCTestCase {
     let url = anyURL()
     let (sut, client) = makeSUT(url: url)
 
-    // TODO: Clean up dirty data below (.dataCorrupted)
     try await expect(
       sut,
-      toCompleteWith: .failure(.invalidData(.decoding(.dataCorrupted(.init(codingPath: [], debugDescription: ""))))),
+      toCompleteWith: .failure(.invalidData(.decoding(.anyDataCorruptedError()))),
       when: {
         client.complete(withStatusCode: 200, data: invalidJSONData(), for: url)
       }
@@ -223,7 +222,6 @@ extension RemoteAlbumLoaderTests {
     for sut: SUT,
     timeout seconds: TimeInterval = 2
   ) async throws -> Entity {
-    // FIXME: The `unowned sut` is a weird one. The timeout task is holding onto sut for some reason
     try await timeoutTask(timeout: seconds) { [unowned sut] in
       try await sut.load()
     }

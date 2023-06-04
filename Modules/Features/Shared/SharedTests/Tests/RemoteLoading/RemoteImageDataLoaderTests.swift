@@ -84,11 +84,10 @@ final class RemoteImageDataLoaderTests: XCTestCase {
     let url = URL.anyURL()
     let (sut, client) = makeSUT()
 
-    // TODO: Clean up dirty data below (.dataCorrupted)
     try await expect(
       sut,
       with: url,
-      toCompleteWith: .failure(.invalidData(.decoding(.dataCorrupted(.init(codingPath: [], debugDescription: ""))))),
+      toCompleteWith: .failure(.invalidData(.decoding(.anyDataCorruptedError()))),
       when: {
         client.complete(withStatusCode: 200, data: Data(), for: url)
       }
@@ -230,7 +229,6 @@ extension RemoteImageDataLoaderTests {
     for sut: SUT,
     timeout seconds: TimeInterval = 2
   ) async throws -> Entity {
-    // FIXME: The `unowned sut` is a weird one. The timeout task is holding onto sut for some reason
     try await timeoutTask(timeout: seconds) { [unowned sut] in
       try await sut.load(url)
     }

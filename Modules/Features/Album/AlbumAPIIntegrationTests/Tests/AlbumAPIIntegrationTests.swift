@@ -1,4 +1,5 @@
 import Album
+import Core
 import Networking
 import Testing
 import XCTest
@@ -44,19 +45,4 @@ final class AlbumAPIIntegrationTests: XCTestCase {
       XCTFail("Expected successful albums result, got \(error) instead")
     }
   }
-}
-
-// TODO: Move to core
-extension String {
-  func asISO8601FullDate() -> Date? {
-    let formatter = Formatter.iso8601
-    formatter.formatOptions = [.withFullDate]
-
-    return formatter.date(from: self)
-  }
-}
-
-// TODO: Look for duplication here
-extension Formatter {
-  static let iso8601 = ISO8601DateFormatter()
 }

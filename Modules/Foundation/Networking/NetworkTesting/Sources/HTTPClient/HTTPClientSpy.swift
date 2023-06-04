@@ -13,9 +13,6 @@ public final class HTTPClientSpy: HTTPClient {
   public func get(from url: URL) async throws -> Response {
     requestedURLs.append(url)
 
-    // FIXME: Remove when tests are done, used for simulating wrong replies
-    // try await Task.sleep(for: .seconds(4))
-
     return try result(at: requestedURLs.count - 1, for: url).get()
   }
 

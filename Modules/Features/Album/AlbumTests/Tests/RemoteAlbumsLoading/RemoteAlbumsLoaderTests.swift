@@ -72,10 +72,9 @@ final class RemoteAlbumsLoaderTests: XCTestCase {
     let url = anyURL()
     let (sut, client) = makeSUT(url: url)
 
-    // TODO: Clean up dirty data below (.dataCorrupted)
     try await expect(
       sut,
-      toCompleteWith: .failure(.invalidData(.decoding(.dataCorrupted(.init(codingPath: [], debugDescription: ""))))),
+      toCompleteWith: .failure(.invalidData(.decoding(.anyDataCorruptedError()))),
       when: {
         client.complete(withStatusCode: 200, data: invalidJSONData(), for: url)
       }
@@ -275,7 +274,6 @@ extension RemoteAlbumsLoaderTests {
     for sut: SUT,
     timeout seconds: TimeInterval = 2
   ) async throws -> [Entity] {
-    // FIXME: The `unowned sut` is a weird one. The timeout task is holding onto sut for some reason
     try await timeoutTask(timeout: seconds) { [unowned sut] in
       try await sut.load()
     }
@@ -356,19 +354,4 @@ extension RemoteAlbumsLoaderTests {
     let json = ["data": albums]
     return try! JSONSerialization.data(withJSONObject: json)
   }
-}
-
-// TODO: Move to test helpers/Core
-extension Date {
-  func asISO8601FullDateString() -> String {
-    let formatter = Formatter.iso8601
-    formatter.formatOptions = [.withFullDate]
-
-    return formatter.string(from: self)
-  }
-}
-
-// TODO: Move to test helpers/Core
-extension Formatter {
-  static let iso8601 = ISO8601DateFormatter()
 }
