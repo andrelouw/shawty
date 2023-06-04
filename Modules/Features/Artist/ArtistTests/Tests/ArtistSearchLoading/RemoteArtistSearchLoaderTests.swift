@@ -97,11 +97,10 @@ final class RemoteArtistSearchLoaderTests: XCTestCase {
     let search = makeSearchFixture()
     let (sut, client) = makeSUT(url: search.baseURL)
 
-    // TODO: Clean up dirty data below (.dataCorrupted)
     try await expect(
       sut,
       with: search.queryString,
-      toCompleteWith: .failure(.invalidData(.decoding(.dataCorrupted(.init(codingPath: [], debugDescription: ""))))),
+      toCompleteWith: .failure(.invalidData(.decoding(.anyDataCorruptedError()))),
       when: {
         client.complete(withStatusCode: 200, data: invalidJSONData(), for: search.urlWithQuery)
       }
