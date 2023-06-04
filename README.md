@@ -31,6 +31,12 @@ Choose the `iOS` target and start browsing 🔍.
 The app has the following features, and detailed breakdown of each can be found on the respective page:
 - [Artist Search](Documentation/ArtistFeatureSpecs.md)
 - [Album List](Documentation/AlbumListFeatureSpecs.md)
+- [Album Detail](Documentation/AlbumDetailFeatureSpecs.md)
+
+## App Architecture
+See the following pages for more information on the app Architecture:
+- [Architecture Overview](Documentation/ArchitectureOverview.md)
+- [Project Structure](Documentation/ProjectStructure.md)
 
 ## Behind the name
 The name was inspired by the song [Replay from Iyaz](https://g.co/kgs/M1eW5e):
@@ -48,7 +54,5 @@ See the [closed PRs](https://github.com/annasbananas/shawty/pulls?q=is%3Apr+is%3
 This (personal and still very much under development) [App template](https://github.com/andrelouw/app-template) was used as a starting point for this project.
 
 See the [Commands](Documentation/Commands.md) page for a full list of `make` commands.
-
-See the [Project Structure](Documentation/ProjectStructure.md) page for an overview of the project and directory structure.
 
 See the [Tools](Documentation/Tools.md) page for all the tools used in this project.
