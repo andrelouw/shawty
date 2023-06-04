@@ -36,6 +36,7 @@ The app has the following features, and detailed breakdown of each can be found 
 ## App Architecture
 See the following pages for more information on the app Architecture:
 - [Architecture Overview](Documentation/ArchitectureOverview.md)
+- [Navigation Overview](Documentation/NavigationOverview.md)
 - [Project Structure](Documentation/ProjectStructure.md)
 
 ## Behind the name
