@@ -357,18 +357,3 @@ extension RemoteAlbumsLoaderTests {
     return try! JSONSerialization.data(withJSONObject: json)
   }
 }
-
-// TODO: Move to test helpers/Core
-extension Date {
-  func asISO8601FullDateString() -> String {
-    let formatter = Formatter.iso8601
-    formatter.formatOptions = [.withFullDate]
-
-    return formatter.string(from: self)
-  }
-}
-
-// TODO: Move to test helpers/Core
-extension Formatter {
-  static let iso8601 = ISO8601DateFormatter()
-}
