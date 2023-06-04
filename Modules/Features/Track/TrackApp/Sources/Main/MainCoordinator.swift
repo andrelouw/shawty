@@ -23,8 +23,7 @@ final class MainCoordinator: Coordinator, FeatureFactory {
   func start() {
     let coordinator = trackListCoordinator()
     addChild(coordinator)
-    // TODO: WeakReference Proxy
-    coordinator.delegate = self
+    coordinator.delegate = WeakRefVirtualProxy(self)
 
     coordinator.start()
   }
