@@ -229,7 +229,6 @@ extension RemoteImageDataLoaderTests {
     for sut: SUT,
     timeout seconds: TimeInterval = 2
   ) async throws -> Entity {
-    // FIXME: The `unowned sut` is a weird one. The timeout task is holding onto sut for some reason
     try await timeoutTask(timeout: seconds) { [unowned sut] in
       try await sut.load(url)
     }
