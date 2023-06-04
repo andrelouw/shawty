@@ -1,5 +1,6 @@
 import AlbumIOS
 import ArtistIOS
+import Core
 import Shared
 import UI
 import UIKit
@@ -45,8 +46,7 @@ extension ArtistSearchSceneCoordinator: ArtistSearchCoordinatorDelegate {
 
     addChild(coordinator)
 
-    // TODO: WeakReference Proxy
-    coordinator.delegate = self
+    coordinator.delegate = WeakRefVirtualProxy(self)
     coordinator.start()
   }
 }

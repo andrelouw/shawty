@@ -1,5 +1,6 @@
 import Album
 import AlbumIOS
+import Core
 import Networking
 import Shared
 import UI
@@ -21,8 +22,7 @@ public final class MainCoordinator: Coordinator, FeatureFactory {
   public func start() {
     let coordinator = albumListCoordinator()
     addChild(coordinator)
-    // TODO: WeakReference Proxy
-    coordinator.delegate = self
+    coordinator.delegate = WeakRefVirtualProxy(self)
 
     coordinator.start()
   }
