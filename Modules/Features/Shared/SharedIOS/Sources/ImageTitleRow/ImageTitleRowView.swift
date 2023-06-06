@@ -20,7 +20,7 @@ public struct ImageTitleRowView<ID: Hashable>: View, ListRowDisplayable {
       Spacer()
       rowChevronIcon
     }
-    .onAppear {
+    .onViewDidLoad {
       viewModel.didAppear()
     }
     .onDisappear {

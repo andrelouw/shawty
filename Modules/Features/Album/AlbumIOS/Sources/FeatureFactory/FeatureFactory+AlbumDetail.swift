@@ -24,17 +24,13 @@ extension FeatureFactory {
       client: httpClient
     )
 
-    let remoteImageDataLoader = RemoteImageDataLoader(
-      client: httpClient
-    )
-
     // Adapters
     let albumDetailHeaderModelAdapter = AlbumDetailHeaderModelAdapter(
       albumLoader: remoteAlbumLoader
     )
 
     let imageDataLoadingImageAdapter = ImageDataLoadingImageAdapter(
-      imageDataLoader: remoteImageDataLoader,
+      imageDataLoader: imageLoader,
       dataImageAdapter: UIImage.init(data:)
     )
 
