@@ -33,6 +33,7 @@
 		7408E93CDB27DFC5818780C9 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23102939CCD07BE95D2AFE04 /* Networking.framework */; };
 		74F1E343C2F662ACB01F266D /* TracksRowModelAdapater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B8080FE0AA7D6E85872F5 /* TracksRowModelAdapater.swift */; };
 		77EC592D6D148D665BE5D34E /* TrackListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CDA8327D9EC5B64783F177 /* TrackListCoordinator.swift */; };
+		7D2FD949215B53A7FF5B4E63 /* Caching.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB0B00418C340CEE74296F2F /* Caching.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DE12F3125E61838918DAF14 /* Track+TrackRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3169C3E6A6E8618BE9F18344 /* Track+TrackRowModel.swift */; };
 		7F904DC3552391AB2E5BC8AD /* RemoteTracksLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BCD037EAA5224A811E4CCA /* RemoteTracksLoader.swift */; };
 		7FC69C544847FCDFB2D8FEFF /* TrackListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90F627AAC191D2BE02987FA /* TrackListView.swift */; };
@@ -158,6 +159,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				7D2FD949215B53A7FF5B4E63 /* Caching.framework in Embed Frameworks */,
 				A16752AFF736D4CE54D69A72 /* Core.framework in Embed Frameworks */,
 				BBFE7E52DEA1EA780FAA7054 /* Networking.framework in Embed Frameworks */,
 				088FE91427AE4E40E7E5B418 /* Shared.framework in Embed Frameworks */,
@@ -212,6 +214,7 @@
 		C6A1F95795A19E424D366894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C6CE75CD7FE33BCC7BB7D68E /* TrackRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRowModel.swift; sourceTree = "<group>"; };
 		C90F627AAC191D2BE02987FA /* TrackListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListView.swift; sourceTree = "<group>"; };
+		CB0B00418C340CEE74296F2F /* Caching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Caching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE465591DFB23F9DCA7402B0 /* NetworkTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42D9DC94BF8AF2E26C6F6DC /* TrackCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCoordinatorTests.swift; sourceTree = "<group>"; };
 		DCD4E932D6675152C24071C4 /* TuistAssets+TrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+TrackApp.swift"; sourceTree = "<group>"; };
@@ -324,6 +327,7 @@
 		211EF2DFDBECA7D9BA1F67F9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				CB0B00418C340CEE74296F2F /* Caching.framework */,
 				DD1A76DDEB768C2769112329 /* Core.framework */,
 				23102939CCD07BE95D2AFE04 /* Networking.framework */,
 				CE465591DFB23F9DCA7402B0 /* NetworkTesting.framework */,

@@ -20,27 +20,32 @@ final public class Cache<Key: Hashable, Value> {
     wrapped.removeAllObjects()
   }
 
-  public func removeValue(forKey key: Key) {
+  public func removeValue(for key: Key) {
     wrapped.removeObject(forKey: WrappedKey(key))
   }
 
-  public func entry(forKey key: Key) -> Entry? {
+  public func value(for key: Key) -> Value? {
+    entry(for: key)?.value
+  }
+
+  public func insert(_ value: Value, for key: Key) {
+    let entry = Entry(key: key, value: value, timestamp: dateProvider())
+    wrapped.setObject(entry, forKey: WrappedKey(entry.key))
+  }
+
+  private func entry(for key: Key) -> Entry? {
     guard let entry = wrapped.object(forKey: WrappedKey(key)) else {
       return nil
     }
 
     guard cachePolicy.validate(entry.timestamp, against: dateProvider()) else {
-      removeValue(forKey: key)
+      removeValue(for: key)
       return nil
     }
 
     return entry
   }
 
-  public func insert(_ value: Value, forKey key: Key) {
-    let entry = Entry(key: key, value: value, timestamp: dateProvider())
-    wrapped.setObject(entry, forKey: WrappedKey(entry.key))
-  }
 }
 
 extension Cache {
@@ -63,8 +68,8 @@ extension Cache {
 
 extension Cache {
   public final class Entry {
-    let key: Key
     let value: Value
+    let key: Key
     let timestamp: Date
 
     init(key: Key, value: Value, timestamp: Date) {

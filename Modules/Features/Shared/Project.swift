@@ -10,6 +10,7 @@ let project = Project.featureModule(
     .foundation("Core"),
     .foundation("UI"),
     .foundation("Networking"),
+    .foundation("Caching"),
   ],
   additionalTargets: [
     .makeTestTarget(
