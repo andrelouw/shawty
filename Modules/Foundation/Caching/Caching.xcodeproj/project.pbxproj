@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2BE832DE8375DD372114E0D8 /* CachingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948412E21EBA26E1D8DC4FBE /* CachingTests.swift */; };
+		4680D42C2A2F95A7007729B7 /* CachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4680D42B2A2F95A7007729B7 /* CachePolicy.swift */; };
 		48CF3EB6A7A88D204854DBF1 /* Testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC08B36BCF3160982EF41FBF /* Testing.framework */; };
 		84C877A1377BC557C495423C /* Caching.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156E11A6188B2E19C1D2E2C3 /* Caching.framework */; };
 		DD85F5A26BD253DB7DFFE913 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C2668B8609C3A9413E4458 /* Core.framework */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		156E11A6188B2E19C1D2E2C3 /* Caching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Caching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19C2668B8609C3A9413E4458 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4680D42B2A2F95A7007729B7 /* CachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachePolicy.swift; sourceTree = "<group>"; };
 		469B953FD84E5761C6029E10 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		717BAA5C325F43C617EF8B43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		798E703DBA838295FC733CDF /* CachingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CachingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				469B953FD84E5761C6029E10 /* Cache.swift */,
+				4680D42B2A2F95A7007729B7 /* CachePolicy.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4680D42C2A2F95A7007729B7 /* CachePolicy.swift in Sources */,
 				F35CDAC57E358F721EAE6DA8 /* Cache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

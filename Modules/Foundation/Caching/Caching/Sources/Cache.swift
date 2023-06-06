@@ -4,18 +4,20 @@ import Foundation
 final public class Cache<Key: Hashable, Value> {
   private let wrapped = NSCache<WrappedKey, Entry>()
   private let dateProvider: () -> Date
-  private let entryLifetime: TimeInterval
-  private let keyTracker = KeyTracker()
+  private let cachePolicy: CachePolicy.Type
 
   public init(
     dateProvider: @escaping () -> Date = Date.init,
-    entryLifetime: TimeInterval = 12 * 60 * 60,
+    cachePolicy: CachePolicy.Type,
     maximumEntryCount: Int = 50
   ) {
     self.dateProvider = dateProvider
-    self.entryLifetime = entryLifetime
+    self.cachePolicy = cachePolicy
     wrapped.countLimit = maximumEntryCount
-    wrapped.delegate = keyTracker
+  }
+
+  public func removeAll() {
+    wrapped.removeAllObjects()
   }
 
   public func removeValue(forKey key: Key) {
@@ -27,7 +29,7 @@ final public class Cache<Key: Hashable, Value> {
       return nil
     }
 
-    guard dateProvider() < entry.expirationDate else {
+    guard cachePolicy.validate(entry.timestamp, against: dateProvider()) else {
       removeValue(forKey: key)
       return nil
     }
@@ -35,9 +37,9 @@ final public class Cache<Key: Hashable, Value> {
     return entry
   }
 
-  public func insert(_ entry: Entry) {
+  public func insert(_ value: Value, forKey key: Key) {
+    let entry = Entry(key: key, value: value, timestamp: dateProvider())
     wrapped.setObject(entry, forKey: WrappedKey(entry.key))
-    keyTracker.keys.insert(entry.key)
   }
 }
 
@@ -63,29 +65,12 @@ extension Cache {
   public final class Entry {
     let key: Key
     let value: Value
-    let expirationDate: Date
+    let timestamp: Date
 
-    private init(key: Key, value: Value, expirationDate: Date) {
+    init(key: Key, value: Value, timestamp: Date) {
       self.key = key
       self.value = value
-      self.expirationDate = expirationDate
-    }
-  }
-}
-
-extension Cache {
-  final class KeyTracker: NSObject, NSCacheDelegate {
-    var keys = Set<Key>()
-
-    func cache(
-      _: NSCache<AnyObject, AnyObject>,
-      willEvictObject object: Any
-    ) {
-      guard let entry = object as? Entry else {
-        return
-      }
-
-      keys.remove(entry.key)
+      self.timestamp = timestamp
     }
   }
 }
