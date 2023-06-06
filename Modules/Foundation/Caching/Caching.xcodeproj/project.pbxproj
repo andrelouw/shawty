@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,7 @@
 		48CF3EB6A7A88D204854DBF1 /* Testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC08B36BCF3160982EF41FBF /* Testing.framework */; };
 		84C877A1377BC557C495423C /* Caching.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156E11A6188B2E19C1D2E2C3 /* Caching.framework */; };
 		DD85F5A26BD253DB7DFFE913 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19C2668B8609C3A9413E4458 /* Core.framework */; };
-		F35CDAC57E358F721EAE6DA8 /* Caching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469B953FD84E5761C6029E10 /* Caching.swift */; };
+		F35CDAC57E358F721EAE6DA8 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469B953FD84E5761C6029E10 /* Cache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 /* Begin PBXFileReference section */
 		156E11A6188B2E19C1D2E2C3 /* Caching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Caching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19C2668B8609C3A9413E4458 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		469B953FD84E5761C6029E10 /* Caching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Caching.swift; sourceTree = "<group>"; };
+		469B953FD84E5761C6029E10 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		717BAA5C325F43C617EF8B43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		798E703DBA838295FC733CDF /* CachingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CachingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		948412E21EBA26E1D8DC4FBE /* CachingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingTests.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		0A8034435A3B2721C7057FF2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				469B953FD84E5761C6029E10 /* Caching.swift */,
+				469B953FD84E5761C6029E10 /* Cache.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -214,8 +214,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1430;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 898AFCCA899E41B7B52D863F /* Build configuration list for PBXProject "Caching" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -299,7 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F35CDAC57E358F721EAE6DA8 /* Caching.swift in Sources */,
+				F35CDAC57E358F721EAE6DA8 /* Cache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
