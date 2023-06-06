@@ -20,13 +20,9 @@ extension FeatureFactory {
       client: httpClient
     )
 
-    let remoteImageDataLoader = RemoteImageDataLoader(
-      client: httpClient
-    )
-
     // Adapters
     let imageDataLoadingImageAdapter = ImageDataLoadingImageAdapter(
-      imageDataLoader: remoteImageDataLoader,
+      imageDataLoader: imageLoader,
       dataImageAdapter: UIImage.init(data:)
     )
 
