@@ -18,4 +18,8 @@ extension XCUIElement {
   }
 
   public var hasFocus: Bool { value(forKey: "hasKeyboardFocus") as? Bool ?? false }
+
+  public func button(withTitle title: String) -> XCUIElement {
+    buttons[title]
+  }
 }

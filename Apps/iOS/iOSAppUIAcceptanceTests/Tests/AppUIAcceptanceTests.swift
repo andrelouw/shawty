@@ -2,7 +2,7 @@ import SharedIOS
 import Testing
 import XCTest
 
-final class AppUIAcceptanceTests: UITestCase, ArtistSearchScreen, AlbumListScreen {
+final class AppUIAcceptanceTests: UITestCase, ArtistSearchScreen {
   func test_artistSearchHappyPath() {
     // Shows No results
     XCTAssertTrue(noResultsTitle().exists)
@@ -18,7 +18,11 @@ final class AppUIAcceptanceTests: UITestCase, ArtistSearchScreen, AlbumListScree
     // Tap on first album
     cell(withTitle: "Thrill Of The Chase").tap()
 
-    // Shows track results
-    XCTAssertTrue(cell(withTitle: "Gone Are The Days (feat. James Gillespie)").exists)
+    // Tap on frist track
+    cell(withTitle: "Gone Are The Days (feat. James Gillespie)").tap()
+
+    alert(withTitle: "'Playing' Track")
+      .button(withTitle: "OK")
+      .tap()
   }
 }

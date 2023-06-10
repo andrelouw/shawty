@@ -18,4 +18,8 @@ open class UITestCase: XCTestCase {
     app.collectionViews.cells.staticTexts[title]
       .waitUntilExists(file: file, line: line)
   }
+
+  public func alert(withTitle title: String) -> XCUIElement {
+    app.alerts[title]
+  }
 }
