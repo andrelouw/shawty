@@ -12,9 +12,13 @@ final class AppUIAcceptanceTests: UITestCase, ArtistSearchScreen, AlbumListScree
     artistSearchField.tap()
     waitUntilElementHasFocus(element: artistSearchField).typeText("Kygo")
 
-    // Tap on first result
+    // Tap on first artist
     cell(withTitle: "Kygo").tap()
 
-    XCTAssertTrue(cell(withTitle: "Thrill Of The Chase").exists)
+    // Tap on first album
+    cell(withTitle: "Thrill Of The Chase").tap()
+
+    // Shows track results
+    XCTAssertTrue(cell(withTitle: "Gone Are The Days (feat. James Gillespie)").exists)
   }
 }
