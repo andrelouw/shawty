@@ -36,4 +36,21 @@ open class UITestCase: XCTestCase {
     app.searchFields[title].waitUntilExists()
       .waitUntilExists(file: file, line: line)
   }
+
+  public func text(
+    withTitle title: String,
+    file: StaticString = #filePath,
+    line: UInt = #line
+  ) -> XCUIElement {
+    app.staticTexts[title]
+      .waitUntilExists(file: file, line: line)
+  }
+
+  public func expect(
+    _ element: XCUIElement,
+    file _: StaticString = #filePath,
+    line _: UInt = #line
+  ) {
+    XCTAssertTrue(element.exists)
+  }
 }

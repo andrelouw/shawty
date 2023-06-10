@@ -3,10 +3,10 @@ import SharedIOS
 import Testing
 import XCTest
 
-final class AppUIAcceptanceTests: UITestCase, ArtistSearchScreen {
+final class AppUIAcceptanceTests: UITestCase {
   func test_artistSearchHappyPath() {
     // Shows No results
-    XCTAssertTrue(noResultsTitle().exists)
+    expect(text(withTitle: SharedIOSStrings.noSearchTitle))
 
     // Search for artist
     let artistSearchField = searchField(withTitle: ArtistIOSStrings.artistSearchPrompt)
