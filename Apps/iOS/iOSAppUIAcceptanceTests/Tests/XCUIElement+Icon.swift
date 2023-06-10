@@ -3,7 +3,7 @@ import UI
 import XCTest
 
 extension UITestCase {
-  public func icon(
+  func icon(
     _ icon: Icon,
     file: StaticString = #filePath,
     line: UInt = #line

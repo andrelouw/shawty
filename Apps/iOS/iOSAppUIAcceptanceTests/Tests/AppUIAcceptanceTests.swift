@@ -9,10 +9,7 @@ final class AppUIAcceptanceTests: UITestCase {
     expect(screenNotice: .noSearch)
 
     // Search for artist
-    let artistSearchField = searchField(withTitle: ArtistIOSStrings.artistSearchPrompt)
-    artistSearchField.tap()
-    waitUntilElementHasFocus(element: artistSearchField)
-      .typeText("Kygo")
+    search(withQuery: "Kygo")
 
     // Tap on first artist
     cell(withTitle: "Kygo").tap()
@@ -37,6 +34,14 @@ final class AppUIAcceptanceTests: UITestCase {
     expect(screenNotice: .noSearch)
   }
 
+  func test_artistSearchNoResultsFound() {
+    expect(screenNotice: .noSearch)
+
+    search(withQuery: "FFFFFFFFFFFFFFFFFFFFFFFFFFFFF")
+
+    expect(screenNotice: .noResults)
+  }
+
   // MARK: - Helpers
 
   private func expect(
@@ -49,5 +54,26 @@ final class AppUIAcceptanceTests: UITestCase {
       expect(text(withTitle: subtitle), file: file, line: line)
     }
     expect(icon(screenNotice.icon), file: file, line: line)
+  }
+
+  private func search(
+    withQuery query: String,
+    file: StaticString = #filePath,
+    line: UInt = #line
+  ) {
+    let artistSearchField = searchField(
+      withTitle: ArtistIOSStrings.artistSearchPrompt,
+      file: file,
+      line: line
+    )
+
+    artistSearchField.tap()
+
+    waitUntilElementHasFocus(
+      element: artistSearchField,
+      file: file,
+      line: line
+    )
+    .typeText(query)
   }
 }
