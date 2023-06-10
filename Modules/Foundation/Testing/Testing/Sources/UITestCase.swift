@@ -65,9 +65,9 @@ open class UITestCase: XCTestCase {
 
   public func expect(
     _ element: XCUIElement,
-    file _: StaticString = #filePath,
-    line _: UInt = #line
+    file: StaticString = #filePath,
+    line: UInt = #line
   ) {
-    XCTAssertTrue(element.exists)
+    XCTAssertTrue(element.exists, file: file, line: line)
   }
 }

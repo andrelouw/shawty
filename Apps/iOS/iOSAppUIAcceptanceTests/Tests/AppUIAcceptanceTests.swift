@@ -1,11 +1,12 @@
 import ArtistIOS
 import SharedIOS
 import Testing
+import UI
 import XCTest
 
 final class AppUIAcceptanceTests: UITestCase {
   func test_artistSearchHappyPath() {
-    expectNoSearchScreenNotice()
+    expect(screenNotice: .noSearch)
 
     // Search for artist
     let artistSearchField = searchField(withTitle: ArtistIOSStrings.artistSearchPrompt)
@@ -33,23 +34,20 @@ final class AppUIAcceptanceTests: UITestCase {
 
     // Cancel search
     button(withTitle: "Cancel").tap()
-    expectNoSearchScreenNotice()
+    expect(screenNotice: .noSearch)
   }
 
   // MARK: - Helpers
 
-  private func expectNoSearchScreenNotice() {
-    expectScreenNotice(
-      withTitle: SharedIOSStrings.noSearchTitle,
-      subtitle: SharedIOSStrings.noSearchSubtitle
-    )
-  }
-
-  private func expectScreenNotice(
-    withTitle title: String,
-    subtitle: String
+  private func expect(
+    screenNotice: ScreenNoticeModel,
+    file: StaticString = #filePath,
+    line: UInt = #line
   ) {
-    expect(text(withTitle: title))
-    expect(text(withTitle: subtitle))
+    expect(text(withTitle: screenNotice.title), file: file, line: line)
+    if let subtitle = screenNotice.subtitle {
+      expect(text(withTitle: subtitle), file: file, line: line)
+    }
+    expect(icon(screenNotice.icon), file: file, line: line)
   }
 }
