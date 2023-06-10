@@ -12,6 +12,7 @@
 		25130ACD23867E4E70EECD76 /* TimeoutTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0ABE2DFF021ECA9818FF94 /* TimeoutTaskTests.swift */; };
 		468021962A34910500155C37 /* XCUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468021952A34910500155C37 /* XCUIElement.swift */; };
 		468021982A34919D00155C37 /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468021972A34919D00155C37 /* UITestCase.swift */; };
+		4680219C2A34962B00155C37 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4680219B2A34962B00155C37 /* XCTestCase.swift */; };
 		7B8D6C478D3A0484C7C5BD19 /* URL+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC8288AACE0D8A8FD51FDB3 /* URL+Fixtures.swift */; };
 		7E3737A2D489C6B9BDDA0A36 /* XCTest+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624AF633C99E06844B1EB4A9 /* XCTest+MemoryLeakTracking.swift */; };
 		8D60EB17018657C8E80C837F /* XCTest+TimeoutTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F162AC6C36A040EE12F9D02 /* XCTest+TimeoutTask.swift */; };
@@ -64,6 +65,7 @@
 		34DE4785E7BC4AA21D491603 /* TimeoutError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeoutError.swift; sourceTree = "<group>"; };
 		468021952A34910500155C37 /* XCUIElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElement.swift; sourceTree = "<group>"; };
 		468021972A34919D00155C37 /* UITestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
+		4680219B2A34962B00155C37 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		4AF70B57115D4907421D8E2E /* TimeoutTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeoutTask.swift; sourceTree = "<group>"; };
 		548202125B7E7FC7C8AF3E37 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		587F896E2472972FA6F0E7F8 /* TestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				468021952A34910500155C37 /* XCUIElement.swift */,
+				4680219B2A34962B00155C37 /* XCTestCase.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4680219C2A34962B00155C37 /* XCTestCase.swift in Sources */,
 				9E9564C43B2D959028F2987D /* TimeoutError.swift in Sources */,
 				CF06966064A5BC42718466B8 /* TimeoutTask.swift in Sources */,
 				468021982A34919D00155C37 /* UITestCase.swift in Sources */,

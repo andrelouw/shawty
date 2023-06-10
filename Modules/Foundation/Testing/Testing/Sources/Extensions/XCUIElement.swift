@@ -16,4 +16,6 @@ extension XCUIElement {
 
     return self
   }
+
+  public var hasFocus: Bool { value(forKey: "hasKeyboardFocus") as? Bool ?? false }
 }
