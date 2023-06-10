@@ -5,8 +5,7 @@ import XCTest
 
 final class AppUIAcceptanceTests: UITestCase {
   func test_artistSearchHappyPath() {
-    // Shows No Search
-    expect(text(withTitle: SharedIOSStrings.noSearchTitle))
+    expectNoSearchScreenNotice()
 
     // Search for artist
     let artistSearchField = searchField(withTitle: ArtistIOSStrings.artistSearchPrompt)
@@ -34,6 +33,23 @@ final class AppUIAcceptanceTests: UITestCase {
 
     // Cancel search
     button(withTitle: "Cancel").tap()
-    expect(text(withTitle: SharedIOSStrings.noSearchTitle))
+    expectNoSearchScreenNotice()
+  }
+
+  // MARK: - Helpers
+
+  private func expectNoSearchScreenNotice() {
+    expectScreenNotice(
+      withTitle: SharedIOSStrings.noSearchTitle,
+      subtitle: SharedIOSStrings.noSearchSubtitle
+    )
+  }
+
+  private func expectScreenNotice(
+    withTitle title: String,
+    subtitle: String
+  ) {
+    expect(text(withTitle: title))
+    expect(text(withTitle: subtitle))
   }
 }
