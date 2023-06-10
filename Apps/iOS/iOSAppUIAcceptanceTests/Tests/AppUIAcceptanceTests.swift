@@ -2,16 +2,19 @@ import SharedIOS
 import Testing
 import XCTest
 
-final class AppUIAcceptanceTests: UITestCase, ArtistSearchScreen {
-  func test_onLaunch_artistSearchShowsNoSearchActiveNotice() {
+final class AppUIAcceptanceTests: UITestCase, ArtistSearchScreen, AlbumListScreen {
+  func test_artistSearchHappyPath() {
+    // Shows No results
     XCTAssertTrue(noResultsTitle().exists)
-  }
 
-  func test_artistSearch_displaysResults() {
+    // Search for artist
     let artistSearchField = artistSearchField()
     artistSearchField.tap()
     waitUntilElementHasFocus(element: artistSearchField).typeText("Kygo")
 
-    XCTAssertTrue(artistCell(withTitle: "Kygo").exists)
+    // Tap on first result
+    cell(withTitle: "Kygo").tap()
+
+    XCTAssertTrue(cell(withTitle: "Thrill Of The Chase").exists)
   }
 }

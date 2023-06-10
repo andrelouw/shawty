@@ -26,15 +26,6 @@ extension ArtistSearchScreen where Self: UITestCase {
     .waitUntilExists(file: file, line: line)
   }
 
-  func artistCell(
-    withTitle title: String,
-    file: StaticString = #filePath,
-    line: UInt = #line
-  ) -> XCUIElement {
-    app.collectionViews.cells.staticTexts[title]
-      .waitUntilExists(file: file, line: line)
-  }
-
   func noResultsTitle(
     file: StaticString = #filePath,
     line: UInt = #line
