@@ -30,8 +30,7 @@ workspace: --tuist
 module: --tuist
 	@./Scripts/module.sh
 
-test_local: --tuist
-	@tuist test --device "iPhone 14" --os 16.4
+test_local: test_unit_ios test_unit_macos
 
 test_ios: test_unit_ios test_integration_ios
 
