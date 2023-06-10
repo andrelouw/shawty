@@ -27,5 +27,8 @@ final class AppUIAcceptanceTests: UITestCase {
     alert(withTitle: "'Playing' Track")
       .button(withTitle: "OK")
       .tap()
+
+    navigationBarBackButton().tap()
+    navigationBarBackButton().tap()
   }
 }

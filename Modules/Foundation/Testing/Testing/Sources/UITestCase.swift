@@ -46,6 +46,14 @@ open class UITestCase: XCTestCase {
       .waitUntilExists(file: file, line: line)
   }
 
+  public func navigationBarBackButton(
+    file: StaticString = #filePath,
+    line: UInt = #line
+  ) -> XCUIElement {
+    app.navigationBars.buttons.element(boundBy: 0)
+      .waitUntilExists(file: file, line: line)
+  }
+
   public func expect(
     _ element: XCUIElement,
     file _: StaticString = #filePath,
