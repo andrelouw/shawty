@@ -8,6 +8,13 @@ extension TargetDependency {
     )
   }
 
+  public static func foundationIOS(_ name: String) -> TargetDependency {
+    .project(
+      target: "\(name)IOS",
+      path: .relativeToRoot("Modules/Foundation/\(name)")
+    )
+  }
+
   public static func feature(_ name: String) -> TargetDependency {
     .project(
       target: name,

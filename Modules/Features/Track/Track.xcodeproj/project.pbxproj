@@ -49,6 +49,7 @@
 		A2DAB4ADB284B304BB31BBBB /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47434F05DF2929DB1B1BF6D3 /* Shared.framework */; };
 		A531A266EA70D17A8506CC81 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = E618ED108EEBE506BF1F8F60 /* Track.swift */; };
 		A7606FC94BC5FD3BE9679E47 /* Track.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8304BCE1EF81761A36D7CDFF /* Track.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AA35DED1659FEDE81938F0CB /* UIIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCC55343C01DB19D1AEAEA42 /* UIIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AD987CE69B80FDD2250A3C49 /* Testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 289BDEE1A9B1E3494798964E /* Testing.framework */; };
 		B1765C9C026D9490AA8DAE3F /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1A76DDEB768C2769112329 /* Core.framework */; };
 		BBFE7E52DEA1EA780FAA7054 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23102939CCD07BE95D2AFE04 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -58,6 +59,7 @@
 		DBC75A913B9C2B7EE91FFB61 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1A76DDEB768C2769112329 /* Core.framework */; };
 		DD0EF0BEDEA7D24DDB241CF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50F45B3448B34CD91B13386E /* LaunchScreen.storyboard */; };
 		DE745CFA9C6CAC688B365C36 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619007024D2740D86BAA4F66 /* MainCoordinator.swift */; };
+		E660E66980C02478C4C2CC9E /* UIIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC55343C01DB19D1AEAEA42 /* UIIOS.framework */; };
 		E82845719F1B4F6B209C038A /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2703A4AFAD4F62F1CD66073C /* AppCoordinator.swift */; };
 		F32705C1B2266949D9C1983A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F8E45BB5A41C67FB4B74702 /* Assets.xcassets */; };
 		F5BDFF0335EE9A5F892D6120 /* RemoteTracksLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC445A045D4F44F9CDAFA26 /* RemoteTracksLoaderTests.swift */; };
@@ -167,6 +169,7 @@
 				A7606FC94BC5FD3BE9679E47 /* Track.framework in Embed Frameworks */,
 				7167620BA5CAC5E6DF484BAC /* TrackIOS.framework in Embed Frameworks */,
 				724DBD20E5149C2CBC7B9BA4 /* UI.framework in Embed Frameworks */,
+				AA35DED1659FEDE81938F0CB /* UIIOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +226,7 @@
 		F8441CCF8AE225F23C133955 /* TrackRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRowView.swift; sourceTree = "<group>"; };
 		F992E9ED1A3B20A99B5D91AC /* FeatureFactory+TrackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeatureFactory+TrackList.swift"; sourceTree = "<group>"; };
 		FCC445A045D4F44F9CDAFA26 /* RemoteTracksLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTracksLoaderTests.swift; sourceTree = "<group>"; };
+		FCC55343C01DB19D1AEAEA42 /* UIIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +249,7 @@
 				4FB7AD3F7911296748E752D0 /* SharedIOS.framework in Frameworks */,
 				5198ED979161D2A11170CB62 /* Track.framework in Frameworks */,
 				651AD59C17143FDECB5BB82E /* UI.framework in Frameworks */,
+				E660E66980C02478C4C2CC9E /* UIIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 				430968C6BB30FA6572FEDBD4 /* TrackIOSTests.xctest */,
 				18486B457EA30A66C7AEDAFE /* TrackTests.xctest */,
 				1CC546DBD50EE515885FCD4C /* UI.framework */,
+				FCC55343C01DB19D1AEAEA42 /* UIIOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";

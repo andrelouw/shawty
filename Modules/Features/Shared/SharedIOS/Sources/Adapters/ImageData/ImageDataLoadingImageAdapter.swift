@@ -1,6 +1,6 @@
 import Foundation
 import Shared
-import UI
+import UIIOS
 
 /// Adapts `ImageDataLoading` output to an `AsyncStream` of `LoadingImage`
 public struct ImageDataLoadingImageAdapter: QueryValueLoader {

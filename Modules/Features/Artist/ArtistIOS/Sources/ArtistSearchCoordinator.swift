@@ -1,5 +1,5 @@
 import Shared
-import UI
+import UIIOS
 import UIKit
 
 public protocol ArtistSearchCoordinatorDelegate {

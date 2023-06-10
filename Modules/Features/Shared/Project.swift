@@ -12,6 +12,9 @@ let project = Project.featureModule(
     .foundation("Networking"),
     .foundation("Caching"),
   ],
+  additionalIOSDependencies: [
+    .foundationIOS("UI"),
+  ],
   additionalTargets: [
     .makeTestTarget(
       name: "\(name)APIIntegration",

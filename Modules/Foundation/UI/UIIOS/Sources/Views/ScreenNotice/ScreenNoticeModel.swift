@@ -1,4 +1,5 @@
 import SwiftUI
+import UI
 
 public struct ScreenNoticeModel: Equatable {
   public enum Style {

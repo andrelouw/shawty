@@ -1,5 +1,5 @@
 import ArtistIOS
-import UI
+import UIIOS
 import UIKit
 
 /// The Main coordinator for the app, holding onto the appWindow

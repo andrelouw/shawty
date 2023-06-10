@@ -1,6 +1,6 @@
 import Foundation
 import Shared
-import UI
+import UIIOS
 import UIKit
 
 public protocol TrackListCoordinatorDelegate {

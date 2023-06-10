@@ -1,4 +1,5 @@
 import SwiftUI
+import UI
 
 // Reference: https://betterprogramming.pub/create-an-awesome-loading-state-using-swiftui-9815ff6abb80
 public struct AnimatingLoaderView: View {

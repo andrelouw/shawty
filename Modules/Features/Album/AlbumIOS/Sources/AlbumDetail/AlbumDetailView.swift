@@ -3,7 +3,7 @@ import SharedIOS
 import SwiftUI
 import Track
 import TrackIOS
-import UI
+import UIIOS
 
 public struct AlbumDetailView<ContentView: View>: View {
   @ObservedObject var viewModel: AlbumDetailViewModel

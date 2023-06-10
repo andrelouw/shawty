@@ -1,5 +1,5 @@
-#if canImport(UIKit)
 import SwiftUI
+import UI
 
 public struct LoadingImageView: View {
   private var loadingImage: LoadingImage
@@ -50,5 +50,3 @@ public struct LoadingImageView: View {
     }
   }
 }
-
-#endif

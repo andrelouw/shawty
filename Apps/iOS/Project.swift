@@ -8,6 +8,7 @@ let project = Project.app(
   dependencies: [
     .foundation("Core"),
     .foundation("UI"),
+    .foundationIOS("UI"),
     .feature("Artist"),
     .feature("Shared"),
     .featureIOS("Artist"),

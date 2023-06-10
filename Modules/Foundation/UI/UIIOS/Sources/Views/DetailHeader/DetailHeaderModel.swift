@@ -1,4 +1,5 @@
 import Foundation
+import UI
 
 public struct DetailHeaderModel: Equatable {
   public let title: String

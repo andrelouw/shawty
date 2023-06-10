@@ -2,7 +2,7 @@ import AlbumIOS
 import ArtistIOS
 import Core
 import Shared
-import UI
+import UIIOS
 import UIKit
 
 /// The Artist Search Scene, the launching feature of the app

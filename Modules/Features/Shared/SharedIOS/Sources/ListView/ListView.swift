@@ -1,5 +1,5 @@
 import SwiftUI
-import UI
+import UIIOS
 
 public protocol ListRowDisplayable: View {
   associatedtype Item: Identifiable
