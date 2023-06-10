@@ -31,6 +31,9 @@
          location = "group:Foundation"
          name = "Foundation">
          <FileRef
+            location = "group:Caching/Caching.xcodeproj">
+         </FileRef>
+         <FileRef
             location = "group:Core/Core.xcodeproj">
          </FileRef>
          <FileRef

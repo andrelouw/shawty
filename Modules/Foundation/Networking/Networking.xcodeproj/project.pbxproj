@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,7 @@
 		3D2F763A4874F7B165839F2E /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EA079B747B31F72CDEEF5A /* URLSessionHTTPClient.swift */; };
 		3E0236F192B023732972C0C4 /* DefaultJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C10C532037D8EA2D88CB3 /* DefaultJSONDecoder.swift */; };
 		42876007D9CC989C11F45CC6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEBA576B7062577B02E6E02 /* XCTest.framework */; };
-		46C38C412A2CF20A00A8EAE6 /* DecodingError+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C38C402A2CF20A00A8EAE6 /* DecodingError+Fixtures.swift */; };
+		567684AF2AA6EE0509A60D12 /* DecodingError+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF14350A9A596D723E6C2A1 /* DecodingError+Fixtures.swift */; };
 		58CF295EECF7CEF11A88967E /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D5AC172276CD51B4D7B6CA /* Networking.framework */; };
 		678D3383F695CE3E4FC4C807 /* HTTPClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FFDAB10D8A8238840058F0 /* HTTPClientSpy.swift */; };
 		78B4D93572300BE45A3BA9DA /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4D65BA7816A1F09DEDC07E /* HTTPClient.swift */; };
@@ -92,7 +92,6 @@
 		1E1C7CF12CD91F68064C3DBA /* HTTPURLResponse+StatusCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCodes.swift"; sourceTree = "<group>"; };
 		3F4229F558A337DC183D9832 /* Testing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Testing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40525EC540A9F65E90299FA0 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
-		46C38C402A2CF20A00A8EAE6 /* DecodingError+Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodingError+Fixtures.swift"; sourceTree = "<group>"; };
 		46F89EB7479AB50667762483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5E4D65BA7816A1F09DEDC07E /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		68D42DE84BC519CF784D5A17 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +102,7 @@
 		BEEBA576B7062577B02E6E02 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C00C56FC6453BE698990A89A /* RemoteLoadingError+Equatability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RemoteLoadingError+Equatability.swift"; sourceTree = "<group>"; };
 		C93C10C532037D8EA2D88CB3 /* DefaultJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultJSONDecoder.swift; sourceTree = "<group>"; };
+		CDF14350A9A596D723E6C2A1 /* DecodingError+Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DecodingError+Fixtures.swift"; sourceTree = "<group>"; };
 		E44585E59FB656AEF912B909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E7BB74AA2AA63E5C62286898 /* RemoteLoadingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLoadingError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,14 +172,6 @@
 				E7BB74AA2AA63E5C62286898 /* RemoteLoadingError.swift */,
 			);
 			path = Errors;
-			sourceTree = "<group>";
-		};
-		46C38C3F2A2CF1FA00A8EAE6 /* Fixtures */ = {
-			isa = PBXGroup;
-			children = (
-				46C38C402A2CF20A00A8EAE6 /* DecodingError+Fixtures.swift */,
-			);
-			path = Fixtures;
 			sourceTree = "<group>";
 		};
 		49BB362F3C0CE45DD19D96B6 /* NetworkingTests */ = {
@@ -292,8 +284,8 @@
 		E2AB9DE2F69B8D26B7CACABC /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				46C38C3F2A2CF1FA00A8EAE6 /* Fixtures */,
 				97CCC7C75EC66A236502D51E /* Errors */,
+				FAAF32B20B0DC426B22D4C3B /* Fixtures */,
 				5F2877F5559EE18B9D1F9F38 /* HTTPClient */,
 			);
 			path = Sources;
@@ -315,6 +307,14 @@
 				B991DBB603A8B438AEC712B9 /* FailableDecodable.swift */,
 			);
 			path = Decoding;
+			sourceTree = "<group>";
+		};
+		FAAF32B20B0DC426B22D4C3B /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				CDF14350A9A596D723E6C2A1 /* DecodingError+Fixtures.swift */,
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +387,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = FEB7E731AD1BAD90CD6A8409 /* Build configuration list for PBXProject "Networking" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -498,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1849792721343E108AE7EB43 /* RemoteLoadingError+Equatability.swift in Sources */,
+				567684AF2AA6EE0509A60D12 /* DecodingError+Fixtures.swift in Sources */,
 				678D3383F695CE3E4FC4C807 /* HTTPClientSpy.swift in Sources */,
 				EE573BDAAE7B136A3F9FE643 /* HTTPURLResponse+Fixtures.swift in Sources */,
 			);
@@ -517,7 +520,6 @@
 			files = (
 				3E0236F192B023732972C0C4 /* DefaultJSONDecoder.swift in Sources */,
 				90E8B3A47BE2453327F89E11 /* FailableDecodable.swift in Sources */,
-				46C38C412A2CF20A00A8EAE6 /* DecodingError+Fixtures.swift in Sources */,
 				ED3759173CA967E7C801D334 /* RemoteLoadingError.swift in Sources */,
 				91761CC303D4134F48F3BF7A /* HTTPURLResponse+StatusCodes.swift in Sources */,
 				78B4D93572300BE45A3BA9DA /* HTTPClient.swift in Sources */,

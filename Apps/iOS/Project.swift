@@ -15,5 +15,6 @@ let project = Project.app(
     .featureIOS("Album"),
     .feature("Track"),
     .featureIOS("Track"),
+    .foundation("Caching"),
   ]
 )

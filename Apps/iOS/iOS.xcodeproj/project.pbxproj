@@ -10,8 +10,10 @@
 		0048CCF8AF8D4501CC74DE82 /* Shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F93B358944E5D1DA1BAE5E /* Shared.framework */; };
 		0A2B09A04004928869DD3826 /* ArtistIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09B5E4CE116F63161BD502B /* ArtistIOS.framework */; };
 		0FCE1BBCA29D85F0105950CD /* AlbumIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 25FD1AADB06A6D5E256CF164 /* AlbumIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		13B64178B0DEC845F2CB184E /* Caching.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1E67DCD9BB4AF2B893491F /* Caching.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		26B4C1978ACC1EF994454601 /* TuistBundle+IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B687B22FC0551AE4544D224 /* TuistBundle+IOSApp.swift */; };
 		28ECC7D1EE221FF50BF4A865 /* TrackIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1D0B33FE01B2450905F863A0 /* TrackIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		290C7468CFFB10F4E77F4F11 /* Caching.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1E67DCD9BB4AF2B893491F /* Caching.framework */; };
 		329FEA8F9C09A8B5F5D8A82C /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B9C2AE17708F990877A04172 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		34D9EF82EA19F1B7ADBE6CA1 /* ArtistIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A09B5E4CE116F63161BD502B /* ArtistIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		359A8DF56A94897B67B9A028 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D082FC9DE78454F67A94CAFD /* AppTests.swift */; };
@@ -65,6 +67,7 @@
 				0FCE1BBCA29D85F0105950CD /* AlbumIOS.framework in Embed Frameworks */,
 				5274C4BBE93CEFDDA0DD7A1D /* Artist.framework in Embed Frameworks */,
 				34D9EF82EA19F1B7ADBE6CA1 /* ArtistIOS.framework in Embed Frameworks */,
+				13B64178B0DEC845F2CB184E /* Caching.framework in Embed Frameworks */,
 				3EEFBA8C6B925908C4D041B5 /* Core.framework in Embed Frameworks */,
 				41A4E7D3DB799D59E68D9D74 /* Networking.framework in Embed Frameworks */,
 				774C2CDCCBEA0472199C750F /* Shared.framework in Embed Frameworks */,
@@ -105,6 +108,7 @@
 		779BA2C22F773BF5BEE5CF68 /* Track.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Track.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77E437BD6D4672D45A783394 /* LiveFeatureFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveFeatureFactory.swift; sourceTree = "<group>"; };
 		88B2EFDF58E43378D33B5CEB /* ArtistSearchSceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchSceneCoordinator.swift; sourceTree = "<group>"; };
+		8E1E67DCD9BB4AF2B893491F /* Caching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Caching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9335D3EFBAE123584314194E /* Artist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Artist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D907954B8638D36D65134B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A09B5E4CE116F63161BD502B /* ArtistIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArtistIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +142,7 @@
 				8BBD65A0D978AEC3750DB8A0 /* AlbumIOS.framework in Frameworks */,
 				73C8A09F59651B98A8707FD4 /* Artist.framework in Frameworks */,
 				0A2B09A04004928869DD3826 /* ArtistIOS.framework in Frameworks */,
+				290C7468CFFB10F4E77F4F11 /* Caching.framework in Frameworks */,
 				9A8AB4A7C8CAA943A794466D /* Core.framework in Frameworks */,
 				0048CCF8AF8D4501CC74DE82 /* Shared.framework in Frameworks */,
 				DCEAFC1D95A1FF7E95F9A6EB /* Track.framework in Frameworks */,
@@ -266,6 +271,7 @@
 				25FD1AADB06A6D5E256CF164 /* AlbumIOS.framework */,
 				9335D3EFBAE123584314194E /* Artist.framework */,
 				A09B5E4CE116F63161BD502B /* ArtistIOS.framework */,
+				8E1E67DCD9BB4AF2B893491F /* Caching.framework */,
 				B213A445F3D8F2D22919E6A6 /* Core.framework */,
 				EB86020F34D1910568D8CD61 /* iOSAppTests.xctest */,
 				0CB9E6414D273313DB6175D1 /* Networking.framework */,
