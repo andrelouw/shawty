@@ -6,8 +6,7 @@ public final class SearchViewModel: ObservableObject, MainQueueUpdating {
   @MainActor
   @Published var searchText = ""
 
-  @MainActor
-  var promptText = ""
+  let promptText: String
 
   private var searchTextCurrentValueSubject = CurrentValueSubject<String, Never>("")
   private var subscription: AnyCancellable?
@@ -15,7 +14,7 @@ public final class SearchViewModel: ObservableObject, MainQueueUpdating {
   public init(
     promptText: String
   ) {
-    mainQueueUpdate(\.promptText, with: promptText)
+    self.promptText = promptText
 
     subscription = $searchText.sink { [weak self] in
       guard let self else { return }
