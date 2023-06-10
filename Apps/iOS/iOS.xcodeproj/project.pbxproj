@@ -26,6 +26,7 @@
 		41A4E7D3DB799D59E68D9D74 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB9E6414D273313DB6175D1 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42EAD6BDDE8DE9B58F65E470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC65D99AEA84FA1DFEF4E74F /* Assets.xcassets */; };
 		439364B5A5F2528401F63051 /* SharedIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2F48200DB839CC0B3CF0E1F8 /* SharedIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4680219A2A34926F00155C37 /* ArtistSearchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468021992A34926F00155C37 /* ArtistSearchScreen.swift */; };
 		4788342DF461ADE262EFCFF8 /* App.strings in Resources */ = {isa = PBXBuildFile; fileRef = A44FD99062E530C6BE62870A /* App.strings */; };
 		5274C4BBE93CEFDDA0DD7A1D /* Artist.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9335D3EFBAE123584314194E /* Artist.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5E9FB17A8DCA0AE064AA7B8D /* Testing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56DE92E0EE9B33AC63D89D32 /* Testing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -123,6 +124,7 @@
 		25FD1AADB06A6D5E256CF164 /* AlbumIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlbumIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B687B22FC0551AE4544D224 /* TuistBundle+IOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+IOSApp.swift"; sourceTree = "<group>"; };
 		2F48200DB839CC0B3CF0E1F8 /* SharedIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		468021992A34926F00155C37 /* ArtistSearchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchScreen.swift; sourceTree = "<group>"; };
 		48F11701C1CE850E8C99D375 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		559C569B1A82F36740220DBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		56DE92E0EE9B33AC63D89D32 /* Testing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Testing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				8DD748CF778FA303F160D020 /* AppUIAcceptanceTests.swift */,
+				468021992A34926F00155C37 /* ArtistSearchScreen.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4680219A2A34926F00155C37 /* ArtistSearchScreen.swift in Sources */,
 				2D41895A0DD2CE594080FADB /* AppUIAcceptanceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
