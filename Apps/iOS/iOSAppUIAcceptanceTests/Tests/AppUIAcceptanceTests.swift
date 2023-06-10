@@ -5,7 +5,7 @@ import XCTest
 
 final class AppUIAcceptanceTests: UITestCase {
   func test_artistSearchHappyPath() {
-    // Shows No results
+    // Shows No Search
     expect(text(withTitle: SharedIOSStrings.noSearchTitle))
 
     // Search for artist
@@ -28,7 +28,12 @@ final class AppUIAcceptanceTests: UITestCase {
       .button(withTitle: "OK")
       .tap()
 
+    // Navigate back to Search Screen
     navigationBarBackButton().tap()
     navigationBarBackButton().tap()
+
+    // Cancel search
+    button(withTitle: "Cancel").tap()
+    expect(text(withTitle: SharedIOSStrings.noSearchTitle))
   }
 }

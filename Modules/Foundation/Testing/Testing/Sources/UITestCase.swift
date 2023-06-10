@@ -54,6 +54,15 @@ open class UITestCase: XCTestCase {
       .waitUntilExists(file: file, line: line)
   }
 
+  public func button(
+    withTitle title: String,
+    file: StaticString = #filePath,
+    line: UInt = #line
+  ) -> XCUIElement {
+    app.buttons[title]
+      .waitUntilExists(file: file, line: line)
+  }
+
   public func expect(
     _ element: XCUIElement,
     file _: StaticString = #filePath,
