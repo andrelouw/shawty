@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "7EC0F3F1-C4D9-45A5-92A5-B18D31C05CC9",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Apps\/iOS\/iOS.xcodeproj",
+        "identifier" : "F606B4F18829C2EAD0087509",
+        "name" : "iOSAppUIAcceptanceTests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -39,5 +39,6 @@ public struct ScreenNoticeView: View {
     model.icon.asImage()
       .font(.system(size: 50))
       .foregroundColor(model.iconColor)
+      .accessibilityIdentifier(model.icon.id)
   }
 }

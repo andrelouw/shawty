@@ -26,6 +26,13 @@ extension Project {
             .target(name: "\(name)App"),
           ]
         ),
+        .makeUITestTarget(
+          name: "\(name)App",
+          platform: platform.asPlatformSet(),
+          dependencies: [
+            .target(name: "\(name)App"),
+          ]
+        ),
       ],
       fileHeaderTemplate: .string("")
     )

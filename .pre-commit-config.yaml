@@ -37,6 +37,6 @@ repos:
         - id: test-ios
           name: Local iOS Tests
           language: system
-          entry: make test_ios
+          entry: make test_local
           stages: [ pre-push ]
           require_serial: true

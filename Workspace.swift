@@ -1,6 +1,17 @@
 import ProjectDescription
 import ProjectDescriptionHelpers
 
+let iOSAcceptanceTests = Scheme(
+  name: "AcceptanceTests-iOS",
+  testAction:
+  .testPlans(
+    [
+      "TestPlans/AcceptanceTests-IOS.xctestplan",
+    ],
+    attachDebugger: false
+  )
+)
+
 let iOSIntegrationTests = Scheme(
   name: "IntegrationTests-iOS",
   testAction:
@@ -67,6 +78,7 @@ let workspace = Workspace(
     iOSUnitTests,
     iOSIntegrationTests,
     macOSIntegrationTests,
+    iOSAcceptanceTests,
     iOS,
   ],
   fileHeaderTemplate: "",

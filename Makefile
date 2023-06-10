@@ -30,10 +30,9 @@ workspace: --tuist
 module: --tuist
 	@./Scripts/module.sh
 
-test_local: --tuist
-	@tuist test --device "iPhone 14" --os 16.4
+test_local: test_unit_ios test_unit_macos
 
-test_ios: test_unit_ios test_integration_ios
+test_ios: test_unit_ios test_integration_ios test_acceptance_ios
 
 test_macos: test_unit_macos test_integration_macos
 
@@ -48,6 +47,9 @@ test_integration_ios:
 
 test_integration_macos:
 	@set -o pipefail && xcodebuild test -workspace ${app_name}.xcworkspace -scheme "IntegrationTests-macOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk macosx -destination "platform=macOS" | mint run xcbeautify
+
+test_acceptance_ios:
+	@set -o pipefail && xcodebuild test -workspace ${app_name}.xcworkspace -scheme "AcceptanceTests-iOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=${ios_device},OS=${ios_os}" | mint run xcbeautify
 
 clean:
 	@find . -name "*.xcodeproj" -type d -print0 | xargs -0 /bin/rm -r
