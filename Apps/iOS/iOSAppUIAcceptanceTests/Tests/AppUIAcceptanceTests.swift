@@ -1,3 +1,4 @@
+import ArtistIOS
 import SharedIOS
 import Testing
 import XCTest
@@ -8,9 +9,10 @@ final class AppUIAcceptanceTests: UITestCase, ArtistSearchScreen {
     XCTAssertTrue(noResultsTitle().exists)
 
     // Search for artist
-    let artistSearchField = artistSearchField()
+    let artistSearchField = searchField(withTitle: ArtistIOSStrings.artistSearchPrompt)
     artistSearchField.tap()
-    waitUntilElementHasFocus(element: artistSearchField).typeText("Kygo")
+    waitUntilElementHasFocus(element: artistSearchField)
+      .typeText("Kygo")
 
     // Tap on first artist
     cell(withTitle: "Kygo").tap()
@@ -18,9 +20,10 @@ final class AppUIAcceptanceTests: UITestCase, ArtistSearchScreen {
     // Tap on first album
     cell(withTitle: "Thrill Of The Chase").tap()
 
-    // Tap on frist track
+    // Tap on first track
     cell(withTitle: "Gone Are The Days (feat. James Gillespie)").tap()
 
+    // Tap on alert
     alert(withTitle: "'Playing' Track")
       .button(withTitle: "OK")
       .tap()

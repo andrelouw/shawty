@@ -19,7 +19,21 @@ open class UITestCase: XCTestCase {
       .waitUntilExists(file: file, line: line)
   }
 
-  public func alert(withTitle title: String) -> XCUIElement {
+  public func alert(
+    withTitle title: String,
+    file: StaticString = #filePath,
+    line: UInt = #line
+  ) -> XCUIElement {
     app.alerts[title]
+      .waitUntilExists(file: file, line: line)
+  }
+
+  public func searchField(
+    withTitle title: String,
+    file: StaticString = #filePath,
+    line: UInt = #line
+  ) -> XCUIElement {
+    app.searchFields[title].waitUntilExists()
+      .waitUntilExists(file: file, line: line)
   }
 }
