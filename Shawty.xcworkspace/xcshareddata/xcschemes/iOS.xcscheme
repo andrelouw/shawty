@@ -57,6 +57,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       disableMainThreadChecker = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F606B4F18829C2EAD0087509"
+               BuildableName = "iOSAppUIAcceptanceTests.xctest"
+               BlueprintName = "iOSAppUIAcceptanceTests"
+               ReferencedContainer = "container:Apps/iOS/iOS.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -61,6 +61,31 @@ extension Target {
     )
   }
 
+  public static func makeUITestTarget(
+    name: String,
+    platform: PlatformSet,
+    dependencies: [TargetDependency] = []
+  ) -> Target {
+    var allDependencies = dependencies
+    if name != "Testing" {
+      allDependencies.append(.project(target: "Testing", path: .relativeToRoot("Modules/Foundation/Testing/")))
+    }
+
+    return Target(
+      name: "\(name)UIAcceptanceTests",
+      platform: platform.base,
+      product: .uiTests,
+      bundleId: bundleID(name: "\(name)UIAcceptanceTests"),
+      infoPlist: "\(name)UIAcceptanceTests/Config/Info.plist",
+      sources: ["\(name)UIAcceptanceTests/Tests/**"],
+      scripts: [
+        .linting,
+      ],
+      dependencies: allDependencies,
+      settings: .base(platformSet: platform)
+    )
+  }
+
   public static func makeFrameworkTarget(
     name: String,
     platform: PlatformSet,
