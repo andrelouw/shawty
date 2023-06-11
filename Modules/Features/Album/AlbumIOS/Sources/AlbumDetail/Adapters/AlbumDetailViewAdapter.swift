@@ -2,8 +2,7 @@ import Album
 import Shared
 import UIIOS
 
-/// Adapt `AlbumLoader` output to provide an optional `DetailHeaderModel`
-struct AlbumDetailHeaderModelAdapter: ValueLoader {
+struct AlbumDetailViewAdapter: ValueLoader {
   private let albumLoader: any AlbumLoader
 
   init(

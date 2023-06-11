@@ -1,7 +1,7 @@
 import SharedIOS
 import SwiftUI
 
-final class AlbumListViewController: UIViewController {
+public final class AlbumListViewController: UIViewController {
   private let screenTitle: String
   private let listViewModel: AlbumListViewModel
 
@@ -14,7 +14,7 @@ final class AlbumListViewController: UIViewController {
     super.init(nibName: nil, bundle: nil)
   }
 
-  override func viewDidLoad() {
+  public override func viewDidLoad() {
     super.viewDidLoad()
     embed(albumListView())
   }

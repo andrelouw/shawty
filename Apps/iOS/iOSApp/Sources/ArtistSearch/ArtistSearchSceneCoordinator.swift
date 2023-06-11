@@ -9,7 +9,7 @@ import UIKit
 final class ArtistSearchSceneCoordinator: Coordinator {
   public var childCoordinators = [Coordinator]()
   public let navigationController: UINavigationController
-  private lazy var featureFactory: FeatureFactory = .live
+  private lazy var featureFactory = FeatureFactory.shared
 
   public init(
     with navigationController: UINavigationController
@@ -25,22 +25,20 @@ final class ArtistSearchSceneCoordinator: Coordinator {
     coordinator.start()
   }
 
-  private func artistSearchCoordinator() -> ArtistSearchCoordinator {
-    ArtistSearchCoordinator(
+  private func artistSearchCoordinator() -> ArtistSearchListCoordinator {
+    featureFactory.makeArtistSearchListCoordinator(
       navigationController: navigationController,
-      featureFactory: featureFactory,
-      removeCoordinatorWith: removeChild
+      removeCoordinatorWith: removeChild(_:)
     )
   }
 }
 
 extension ArtistSearchSceneCoordinator: ArtistSearchCoordinatorDelegate {
   public func didSelectArtist(withID id: Int) {
-    let coordinator = AlbumListCoordinator(
-      albumListURL: featureFactory.artistAlbumsURL(forArtistID: id),
+    let coordinator = featureFactory.makeAlbumListCoordinator(
+      for: id,
       navigationController: navigationController,
-      featureFactory: featureFactory,
-      removeCoordinatorWith: removeChild
+      removeCoordinatorWith: removeChild(_:)
     )
 
     addChild(coordinator)

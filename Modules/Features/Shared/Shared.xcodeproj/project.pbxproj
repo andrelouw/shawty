@@ -62,7 +62,6 @@
 		E16D0EB0B32A7D67D3E3B8E5 /* UIIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D247C93A809CBCFAE0EC244 /* UIIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E499E3EC2E01A6C07A37BC59 /* Testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6F90079FDBCA87E3DF1A4C /* Testing.framework */; };
 		E677CEA593B641DABFB60DF5 /* ImageTitleRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483ECB776BB2F76DD4294E72 /* ImageTitleRowViewModel.swift */; };
-		EA778625AA37765292C3E1FF /* FeatureFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2283FCC2A641C6DC3EE8F3 /* FeatureFactory.swift */; };
 		ED086BFCD7812E6008F399B7 /* UIIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D247C93A809CBCFAE0EC244 /* UIIOS.framework */; };
 		F0A767827AD91C838BBECCFC /* SharedAPIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E22DE853E77A0B98639A40 /* SharedAPIIntegrationTests.swift */; };
 		F10981F60BB16E3BA2403B08 /* ImageDataLoadingImageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09096984E60D52E3678D50BA /* ImageDataLoadingImageAdapter.swift */; };
@@ -242,7 +241,6 @@
 		D755F07FA830A33F108D2CC3 /* RemoteImageDataLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageDataLoaderTests.swift; sourceTree = "<group>"; };
 		D8472A54A4490A8382EF9986 /* ImageDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataMapper.swift; sourceTree = "<group>"; };
 		E71C087F3ECE8347B1007366 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA2283FCC2A641C6DC3EE8F3 /* FeatureFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFactory.swift; sourceTree = "<group>"; };
 		F9252B9F1940A1FB388EF3A1 /* TuistStrings+SharedIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistStrings+SharedIOS.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -370,7 +368,6 @@
 		1D5728E5C8396271C593D50D /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				EA2283FCC2A641C6DC3EE8F3 /* FeatureFactory.swift */,
 				29646289693CF19E404D1992 /* QueryValueLoader.swift */,
 				B1D80537E9E439D264CD8DC7 /* ValueLoader.swift */,
 			);
@@ -1083,7 +1080,6 @@
 				277693FC18AB74FD7A2E7E88 /* LocalImageDataLoader.swift in Sources */,
 				4C81AEF4D40A30C3F8E1D2AA /* ImageDataMapper.swift in Sources */,
 				A3BF393F89D35FD844BB8A74 /* RemoteImageDataLoader.swift in Sources */,
-				EA778625AA37765292C3E1FF /* FeatureFactory.swift in Sources */,
 				431BBDF33194D694F95F975F /* QueryValueLoader.swift in Sources */,
 				46CA9E77B617D041135E56FF /* ValueLoader.swift in Sources */,
 			);

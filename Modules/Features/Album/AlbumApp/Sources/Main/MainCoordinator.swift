@@ -3,10 +3,11 @@ import AlbumIOS
 import Core
 import Networking
 import Shared
+import SwiftUI
 import UIIOS
 import UIKit
 
-public final class MainCoordinator: Coordinator, FeatureFactory {
+public final class MainCoordinator: Coordinator {
   public var navigationController: UINavigationController
   public var childCoordinators = [Coordinator]()
 
@@ -28,12 +29,57 @@ public final class MainCoordinator: Coordinator, FeatureFactory {
   }
 
   private func albumListCoordinator() -> AlbumListCoordinator {
-    AlbumListCoordinator(
-      albumListURL: baseURL.appending(path: "artist/4768753/albums"),
+    makeAlbumListCoordinator(
+      for: 4768753,
       navigationController: navigationController,
-      featureFactory: self,
-      removeCoordinatorWith: removeChild
+      removeCoordinatorWith: removeChild(_:)
     )
+  }
+}
+
+extension MainCoordinator: AlbumFactory {
+  public func makeAlbumListViewController(
+    for albumID: Int,
+    onAlbumSelection: @escaping (Int) -> Void
+  ) -> UIViewController {
+    AlbumListUIComposer.listComposedWith(
+      albumsLoader: makeRemoteAlbumsLoader(for: albumID),
+      imageDataLoader: makeImageDataLoader(),
+      selection: onAlbumSelection
+    )
+  }
+
+  public func makeAlbumDetailViewController(
+    for albumID: Int,
+    onTrackSelection _: @escaping (Int) -> Void
+  ) -> UIViewController {
+    AlbumDetailUIComposer.detailComposedWith(
+      albumLoader: makeRemoteAlbumLoader(for: albumID),
+      imageDataLoader: makeImageDataLoader(),
+      listView: { EmptyView() }
+    )
+  }
+
+  private func makeRemoteAlbumsLoader(for albumID: Int) -> any AlbumsLoader {
+    let url = baseURL.appending(path: "artist/\(albumID)/albums")
+
+    return RemoteAlbumsLoader(
+      url: url,
+      client: httpClient
+    )
+  }
+
+  private func makeRemoteAlbumLoader(for albumID: Int) -> any AlbumLoader {
+    let url = AlbumEndpoint.album(id: albumID).url(baseURL: baseURL)
+
+    return RemoteAlbumLoader(
+      url: url,
+      client: httpClient
+    )
+  }
+
+  private func makeImageDataLoader() -> any ImageDataLoader {
+    RemoteImageDataLoader(client: httpClient)
   }
 }
 

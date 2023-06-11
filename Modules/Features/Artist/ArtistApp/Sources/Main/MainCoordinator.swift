@@ -7,7 +7,7 @@ import SharedIOS
 import UIIOS
 import UIKit
 
-final class MainCoordinator: Coordinator, FeatureFactory {
+final class MainCoordinator: Coordinator {
   var navigationController: UINavigationController
   var childCoordinators = [Coordinator]()
 
@@ -28,12 +28,34 @@ final class MainCoordinator: Coordinator, FeatureFactory {
     coordinator.start()
   }
 
-  private func artistSearchCoordinator() -> ArtistSearchCoordinator {
-    ArtistSearchCoordinator(
+  private func artistSearchCoordinator() -> ArtistSearchListCoordinator {
+    makeArtistSearchListCoordinator(
       navigationController: navigationController,
-      featureFactory: self,
-      removeCoordinatorWith: removeChild
+      removeCoordinatorWith: removeChild(_:)
     )
+  }
+}
+
+extension MainCoordinator: ArtistSearchFactory {
+  func makeArtistSearchListViewController(
+    onArtistSelection: @escaping (Int) -> Void
+  ) -> UIViewController {
+    ArtistSearchListUIComposer.listComposedWith(
+      artistSearchLoader: makeArtistSearchLoader(),
+      imageDataLoader: makeImageDataLoader(),
+      selection: onArtistSelection
+    )
+  }
+
+  private func makeArtistSearchLoader() -> any ArtistSearchLoader {
+    RemoteArtistSearchLoader(
+      url: ArtistEndpoint.search.url(baseURL: baseURL),
+      client: httpClient
+    )
+  }
+
+  private func makeImageDataLoader() -> any ImageDataLoader {
+    RemoteImageDataLoader(client: httpClient)
   }
 }
 

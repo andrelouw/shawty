@@ -7,7 +7,7 @@ import TrackIOS
 import UIIOS
 import UIKit
 
-final class MainCoordinator: Coordinator, FeatureFactory {
+final class MainCoordinator: Coordinator {
   var navigationController: UINavigationController
   var childCoordinators = [Coordinator]()
 
@@ -29,11 +29,31 @@ final class MainCoordinator: Coordinator, FeatureFactory {
   }
 
   private func trackListCoordinator() -> TrackListCoordinator {
-    TrackListCoordinator(
-      trackListURL: baseURL.appending(path: "album/373401057/tracks"),
+    makeTrackListCoordinator(
+      for: 373401057,
       navigationController: navigationController,
-      featureFactory: self,
-      removeCoordinatorWith: removeChild
+      removeCoordinatorWith: removeChild(_:)
+    )
+  }
+}
+
+extension MainCoordinator: TrackFactory {
+  func makeTrackListViewController(
+    for albumID: Int,
+    onTrackSelection: @escaping (Int) -> Void
+  ) -> UIViewController {
+    TrackListUIComposer.listComposedWith(
+      tracksLoader: makeRemoteTracksLoader(for: albumID),
+      selection: onTrackSelection
+    )
+  }
+
+  private func makeRemoteTracksLoader(
+    for albumID: Int
+  ) -> any TracksLoader {
+    RemoteTracksLoader(
+      url: baseURL.appending(path: "album/\(albumID)/tracks"),
+      client: httpClient
     )
   }
 }

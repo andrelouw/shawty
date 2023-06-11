@@ -1,8 +1,7 @@
 import Shared
 import Track
 
-/// Adapt `TrackLoading` output to provide to `TrackRowModel`s
-final class TracksRowModelAdapter: ValueLoader {
+struct TrackListViewAdapter: ValueLoader {
   private let tracksLoader: any TracksLoader
 
   init(
@@ -13,6 +12,7 @@ final class TracksRowModelAdapter: ValueLoader {
 
   func load() async throws -> [TrackRowModel<Int>] {
     let tracks = try await tracksLoader.load()
+
     return tracks
       .map {
         $0.asTrackRowModel()
