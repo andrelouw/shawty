@@ -369,7 +369,6 @@
 			isa = PBXGroup;
 			children = (
 				46AB07832A36003900880F2E /* ArtistSearchFactory.swift */,
-				A1C5F7CBCA1DD001B813E5A9 /* Adapters */,
 				A093F9B2E15C2C3E2EDBB528 /* ArtistSearchList */,
 				E16B17CE9336C3FEB91B0195 /* Extensions */,
 			);
@@ -506,11 +505,12 @@
 		A093F9B2E15C2C3E2EDBB528 /* ArtistSearchList */ = {
 			isa = PBXGroup;
 			children = (
-				4642657D2A3604440048948D /* ArtistSearchListUIComposer.swift */,
 				636F0C5C763FC370398F6B60 /* ArtistSearchListCoordinator.swift */,
+				4642657D2A3604440048948D /* ArtistSearchListUIComposer.swift */,
 				CFCC9EADAF30FAB516624869 /* ArtistSearchListView.swift */,
 				8B0DE7AA2FED2847C6646564 /* ArtistSearchListViewController.swift */,
 				9B91E20AAA6542870012B347 /* ArtistSearchListViewModel.swift */,
+				A1C5F7CBCA1DD001B813E5A9 /* Adapters */,
 			);
 			path = ArtistSearchList;
 			sourceTree = "<group>";

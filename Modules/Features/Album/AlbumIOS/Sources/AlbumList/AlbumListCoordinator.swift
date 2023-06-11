@@ -43,14 +43,11 @@ public final class AlbumListCoordinator: NSObject, Coordinator {
   }
 }
 
-// MARK: -- Factory Methods
-
 extension AlbumListCoordinator {
   private func albumListViewController() -> UIViewController {
     viewControllerFactory
       .makeAlbumListViewController(for: albumID) { [weak self] id in
-        guard let self else { return }
-        showAlbumDetail(for: id)
+        self?.showAlbumDetail(for: id)
       }
   }
 

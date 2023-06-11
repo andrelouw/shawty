@@ -548,11 +548,11 @@
 		765A29A151507C28C5C8274E /* AlbumDetail */ = {
 			isa = PBXGroup;
 			children = (
-				46AD918E2A36219C0069E83A /* Adapters */,
-				BCAD5E3332E47483D1340386 /* AlbumDetailView.swift */,
 				46AD918A2A361C960069E83A /* AlbumDetailUIComposer.swift */,
-				64BA7C4437A175C851916788 /* AlbumDetailViewController.swift */,
 				C7F302688372920180CBE7BF /* AlbumDetailViewModel.swift */,
+				64BA7C4437A175C851916788 /* AlbumDetailViewController.swift */,
+				BCAD5E3332E47483D1340386 /* AlbumDetailView.swift */,
+				46AD918E2A36219C0069E83A /* Adapters */,
 			);
 			path = AlbumDetail;
 			sourceTree = "<group>";

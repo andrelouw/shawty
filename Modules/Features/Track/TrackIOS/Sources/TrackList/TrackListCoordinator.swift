@@ -7,26 +7,26 @@ public protocol TrackListCoordinatorDelegate {
   func didSelectTrack(withID id: Int)
 }
 
-/// The scene showing a list of `Track`s from a given url
+/// The scene showing a list of `Track`s from a given album ID
 public final class TrackListCoordinator: NSObject, Coordinator {
   public var navigationController: UINavigationController
   public var childCoordinators: [Coordinator] = []
 
-  private let featureFactory: FeatureFactory
-  private let trackListURL: URL
+  private let viewControllerFactory: TrackViewControllerFactory
+  private let albumID: Int
 
   public var delegate: TrackListCoordinatorDelegate?
   private var removeCoordinatorWhenViewDismissed: (Coordinator) -> Void
 
   public init(
-    trackListURL: URL,
+    for albumID: Int,
     navigationController: UINavigationController,
-    featureFactory: FeatureFactory,
+    viewControllerFactory: TrackViewControllerFactory,
     removeCoordinatorWith removeCoordinatorWhenViewDismissed: @escaping (Coordinator) -> Void
   ) {
-    self.trackListURL = trackListURL
+    self.albumID = albumID
     self.navigationController = navigationController
-    self.featureFactory = featureFactory
+    self.viewControllerFactory = viewControllerFactory
     self.removeCoordinatorWhenViewDismissed = removeCoordinatorWhenViewDismissed
 
     super.init()
@@ -37,17 +37,18 @@ public final class TrackListCoordinator: NSObject, Coordinator {
   public func start() {
     navigate(to: trackListViewController(), with: .push)
   }
+}
 
+extension TrackListCoordinator {
   private func trackListViewController() -> UIViewController {
-    featureFactory.makeTrackListViewController(
-      for: trackListURL,
-      onTrackSelection: { [weak self] id in
-        guard let self else { return }
-        delegate?.didSelectTrack(withID: id)
+    viewControllerFactory
+      .makeTrackListViewController(for: albumID) { [weak self] id in
+        self?.delegate?.didSelectTrack(withID: id)
       }
-    )
   }
 }
+
+// MARK: -- Factory Methods
 
 extension TrackListCoordinator: UINavigationControllerDelegate {
   public func navigationController(
