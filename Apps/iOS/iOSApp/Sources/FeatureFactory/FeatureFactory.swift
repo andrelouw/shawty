@@ -1,15 +1,15 @@
 import Networking
 import Shared
 
-// The Live instance of the Feature Factory, providing the live global instances
-final class LiveFeatureFactory: FeatureFactory {
+final class FeatureFactory {
   private init() { }
 
-  static let shared = LiveFeatureFactory()
+  static let shared = FeatureFactory()
 
   lazy var httpClient: HTTPClient = URLSessionHTTPClient(session: .shared)
 
   lazy var imageLoader: any ImageDataLoader = imageDataLoaderWithCache
+
   let baseURL = Config.baseURL
 
   private lazy var imageDataCacheStore: ImageDataStore = ImageDataCacheStore()

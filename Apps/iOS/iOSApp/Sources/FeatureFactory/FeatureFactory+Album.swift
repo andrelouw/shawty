@@ -4,7 +4,7 @@ import Artist
 import SwiftUI
 import UIKit
 
-extension LiveFeatureFactory: AlbumFactory {
+extension FeatureFactory: AlbumFactory {
   func makeAlbumListViewController(
     for albumID: Int,
     onAlbumSelection: @escaping (Int) -> Void

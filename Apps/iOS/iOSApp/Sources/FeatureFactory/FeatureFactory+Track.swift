@@ -3,7 +3,7 @@ import SwiftUI
 import Track
 import TrackIOS
 
-extension LiveFeatureFactory: TrackViewFactory {
+extension FeatureFactory: TrackViewFactory {
   func makeTrackListView(
     for albumID: Int,
     onTrackSelection: @escaping (Int) -> Void

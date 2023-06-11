@@ -41,7 +41,6 @@
 		9D338F68FDE9EC4E0EDCB383 /* NetworkTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC0E270379C7FAA49A54C8B /* NetworkTesting.framework */; };
 		A644C0B52165FAE66F23F474 /* ArtistIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B268253FFD1B3463E1E4447A /* ArtistIOS.framework */; };
 		AA60192818BD5B70897C9C22 /* ArtistCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDCF99B9C04F79C452BEEDD /* ArtistCoordinatorTests.swift */; };
-		B0F62AF2B3B3BBA73E056A56 /* FeatureFactory+ArtistEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2117B595C90565F2F756D7FB /* FeatureFactory+ArtistEndpoint.swift */; };
 		B1B91F7DF0DD8E58A26178F1 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D664E27E0FAD0500A11ECF /* UI.framework */; };
 		B259D1816FCA029A6DD2CEF9 /* TuistBundle+ArtistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF8A7C3CE2650B3DCCEC6B1 /* TuistBundle+ArtistApp.swift */; };
 		B3AB70FBC45271D3E664BF80 /* Caching.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC0DFE86BC2F8EC79419A616 /* Caching.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -182,7 +181,6 @@
 		052637A007D81131BAE585B3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		0F5F6073EE9A14DB3DDBC2F9 /* ArtistEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistEndpoint.swift; sourceTree = "<group>"; };
 		12D664E27E0FAD0500A11ECF /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2117B595C90565F2F756D7FB /* FeatureFactory+ArtistEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeatureFactory+ArtistEndpoint.swift"; sourceTree = "<group>"; };
 		234272F0770C0094AAE92CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2A96AA91578DF03B3A0C8D76 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		2B12F7F20AAA266271938E78 /* TuistAssets+ArtistIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+ArtistIOS.swift"; sourceTree = "<group>"; };
@@ -334,7 +332,6 @@
 			isa = PBXGroup;
 			children = (
 				0F5F6073EE9A14DB3DDBC2F9 /* ArtistEndpoint.swift */,
-				2117B595C90565F2F756D7FB /* FeatureFactory+ArtistEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -961,7 +958,6 @@
 				D5896D154E9F9747EB1D5C94 /* ArtistsMapper.swift in Sources */,
 				8B38D27FD348E0688FC18462 /* RemoteArtistSearchLoader.swift in Sources */,
 				CC7C6B6CE497FDC095F592F6 /* ArtistEndpoint.swift in Sources */,
-				B0F62AF2B3B3BBA73E056A56 /* FeatureFactory+ArtistEndpoint.swift in Sources */,
 				D55EA928CFA181DA9FD059DA /* Artist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

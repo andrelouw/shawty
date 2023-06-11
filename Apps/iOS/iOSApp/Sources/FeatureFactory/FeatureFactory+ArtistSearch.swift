@@ -3,7 +3,7 @@ import ArtistIOS
 import UIIOS
 import UIKit
 
-extension LiveFeatureFactory: ArtistSearchFactory {
+extension FeatureFactory: ArtistSearchFactory {
   func makeArtistSearchListViewController(
     onArtistSelection: @escaping (Int) -> Void
   ) -> UIViewController {

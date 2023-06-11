@@ -9,7 +9,7 @@ import UIKit
 final class ArtistSearchSceneCoordinator: Coordinator {
   public var childCoordinators = [Coordinator]()
   public let navigationController: UINavigationController
-  private lazy var featureFactory = LiveFeatureFactory.shared
+  private lazy var featureFactory = FeatureFactory.shared
 
   public init(
     with navigationController: UINavigationController
