@@ -31,7 +31,7 @@ final class MainCoordinator: Coordinator {
   private func artistSearchCoordinator() -> ArtistSearchListCoordinator {
     makeArtistSearchListCoordinator(
       navigationController: navigationController,
-      removeCoordinatorWith: removeChild
+      removeCoordinatorWith: removeChild(_:)
     )
   }
 }
@@ -39,11 +39,12 @@ final class MainCoordinator: Coordinator {
 extension MainCoordinator: ArtistSearchFactory {
   func makeArtistSearchListCoordinator(
     navigationController: UINavigationController,
+    viewControllerFactory _: ArtistSearchViewControllerFactory,
     removeCoordinatorWith _: (UIIOS.Coordinator?) -> Void
-  ) -> ArtistIOS.ArtistSearchListCoordinator {
+  ) -> ArtistSearchListCoordinator {
     ArtistSearchListCoordinator(
       navigationController: navigationController,
-      artistSearchFactory: self,
+      viewControllerFactory: self,
       removeCoordinatorWith: removeChild
     )
   }

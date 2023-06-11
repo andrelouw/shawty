@@ -13,16 +13,16 @@ public final class ArtistSearchListCoordinator: NSObject, Coordinator {
   public var childCoordinators: [Coordinator] = []
   public var delegate: ArtistSearchCoordinatorDelegate?
 
-  private let artistSearchFactory: ArtistSearchFactory
+  private let viewControllerFactory: ArtistSearchViewControllerFactory
   private var removeCoordinatorWhenViewDismissed: (Coordinator) -> Void
 
   public init(
     navigationController: UINavigationController,
-    artistSearchFactory: ArtistSearchFactory,
+    viewControllerFactory: ArtistSearchViewControllerFactory,
     removeCoordinatorWith removeCoordinatorWhenViewDismissed: @escaping (Coordinator) -> Void
   ) {
     self.navigationController = navigationController
-    self.artistSearchFactory = artistSearchFactory
+    self.viewControllerFactory = viewControllerFactory
     self.removeCoordinatorWhenViewDismissed = removeCoordinatorWhenViewDismissed
 
     super.init()
@@ -39,7 +39,7 @@ public final class ArtistSearchListCoordinator: NSObject, Coordinator {
 
 extension ArtistSearchListCoordinator {
   private func artistSearchViewController() -> UIViewController {
-    artistSearchFactory.makeArtistSearchListViewController { [weak self] id in
+    viewControllerFactory.makeArtistSearchListViewController { [weak self] id in
       guard let self else { return }
       delegate?.didSelectArtist(withID: id)
     }
