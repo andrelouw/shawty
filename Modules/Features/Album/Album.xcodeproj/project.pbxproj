@@ -579,7 +579,6 @@
 				CF3DCCA97A5365AFA3A32129 /* AlbumList */,
 				5E26986574D820CB52054D38 /* Extensions */,
 				53EB23BFEA478A64315C0A49 /* FeatureFactory */,
-				BDEECBD34D451C59A4C893EF /* AlbumListCoordinator.swift */,
 				46AD91802A360FDD0069E83A /* AlbumFactory.swift */,
 			);
 			path = Sources;
@@ -644,6 +643,7 @@
 		CF3DCCA97A5365AFA3A32129 /* AlbumList */ = {
 			isa = PBXGroup;
 			children = (
+				BDEECBD34D451C59A4C893EF /* AlbumListCoordinator.swift */,
 				46AD91892A3618610069E83A /* Adapters */,
 				C44094BCF4C2351926F54E36 /* AlbumListView.swift */,
 				A7480288CFC968FF9D804DAB /* AlbumListViewController.swift */,

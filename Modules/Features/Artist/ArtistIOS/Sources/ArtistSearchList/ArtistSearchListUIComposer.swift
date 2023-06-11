@@ -4,16 +4,17 @@ import Core
 import Foundation
 import Shared
 import SharedIOS
+import UIKit
 
 public enum ArtistSearchListUIComposer {
-  private typealias ArtistContentStream = () -> ContentViewStream<[ImageTitleRowViewModel<Int>]>
+  private typealias ArtistContentStreamLoader = () -> ContentViewStream<[ImageTitleRowViewModel<Int>]>
 
   public static func listComposedWith(
     artistSearchLoader: any ArtistSearchLoader,
     imageDataLoader: any ImageDataLoader,
     searchQueryDebounce: DispatchQueue.SchedulerTimeType.Stride = .milliseconds(500),
     selection: @escaping (Int) -> Void
-  ) -> ArtistSearchListViewController {
+  ) -> UIViewController {
     let searchViewModel = SearchViewModel(
       promptText: ArtistIOSStrings.artistSearchPrompt
     )
@@ -38,7 +39,7 @@ public enum ArtistSearchListUIComposer {
     from publisher: AnyPublisher<String, Never>,
     artistSearchLoader: any ArtistSearchLoader,
     imageDataLoader: any ImageDataLoader
-  ) -> ArtistContentStream {
+  ) -> ArtistContentStreamLoader {
     let artistSearchListViewAdapter = ArtistSearchListViewAdapter(
       artistsSearchLoader: artistSearchLoader,
       imageDataLoader: imageDataLoader

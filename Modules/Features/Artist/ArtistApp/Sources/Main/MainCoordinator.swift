@@ -55,10 +55,7 @@ extension MainCoordinator: ArtistSearchFactory {
   }
 
   private func makeImageDataLoader() -> any ImageDataLoader {
-    ImageDataLoaderCacheDecorator(
-      imageDataLoader: RemoteImageDataLoader(client: httpClient),
-      cache: ImageDataCacheStore()
-    )
+    RemoteImageDataLoader(client: httpClient)
   }
 }
 

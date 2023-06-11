@@ -8,13 +8,13 @@ public enum AlbumListUIComposer {
   private typealias AlbumContentStreamLoader = () -> ContentViewStream<[ImageTitleRowViewModel<Int>]>
 
   public static func listComposedWith(
-    albumLoader: any AlbumsLoader,
+    albumsLoader: any AlbumsLoader,
     imageDataLoader: any ImageDataLoader,
     selection: @escaping (Int) -> Void
   ) -> UIViewController {
     let viewModel = ListViewModel(
       contentLoader: albumContentStreamLoader(
-        albumLoader: albumLoader,
+        albumsLoader: albumsLoader,
         imageDataLoader: imageDataLoader
       ),
       onItemSelection: selection
@@ -27,11 +27,11 @@ public enum AlbumListUIComposer {
   }
 
   private static func albumContentStreamLoader(
-    albumLoader: any AlbumsLoader,
+    albumsLoader: any AlbumsLoader,
     imageDataLoader: any ImageDataLoader
   ) -> AlbumContentStreamLoader {
     let albumListViewAdapter = AlbumListViewAdapter(
-      albumsLoader: albumLoader,
+      albumsLoader: albumsLoader,
       imageDataLoader: imageDataLoader
     )
 

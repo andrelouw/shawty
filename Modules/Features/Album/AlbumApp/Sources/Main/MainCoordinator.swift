@@ -38,10 +38,14 @@ public final class MainCoordinator: Coordinator {
 
 extension MainCoordinator: AlbumFactory {
   public func makeAlbumListViewController(
-    for _: Int,
-    onAlbumSelection _: @escaping (Int) -> Void
+    for albumID: Int,
+    onAlbumSelection: @escaping (Int) -> Void
   ) -> UIViewController {
-    .init()
+    AlbumListUIComposer.listComposedWith(
+      albumsLoader: makeRemoteAlbumsLoader(for: albumID),
+      imageDataLoader: makeImageDataLoader(),
+      selection: onAlbumSelection
+    )
   }
 
   public func makeAlbumDetailViewController(
@@ -49,6 +53,19 @@ extension MainCoordinator: AlbumFactory {
     onTrackSelection _: @escaping (Int) -> Void
   ) -> UIViewController {
     .init()
+  }
+
+  private func makeRemoteAlbumsLoader(for albumID: Int) -> any AlbumsLoader {
+    let url = baseURL.appending(path: "artist/\(albumID)/albums")
+
+    return RemoteAlbumsLoader(
+      url: url,
+      client: httpClient
+    )
+  }
+
+  private func makeImageDataLoader() -> any ImageDataLoader {
+    RemoteImageDataLoader(client: httpClient)
   }
 }
 
