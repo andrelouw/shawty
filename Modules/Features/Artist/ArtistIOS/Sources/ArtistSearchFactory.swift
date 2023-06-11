@@ -1,6 +1,23 @@
 import UIIOS
 import UIKit
 
+public protocol ArtistSearchFactory: ArtistSearchCoordinatorFactory, ArtistSearchViewControllerFactory { }
+
+extension ArtistSearchFactory {
+  public func makeArtistSearchListCoordinator(
+    navigationController: UINavigationController,
+    removeCoordinatorWith: @escaping (Coordinator?) -> Void
+  ) -> ArtistSearchListCoordinator {
+    makeArtistSearchListCoordinator(
+      navigationController: navigationController,
+      viewControllerFactory: self,
+      removeCoordinatorWith: removeCoordinatorWith
+    )
+  }
+}
+
+// MARK: - Coordinator Factory
+
 public protocol ArtistSearchCoordinatorFactory {
   func makeArtistSearchListCoordinator(
     navigationController: UINavigationController,
@@ -23,23 +40,10 @@ extension ArtistSearchCoordinatorFactory {
   }
 }
 
+// MARK: - View Controller Factory
+
 public protocol ArtistSearchViewControllerFactory {
   func makeArtistSearchListViewController(
     onArtistSelection: @escaping (Int) -> Void
-  ) -> ArtistSearchListViewController
-}
-
-public protocol ArtistSearchFactory: ArtistSearchCoordinatorFactory, ArtistSearchViewControllerFactory { }
-
-extension ArtistSearchFactory {
-  public func makeArtistSearchListCoordinator(
-    navigationController: UINavigationController,
-    removeCoordinatorWith: @escaping (Coordinator?) -> Void
-  ) -> ArtistSearchListCoordinator {
-    makeArtistSearchListCoordinator(
-      navigationController: navigationController,
-      viewControllerFactory: self,
-      removeCoordinatorWith: removeCoordinatorWith
-    )
-  }
+  ) -> UIViewController
 }

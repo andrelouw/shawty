@@ -6,7 +6,7 @@ import Shared
 import UIIOS
 import UIKit
 
-public final class MainCoordinator: Coordinator, FeatureFactory {
+public final class MainCoordinator: Coordinator {
   public var navigationController: UINavigationController
   public var childCoordinators = [Coordinator]()
 
@@ -28,12 +28,27 @@ public final class MainCoordinator: Coordinator, FeatureFactory {
   }
 
   private func albumListCoordinator() -> AlbumListCoordinator {
-    AlbumListCoordinator(
-      albumListURL: baseURL.appending(path: "artist/4768753/albums"),
+    makeAlbumListCoordinator(
+      for: 4768753,
       navigationController: navigationController,
-      featureFactory: self,
-      removeCoordinatorWith: removeChild
+      removeCoordinatorWith: removeChild(_:)
     )
+  }
+}
+
+extension MainCoordinator: AlbumFactory {
+  public func makeAlbumListViewController(
+    for _: Int,
+    onAlbumSelection _: @escaping (Int) -> Void
+  ) -> UIViewController {
+    .init()
+  }
+
+  public func makeAlbumDetailViewController(
+    for _: Int,
+    onTrackSelection _: @escaping (Int) -> Void
+  ) -> UIViewController {
+    .init()
   }
 }
 

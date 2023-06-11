@@ -6,7 +6,7 @@ import UIKit
 extension LiveFeatureFactory: ArtistSearchFactory {
   func makeArtistSearchListViewController(
     onArtistSelection: @escaping (Int) -> Void
-  ) -> ArtistSearchListViewController {
+  ) -> UIViewController {
     ArtistSearchListUIComposer.listComposedWith(
       artistSearchLoader: makeArtistSearchLoader(),
       imageDataLoader: imageLoader,

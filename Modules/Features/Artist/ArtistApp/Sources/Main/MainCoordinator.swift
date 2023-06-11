@@ -39,7 +39,7 @@ final class MainCoordinator: Coordinator {
 extension MainCoordinator: ArtistSearchFactory {
   func makeArtistSearchListViewController(
     onArtistSelection: @escaping (Int) -> Void
-  ) -> ArtistSearchListViewController {
+  ) -> UIViewController {
     ArtistSearchListUIComposer.listComposedWith(
       artistSearchLoader: makeArtistSearchLoader(),
       imageDataLoader: makeImageDataLoader(),

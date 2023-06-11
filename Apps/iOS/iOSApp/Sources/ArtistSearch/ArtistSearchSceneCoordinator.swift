@@ -35,11 +35,10 @@ final class ArtistSearchSceneCoordinator: Coordinator {
 
 extension ArtistSearchSceneCoordinator: ArtistSearchCoordinatorDelegate {
   public func didSelectArtist(withID id: Int) {
-    let coordinator = AlbumListCoordinator(
-      albumListURL: featureFactory.artistAlbumsURL(forArtistID: id),
+    let coordinator = featureFactory.makeAlbumListCoordinator(
+      for: id,
       navigationController: navigationController,
-      featureFactory: featureFactory,
-      removeCoordinatorWith: removeChild
+      removeCoordinatorWith: removeChild(_:)
     )
 
     addChild(coordinator)

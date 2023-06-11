@@ -12,21 +12,21 @@ public final class AlbumListCoordinator: NSObject, Coordinator {
   public let navigationController: UINavigationController
   public var childCoordinators: [Coordinator] = []
 
-  private let featureFactory: FeatureFactory
-  private let albumListURL: URL
+  private let viewControllerFactory: AlbumViewControllerFactory
+  private let albumID: Int
 
   public var delegate: AlbumListCoordinatorDelegate?
   private var removeCoordinatorWhenViewDismissed: (Coordinator) -> Void
 
   public init(
-    albumListURL: URL,
+    for albumID: Int,
     navigationController: UINavigationController,
-    featureFactory: FeatureFactory,
+    viewControllerFactory: AlbumViewControllerFactory,
     removeCoordinatorWith removeCoordinatorWhenViewDismissed: @escaping (Coordinator) -> Void
   ) {
-    self.albumListURL = albumListURL
+    self.albumID = albumID
     self.navigationController = navigationController
-    self.featureFactory = featureFactory
+    self.viewControllerFactory = viewControllerFactory
     self.removeCoordinatorWhenViewDismissed = removeCoordinatorWhenViewDismissed
 
     super.init()
@@ -47,15 +47,15 @@ public final class AlbumListCoordinator: NSObject, Coordinator {
 
 extension AlbumListCoordinator {
   private func albumListViewController() -> UIViewController {
-    featureFactory
-      .makeAlbumListViewController(for: albumListURL) { [weak self] id in
+    viewControllerFactory
+      .makeAlbumListViewController(for: albumID) { [weak self] id in
         guard let self else { return }
         showAlbumDetail(for: id)
       }
   }
 
   private func albumDetailViewController(for id: Int) -> UIViewController {
-    featureFactory
+    viewControllerFactory
       .makeAlbumDetailViewController(for: id) { [weak self] id in
         self?.delegate?.didSelectTrack(withID: id)
       }
