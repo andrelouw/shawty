@@ -34,7 +34,6 @@
 		7167620BA5CAC5E6DF484BAC /* TrackIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE3EA3BEFDBAF6A5FBCA56B /* TrackIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		724DBD20E5149C2CBC7B9BA4 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC546DBD50EE515885FCD4C /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7408E93CDB27DFC5818780C9 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23102939CCD07BE95D2AFE04 /* Networking.framework */; };
-		74F1E343C2F662ACB01F266D /* TracksRowModelAdapater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262B8080FE0AA7D6E85872F5 /* TracksRowModelAdapater.swift */; };
 		77EC592D6D148D665BE5D34E /* TrackListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CDA8327D9EC5B64783F177 /* TrackListCoordinator.swift */; };
 		7D2FD949215B53A7FF5B4E63 /* Caching.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB0B00418C340CEE74296F2F /* Caching.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7DE12F3125E61838918DAF14 /* Track+TrackRowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3169C3E6A6E8618BE9F18344 /* Track+TrackRowModel.swift */; };
@@ -57,7 +56,6 @@
 		B1765C9C026D9490AA8DAE3F /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1A76DDEB768C2769112329 /* Core.framework */; };
 		BBFE7E52DEA1EA780FAA7054 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 23102939CCD07BE95D2AFE04 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C32514E99EB2C7A683D6CCAD /* NetworkTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE465591DFB23F9DCA7402B0 /* NetworkTesting.framework */; };
-		C75C0D018E8ED9887D10DE2F /* FeatureFactory+TrackList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F992E9ED1A3B20A99B5D91AC /* FeatureFactory+TrackList.swift */; };
 		CB88F26092281939D1EEFC84 /* TrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B77390AF3F7EDA97FEC9EDF /* TrackListViewController.swift */; };
 		DBC75A913B9C2B7EE91FFB61 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1A76DDEB768C2769112329 /* Core.framework */; };
 		DD0EF0BEDEA7D24DDB241CF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50F45B3448B34CD91B13386E /* LaunchScreen.storyboard */; };
@@ -185,7 +183,6 @@
 		1CC546DBD50EE515885FCD4C /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F8E45BB5A41C67FB4B74702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23102939CCD07BE95D2AFE04 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		262B8080FE0AA7D6E85872F5 /* TracksRowModelAdapater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksRowModelAdapater.swift; sourceTree = "<group>"; };
 		2703A4AFAD4F62F1CD66073C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		289BDEE1A9B1E3494798964E /* Testing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Testing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29CDA8327D9EC5B64783F177 /* TrackListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListCoordinator.swift; sourceTree = "<group>"; };
@@ -230,7 +227,6 @@
 		DD1A76DDEB768C2769112329 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E618ED108EEBE506BF1F8F60 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		F8441CCF8AE225F23C133955 /* TrackRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackRowView.swift; sourceTree = "<group>"; };
-		F992E9ED1A3B20A99B5D91AC /* FeatureFactory+TrackList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeatureFactory+TrackList.swift"; sourceTree = "<group>"; };
 		FCC445A045D4F44F9CDAFA26 /* RemoteTracksLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteTracksLoaderTests.swift; sourceTree = "<group>"; };
 		FCC55343C01DB19D1AEAEA42 /* UIIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -404,11 +400,9 @@
 		430BB53568BB42608665AB8C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				457BCC574C8706201A0F1A57 /* Adapters */,
-				50AF38F861392DA2DF1E9865 /* Extensions */,
-				B25728EF5D4D6915ADB5D104 /* FeatureFactory */,
-				465D41143BE8518B9B3B5F82 /* TrackList */,
 				8171C13DACBA763686F459DF /* TrackRow */,
+				465D41143BE8518B9B3B5F82 /* TrackList */,
+				50AF38F861392DA2DF1E9865 /* Extensions */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -419,14 +413,6 @@
 				A6C49E585A2172F500B2D86E /* TrackAPIIntegrationTests.swift */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		457BCC574C8706201A0F1A57 /* Adapters */ = {
-			isa = PBXGroup;
-			children = (
-				E69DEB1E5BBE4DB41C737451 /* Track+TrackRowModel */,
-			);
-			path = Adapters;
 			sourceTree = "<group>";
 		};
 		465D41143BE8518B9B3B5F82 /* TrackList */ = {
@@ -562,14 +548,6 @@
 			path = TrackIOS;
 			sourceTree = "<group>";
 		};
-		B25728EF5D4D6915ADB5D104 /* FeatureFactory */ = {
-			isa = PBXGroup;
-			children = (
-				F992E9ED1A3B20A99B5D91AC /* FeatureFactory+TrackList.swift */,
-			);
-			path = FeatureFactory;
-			sourceTree = "<group>";
-		};
 		C5A899C178144793B569E2BC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,14 +605,6 @@
 				FCC445A045D4F44F9CDAFA26 /* RemoteTracksLoaderTests.swift */,
 			);
 			path = TrackLoading;
-			sourceTree = "<group>";
-		};
-		E69DEB1E5BBE4DB41C737451 /* Track+TrackRowModel */ = {
-			isa = PBXGroup;
-			children = (
-				262B8080FE0AA7D6E85872F5 /* TracksRowModelAdapater.swift */,
-			);
-			path = "Track+TrackRowModel";
 			sourceTree = "<group>";
 		};
 		F64ACF3CF4E172E3D3CB4793 /* TrackAPIIntegrationTests */ = {
@@ -1024,9 +994,7 @@
 				9EDACBAD0AD4D3DDC1888FCE /* TuistBundle+TrackIOS.swift in Sources */,
 				12EB1E6E4FC38DCC4ED7DAA9 /* TuistStrings+TrackIOS.swift in Sources */,
 				7DE12F3125E61838918DAF14 /* Track+TrackRowModel.swift in Sources */,
-				74F1E343C2F662ACB01F266D /* TracksRowModelAdapater.swift in Sources */,
 				038DEEBF8ECA10CAF8B6A061 /* WeakReferenceProxy+TrackLIstCoordinatorDelegate.swift in Sources */,
-				C75C0D018E8ED9887D10DE2F /* FeatureFactory+TrackList.swift in Sources */,
 				7FC69C544847FCDFB2D8FEFF /* TrackListView.swift in Sources */,
 				46AD91902A3623BD0069E83A /* TrackFactory.swift in Sources */,
 				CB88F26092281939D1EEFC84 /* TrackListViewController.swift in Sources */,
