@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -357,8 +357,8 @@
 			isa = PBXGroup;
 			children = (
 				A4EF7EA0D2E3CE41BF5FD634 /* FeatureFactory.swift */,
-				040738DD961AB76006C07125 /* FeatureFactory+Album.swift */,
 				30598216375737683A98DDDE /* FeatureFactory+ArtistSearch.swift */,
+				040738DD961AB76006C07125 /* FeatureFactory+Album.swift */,
 				77300C438AA36443469BB4C7 /* FeatureFactory+Track.swift */,
 			);
 			path = FeatureFactory;
