@@ -27,7 +27,7 @@ let project = Project(
     .makeFrameworkTarget(
       name: "\(name)IOS",
       platform: .iOS,
-      hasResources: true,
+      hasResources: false,
       dependencies: [
         .target(name: name),
         .foundation("Core"),
