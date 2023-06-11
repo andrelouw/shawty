@@ -1,3 +1,4 @@
+import SwiftUI
 import UIIOS
 import UIKit
 
@@ -50,6 +51,16 @@ extension TrackCoordinatorFactory {
 public protocol TrackViewControllerFactory {
   func makeTrackListViewController(
     for albumID: Int,
-    onAlbumSelection: @escaping (Int) -> Void
+    onTrackSelection: @escaping (Int) -> Void
   ) -> UIViewController
+}
+
+// MARK: - View Factory
+
+public protocol TrackViewFactory {
+  associatedtype ListView: View
+  func makeTrackListView(
+    for albumID: Int,
+    onTrackSelection: @escaping (Int) -> Void
+  ) -> ListView
 }

@@ -18,12 +18,17 @@ extension LiveFeatureFactory: AlbumFactory {
 
   func makeAlbumDetailViewController(
     for albumID: Int,
-    onTrackSelection _: @escaping (Int) -> Void
+    onTrackSelection: @escaping (Int) -> Void
   ) -> UIViewController {
     AlbumDetailUIComposer.detailComposedWith(
       albumLoader: makeRemoteAlbumLoader(for: albumID),
       imageDataLoader: imageLoader,
-      listView: { EmptyView() }
+      listView: { [unowned self] in
+        makeTrackListView(
+          for: albumID,
+          onTrackSelection: onTrackSelection
+        )
+      }
     )
   }
 

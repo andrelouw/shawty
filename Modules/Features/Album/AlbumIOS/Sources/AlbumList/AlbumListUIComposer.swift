@@ -13,7 +13,7 @@ public enum AlbumListUIComposer {
     selection: @escaping (Int) -> Void
   ) -> UIViewController {
     let viewModel = ListViewModel(
-      contentLoader: albumContentStreamLoader(
+      contentLoader: albumsContentStreamLoader(
         albumsLoader: albumsLoader,
         imageDataLoader: imageDataLoader
       ),
@@ -26,7 +26,7 @@ public enum AlbumListUIComposer {
     )
   }
 
-  private static func albumContentStreamLoader(
+  private static func albumsContentStreamLoader(
     albumsLoader: any AlbumsLoader,
     imageDataLoader: any ImageDataLoader
   ) -> AlbumContentStreamLoader {

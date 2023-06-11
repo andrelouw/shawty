@@ -20,6 +20,8 @@
 		316EB42AE964880EF28B48FB /* Track.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8304BCE1EF81761A36D7CDFF /* Track.framework */; };
 		35898D6D5BC86CCF1FF2C303 /* Track.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8304BCE1EF81761A36D7CDFF /* Track.framework */; };
 		46AD91902A3623BD0069E83A /* TrackFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD918F2A3623BD0069E83A /* TrackFactory.swift */; };
+		46AD91922A3628DF0069E83A /* TrackListUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD91912A3628DF0069E83A /* TrackListUIComposer.swift */; };
+		46AD91942A362AED0069E83A /* TrackListViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD91932A362AED0069E83A /* TrackListViewAdapter.swift */; };
 		4E429FF15B761E0F02719616 /* SharedIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 67FF9BF213AF31E8692F0B55 /* SharedIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4FB7AD3F7911296748E752D0 /* SharedIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67FF9BF213AF31E8692F0B55 /* SharedIOS.framework */; };
 		518DAA2691C0FD0DD7589772 /* TuistAssets+TrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD4E932D6675152C24071C4 /* TuistAssets+TrackApp.swift */; };
@@ -192,6 +194,8 @@
 		4129CB7708C11D8B81C42EF5 /* TrackAPIIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackAPIIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		430968C6BB30FA6572FEDBD4 /* TrackIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46AD918F2A3623BD0069E83A /* TrackFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackFactory.swift; sourceTree = "<group>"; };
+		46AD91912A3628DF0069E83A /* TrackListUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListUIComposer.swift; sourceTree = "<group>"; };
+		46AD91932A362AED0069E83A /* TrackListViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewAdapter.swift; sourceTree = "<group>"; };
 		47434F05DF2929DB1B1BF6D3 /* Shared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B77390AF3F7EDA97FEC9EDF /* TrackListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewController.swift; sourceTree = "<group>"; };
 		4D8B251F8D54DFC2CE47996B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -429,11 +433,22 @@
 			isa = PBXGroup;
 			children = (
 				29CDA8327D9EC5B64783F177 /* TrackListCoordinator.swift */,
-				C90F627AAC191D2BE02987FA /* TrackListView.swift */,
-				4B77390AF3F7EDA97FEC9EDF /* TrackListViewController.swift */,
+				46AD91912A3628DF0069E83A /* TrackListUIComposer.swift */,
 				B9A42AC9D43D32427AD55BEC /* TrackListViewModel.swift */,
+				4B77390AF3F7EDA97FEC9EDF /* TrackListViewController.swift */,
+				C90F627AAC191D2BE02987FA /* TrackListView.swift */,
+				46AD91952A362AF50069E83A /* Adapters */,
 			);
 			path = TrackList;
+			sourceTree = "<group>";
+		};
+		46AD91952A362AF50069E83A /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				3169C3E6A6E8618BE9F18344 /* Track+TrackRowModel.swift */,
+				46AD91932A362AED0069E83A /* TrackListViewAdapter.swift */,
+			);
+			path = Adapters;
 			sourceTree = "<group>";
 		};
 		498209665FC763CA3A287EF5 /* TrackTests */ = {
@@ -617,7 +632,6 @@
 		E69DEB1E5BBE4DB41C737451 /* Track+TrackRowModel */ = {
 			isa = PBXGroup;
 			children = (
-				3169C3E6A6E8618BE9F18344 /* Track+TrackRowModel.swift */,
 				262B8080FE0AA7D6E85872F5 /* TracksRowModelAdapater.swift */,
 			);
 			path = "Track+TrackRowModel";
@@ -1005,6 +1019,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				64D27FD41EEE0B07D293F560 /* TuistAssets+TrackIOS.swift in Sources */,
+				46AD91922A3628DF0069E83A /* TrackListUIComposer.swift in Sources */,
+				46AD91942A362AED0069E83A /* TrackListViewAdapter.swift in Sources */,
 				9EDACBAD0AD4D3DDC1888FCE /* TuistBundle+TrackIOS.swift in Sources */,
 				12EB1E6E4FC38DCC4ED7DAA9 /* TuistStrings+TrackIOS.swift in Sources */,
 				7DE12F3125E61838918DAF14 /* Track+TrackRowModel.swift in Sources */,
