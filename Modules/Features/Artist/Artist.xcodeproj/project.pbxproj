@@ -22,6 +22,7 @@
 		38058385CAE735155B891303 /* Artist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99DEB5F180440477F9500360 /* Artist.framework */; };
 		45590DC5A4C2749F4C1ECDD1 /* WeakReferenceProxy+AlbumLIstCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9138B9DCEED884D993DC0FB0 /* WeakReferenceProxy+AlbumLIstCoordinatorDelegate.swift */; };
 		458541D5B13667BEBAAA49BC /* TuistAssets+ArtistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56714E014DDA3AF88967637F /* TuistAssets+ArtistApp.swift */; };
+		4642657E2A3604440048948D /* ArtistSearchListUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4642657D2A3604440048948D /* ArtistSearchListUIComposer.swift */; };
 		46AB07862A3602DE00880F2E /* ArtistSearchListViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AB07852A3602DE00880F2E /* ArtistSearchListViewAdapter.swift */; };
 		4E6601DADBBC278FB8BA657A /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C2372AF75C28967F06773D9D /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		51E2BC7F99A751A9393D5DC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAAA6A69DBFF86C0C4560A46 /* Assets.xcassets */; };
@@ -188,6 +189,7 @@
 		2A96AA91578DF03B3A0C8D76 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		2B12F7F20AAA266271938E78 /* TuistAssets+ArtistIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+ArtistIOS.swift"; sourceTree = "<group>"; };
 		3F7A179FEACB196B948DD36D /* ArtistsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsMapper.swift; sourceTree = "<group>"; };
+		4642657D2A3604440048948D /* ArtistSearchListUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchListUIComposer.swift; sourceTree = "<group>"; };
 		46AB07852A3602DE00880F2E /* ArtistSearchListViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchListViewAdapter.swift; sourceTree = "<group>"; };
 		47D868B4E8FAD8C7FFDEA02D /* TuistBundle+ArtistIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+ArtistIOS.swift"; sourceTree = "<group>"; };
 		4E8800FC82889EA91F5781E4 /* ArtistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -373,6 +375,7 @@
 				E16B17CE9336C3FEB91B0195 /* Extensions */,
 				F4B74240C1082283299872EB /* FeatureFactory */,
 				636F0C5C763FC370398F6B60 /* ArtistSearchCoordinator.swift */,
+				4642657D2A3604440048948D /* ArtistSearchListUIComposer.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -1024,6 +1027,7 @@
 				9628E22519764464A468B0DF /* ArtistSearchListViewModel.swift in Sources */,
 				45590DC5A4C2749F4C1ECDD1 /* WeakReferenceProxy+AlbumLIstCoordinatorDelegate.swift in Sources */,
 				85A711CAB21D0436A8ED51B0 /* FeatureFactory+ArtistSearchViewController.swift in Sources */,
+				4642657E2A3604440048948D /* ArtistSearchListUIComposer.swift in Sources */,
 				336AC2E6A0240F3B179AB6D4 /* TuistAssets+ArtistIOS.swift in Sources */,
 				46AB07862A3602DE00880F2E /* ArtistSearchListViewAdapter.swift in Sources */,
 				6BBFAF89CC8D2DD5E5FFDA5E /* TuistBundle+ArtistIOS.swift in Sources */,
