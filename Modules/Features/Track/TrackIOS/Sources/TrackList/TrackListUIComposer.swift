@@ -24,6 +24,23 @@ public enum TrackListUIComposer {
     }
   }
 
+  public static func listComposedWith(
+    tracksLoader: any TracksLoader,
+    selection: @escaping (Int) -> Void
+  ) -> UIViewController {
+    let viewModel = ListViewModel(
+      contentLoader: tracksContentStreamLoader(
+        tracksLoader: tracksLoader
+      ),
+      onItemSelection: selection
+    )
+
+    return TrackListViewController(
+      screenTitle: TrackIOSStrings.trackListScreenTitle,
+      listViewModel: viewModel
+    )
+  }
+
   private static func tracksContentStreamLoader(
     tracksLoader: any TracksLoader
   ) -> TrackContentStreamLoader {

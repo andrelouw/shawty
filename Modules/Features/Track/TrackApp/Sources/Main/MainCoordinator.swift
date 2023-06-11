@@ -39,10 +39,22 @@ final class MainCoordinator: Coordinator {
 
 extension MainCoordinator: TrackFactory {
   func makeTrackListViewController(
-    for _: Int,
-    onAlbumSelection _: @escaping (Int) -> Void
+    for albumID: Int,
+    onTrackSelection: @escaping (Int) -> Void
   ) -> UIViewController {
-    .init()
+    TrackListUIComposer.listComposedWith(
+      tracksLoader: makeRemoteTracksLoader(for: albumID),
+      selection: onTrackSelection
+    )
+  }
+
+  private func makeRemoteTracksLoader(
+    for albumID: Int
+  ) -> any TracksLoader {
+    RemoteTracksLoader(
+      url: baseURL.appending(path: "album/\(albumID)/tracks"),
+      client: httpClient
+    )
   }
 }
 
