@@ -51,7 +51,8 @@ test_integration_macos:
 test_acceptance_ios:
 	@set -o pipefail && xcodebuild test -workspace ${app_name}.xcworkspace -scheme "AcceptanceTests-iOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=${ios_device},OS=${ios_os}" | mint run xcbeautify
 
-clean:
+clean: --tuist
+	@tuist clean
 	@find . -name "*.xcodeproj" -type d -print0 | xargs -0 /bin/rm -r
 	@find . -name "*.xcworkspace" -type d -print0 | xargs -0 /bin/rm -r
 
