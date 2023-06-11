@@ -20,6 +20,7 @@
 		3D3F22E440F25F720FFD65C2 /* TuistBundle+AlbumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F134C40D167263F3DCC73BD9 /* TuistBundle+AlbumApp.swift */; };
 		3EFB72F67DA5513A0BD54134 /* RemoteAlbumsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267F361A4158DFF618CE7FB8 /* RemoteAlbumsLoader.swift */; };
 		46AD91812A360FDD0069E83A /* AlbumFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD91802A360FDD0069E83A /* AlbumFactory.swift */; };
+		46AD91872A36175B0069E83A /* AlbumListViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AD91862A36175B0069E83A /* AlbumListViewAdapter.swift */; };
 		46FF3F0C337FD0EBDA489039 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D05309141F4B929D8CD9F718 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4A38E2BDA9730B40E586EBC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E0CBD4E25932B5B17C00EA /* AppDelegate.swift */; };
 		512A3ECE0F5B2D1B43888463 /* Album.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 29F4D58122690B01592D4EE9 /* Album.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -209,6 +210,7 @@
 		446F7A078E0616DE9CF586C8 /* AlbumCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCoordinatorTests.swift; sourceTree = "<group>"; };
 		45C7FBD8FD7954474D874309 /* AlbumIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbumIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46AD91802A360FDD0069E83A /* AlbumFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumFactory.swift; sourceTree = "<group>"; };
+		46AD91862A36175B0069E83A /* AlbumListViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewAdapter.swift; sourceTree = "<group>"; };
 		4CA21183E6745AAC2799FAAE /* Album+ImageTitleRowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Album+ImageTitleRowModel.swift"; sourceTree = "<group>"; };
 		4D97588A97FF8C919566919A /* FeatureFactory+AlbumEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeatureFactory+AlbumEndpoint.swift"; sourceTree = "<group>"; };
 		540E4DCDED35073BCE003047 /* AlbumApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlbumApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -391,10 +393,18 @@
 		3A77DC5FEDDD5A30BC2FD8B9 /* Album+ImageTitleRow */ = {
 			isa = PBXGroup;
 			children = (
-				4CA21183E6745AAC2799FAAE /* Album+ImageTitleRowModel.swift */,
 				42A20D9F96A74241D3594F88 /* AlbumImageTitleRowViewModelAdapter.swift */,
 			);
 			path = "Album+ImageTitleRow";
+			sourceTree = "<group>";
+		};
+		46AD91882A36179A0069E83A /* AlbumList */ = {
+			isa = PBXGroup;
+			children = (
+				4CA21183E6745AAC2799FAAE /* Album+ImageTitleRowModel.swift */,
+				46AD91862A36175B0069E83A /* AlbumListViewAdapter.swift */,
+			);
+			path = AlbumList;
 			sourceTree = "<group>";
 		};
 		492B3F2A8FCA9B4A17C35323 = {
@@ -478,6 +488,7 @@
 		662A38E034DD4594870CB719 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
+				46AD91882A36179A0069E83A /* AlbumList */,
 				703689084B515D22CF39E422 /* Album+DetailHeader */,
 				3A77DC5FEDDD5A30BC2FD8B9 /* Album+ImageTitleRow */,
 			);
@@ -1070,6 +1081,7 @@
 				C2672C7E07CD0B8FBE227578 /* FeatureFactory+AlbumListViewController.swift in Sources */,
 				D42E6459AB09DA3408674CC8 /* TuistAssets+AlbumIOS.swift in Sources */,
 				82FE9D24389373644DC5E245 /* TuistBundle+AlbumIOS.swift in Sources */,
+				46AD91872A36175B0069E83A /* AlbumListViewAdapter.swift in Sources */,
 				10439CED8B53CF25C71CE64C /* TuistStrings+AlbumIOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
