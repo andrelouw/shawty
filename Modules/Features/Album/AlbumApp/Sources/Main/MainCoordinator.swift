@@ -3,6 +3,7 @@ import AlbumIOS
 import Core
 import Networking
 import Shared
+import SwiftUI
 import UIIOS
 import UIKit
 
@@ -49,16 +50,29 @@ extension MainCoordinator: AlbumFactory {
   }
 
   public func makeAlbumDetailViewController(
-    for _: Int,
+    for albumID: Int,
     onTrackSelection _: @escaping (Int) -> Void
   ) -> UIViewController {
-    .init()
+    AlbumDetailUIComposer.detailComposedWith(
+      albumLoader: makeRemoteAlbumLoader(for: albumID),
+      imageDataLoader: makeImageDataLoader(),
+      listView: { EmptyView() }
+    )
   }
 
   private func makeRemoteAlbumsLoader(for albumID: Int) -> any AlbumsLoader {
     let url = baseURL.appending(path: "artist/\(albumID)/albums")
 
     return RemoteAlbumsLoader(
+      url: url,
+      client: httpClient
+    )
+  }
+
+  private func makeRemoteAlbumLoader(for albumID: Int) -> any AlbumLoader {
+    let url = AlbumEndpoint.album(id: albumID).url(baseURL: baseURL)
+
+    return RemoteAlbumLoader(
       url: url,
       client: httpClient
     )

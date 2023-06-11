@@ -3,16 +3,16 @@ import SwiftUI
 import TrackIOS
 import TrackIOS
 
-final class AlbumDetailViewController: UIViewController {
+final class AlbumDetailViewController<ListView: View>: UIViewController {
   private let albumViewModel: AlbumDetailViewModel
-  private let listViewModel: TrackListViewModel
+  private let listView: () -> ListView
 
   init(
     albumViewModel: AlbumDetailViewModel,
-    listViewModel: TrackListViewModel
+    listView: @escaping () -> ListView
   ) {
     self.albumViewModel = albumViewModel
-    self.listViewModel = listViewModel
+    self.listView = listView
     super.init(nibName: nil, bundle: nil)
   }
 
@@ -34,15 +34,9 @@ extension AlbumDetailViewController {
   private func albumDetailView() -> some View {
     NavigationView {
       AlbumDetailView(
-        viewModel: albumViewModel
-      ) { [unowned self] in
-        ListView(
-          viewModel: listViewModel,
-          rowView: { model in
-            TrackRowView(model: model)
-          }
-        )
-      }
+        viewModel: albumViewModel,
+        contentView: listView
+      )
     }
   }
 }
