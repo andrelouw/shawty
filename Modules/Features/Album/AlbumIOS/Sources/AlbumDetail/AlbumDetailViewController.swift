@@ -1,7 +1,5 @@
 import SharedIOS
 import SwiftUI
-import TrackIOS
-import TrackIOS
 
 final class AlbumDetailViewController<ListView: View>: UIViewController {
   private let albumViewModel: AlbumDetailViewModel
