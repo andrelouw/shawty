@@ -29,15 +29,25 @@ final class MainCoordinator: Coordinator {
   }
 
   private func artistSearchCoordinator() -> ArtistSearchListCoordinator {
-    ArtistSearchListCoordinator(
+    makeArtistSearchListCoordinator(
       navigationController: navigationController,
-      artistSearchFactory: self,
       removeCoordinatorWith: removeChild
     )
   }
 }
 
 extension MainCoordinator: ArtistSearchFactory {
+  func makeArtistSearchListCoordinator(
+    navigationController: UINavigationController,
+    removeCoordinatorWith _: (UIIOS.Coordinator?) -> Void
+  ) -> ArtistIOS.ArtistSearchListCoordinator {
+    ArtistSearchListCoordinator(
+      navigationController: navigationController,
+      artistSearchFactory: self,
+      removeCoordinatorWith: removeChild
+    )
+  }
+
   func makeArtistSearchListViewController(
     onArtistSelection: @escaping (Int) -> Void
   ) -> ArtistSearchListViewController {
