@@ -5,9 +5,9 @@ ios_os := 16.4
 .PHONY: bootstrap build run workspace module test_ios test_macos rename clean format lint
 
 all: bootstrap run
-ci: --ci-bootstrap workspace build test_macos test_ios
-ci_macos: --ci-bootstrap workspace build test_macos
-ci_ios: --ci-bootstrap workspace build test_ios
+ci: --ci-bootstrap clean workspace build test_macos test_ios
+ci_macos: --ci-bootstrap clean workspace build test_macos
+ci_ios: --ci-bootstrap clean workspace build test_ios
 test: test_macos test_ios
 
 bootstrap: --homebrew --mint --mint --hooks
