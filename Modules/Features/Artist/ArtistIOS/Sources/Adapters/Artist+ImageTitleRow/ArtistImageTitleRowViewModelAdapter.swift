@@ -3,6 +3,7 @@ import Shared
 import SharedIOS
 
 /// Adapt `ArtistSearchLoading` output to provide to `ImageTitleRowViewModel`s
+// TODO: Remove, replaced by `ArtistSearchListViewAdapter`
 struct ArtistImageTitleRowViewModelAdapter: QueryValueLoader {
   private let artistsSearchLoader: any ArtistSearchLoader
   private let imageDataLoadingImageAdapter: ImageDataLoadingImageAdapter
