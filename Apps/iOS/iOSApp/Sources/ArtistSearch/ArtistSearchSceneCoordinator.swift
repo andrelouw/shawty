@@ -25,8 +25,8 @@ final class ArtistSearchSceneCoordinator: Coordinator {
     coordinator.start()
   }
 
-  private func artistSearchCoordinator() -> ArtistSearchCoordinator {
-    ArtistSearchCoordinator(
+  private func artistSearchCoordinator() -> ArtistSearchListCoordinator {
+    ArtistSearchListCoordinator(
       navigationController: navigationController,
       featureFactory: featureFactory,
       removeCoordinatorWith: removeChild

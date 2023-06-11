@@ -28,7 +28,7 @@
 		51E2BC7F99A751A9393D5DC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAAA6A69DBFF86C0C4560A46 /* Assets.xcassets */; };
 		52459E91B8E16A8752C68D46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9FC44A183327DE24EB74D4 /* LaunchScreen.storyboard */; };
 		554ECF3B011D4BD5A3848167 /* UIIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8637F062725AB2E8763D9A89 /* UIIOS.framework */; };
-		59075DF0E0016C9BF4402078 /* ArtistSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636F0C5C763FC370398F6B60 /* ArtistSearchCoordinator.swift */; };
+		59075DF0E0016C9BF4402078 /* ArtistSearchListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636F0C5C763FC370398F6B60 /* ArtistSearchListCoordinator.swift */; };
 		5D9AB80B9DC5B483A09DE495 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12D664E27E0FAD0500A11ECF /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5E1900A80182F12E02174E17 /* Testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 711179475A208C64BC0D4D05 /* Testing.framework */; };
 		6BBFAF89CC8D2DD5E5FFDA5E /* TuistBundle+ArtistIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D868B4E8FAD8C7FFDEA02D /* TuistBundle+ArtistIOS.swift */; };
@@ -196,7 +196,7 @@
 		56714E014DDA3AF88967637F /* TuistAssets+ArtistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+ArtistApp.swift"; sourceTree = "<group>"; };
 		5BDCF99B9C04F79C452BEEDD /* ArtistCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCoordinatorTests.swift; sourceTree = "<group>"; };
 		5D0B128330D371D78F4397B8 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		636F0C5C763FC370398F6B60 /* ArtistSearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchCoordinator.swift; sourceTree = "<group>"; };
+		636F0C5C763FC370398F6B60 /* ArtistSearchListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchListCoordinator.swift; sourceTree = "<group>"; };
 		6838CF41169BBB2742FE69AF /* ArtistIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtistIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB65F82367255EAE22A4E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FC0E270379C7FAA49A54C8B /* NetworkTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -374,7 +374,6 @@
 				A093F9B2E15C2C3E2EDBB528 /* ArtistSearchList */,
 				E16B17CE9336C3FEB91B0195 /* Extensions */,
 				F4B74240C1082283299872EB /* FeatureFactory */,
-				636F0C5C763FC370398F6B60 /* ArtistSearchCoordinator.swift */,
 				4642657D2A3604440048948D /* ArtistSearchListUIComposer.swift */,
 			);
 			path = Sources;
@@ -519,6 +518,7 @@
 		A093F9B2E15C2C3E2EDBB528 /* ArtistSearchList */ = {
 			isa = PBXGroup;
 			children = (
+				636F0C5C763FC370398F6B60 /* ArtistSearchListCoordinator.swift */,
 				CFCC9EADAF30FAB516624869 /* ArtistSearchListView.swift */,
 				8B0DE7AA2FED2847C6646564 /* ArtistSearchListViewController.swift */,
 				9B91E20AAA6542870012B347 /* ArtistSearchListViewModel.swift */,
@@ -1021,7 +1021,7 @@
 			files = (
 				E64635ECA59247BCC30F3A5D /* Artist+ImageTitleRowModel.swift in Sources */,
 				30B629184D12BCDC2A777B71 /* ArtistImageTitleRowViewModelAdapter.swift in Sources */,
-				59075DF0E0016C9BF4402078 /* ArtistSearchCoordinator.swift in Sources */,
+				59075DF0E0016C9BF4402078 /* ArtistSearchListCoordinator.swift in Sources */,
 				B876B4DFDCEB1749603CA989 /* ArtistSearchListView.swift in Sources */,
 				ED0C3C04FADAAB0A95F810FF /* ArtistSearchListViewController.swift in Sources */,
 				9628E22519764464A468B0DF /* ArtistSearchListViewModel.swift in Sources */,

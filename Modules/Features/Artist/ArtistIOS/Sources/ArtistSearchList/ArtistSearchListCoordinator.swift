@@ -1,3 +1,4 @@
+import Artist
 import Shared
 import UIIOS
 import UIKit
@@ -7,21 +8,21 @@ public protocol ArtistSearchCoordinatorDelegate {
 }
 
 /// The scene showing a list of `Artist`s based on a given typed search query
-public final class ArtistSearchCoordinator: NSObject, Coordinator {
+public final class ArtistSearchListCoordinator: NSObject, Coordinator {
   public let navigationController: UINavigationController
   public var childCoordinators: [Coordinator] = []
   public var delegate: ArtistSearchCoordinatorDelegate?
 
-  private let featureFactory: FeatureFactory
+  private let artistSearchFactory: ArtistSearchFactory
   private var removeCoordinatorWhenViewDismissed: (Coordinator) -> Void
 
   public init(
     navigationController: UINavigationController,
-    featureFactory: FeatureFactory,
+    artistSearchFactory: ArtistSearchFactory,
     removeCoordinatorWith removeCoordinatorWhenViewDismissed: @escaping (Coordinator) -> Void
   ) {
     self.navigationController = navigationController
-    self.featureFactory = featureFactory
+    self.artistSearchFactory = artistSearchFactory
     self.removeCoordinatorWhenViewDismissed = removeCoordinatorWhenViewDismissed
 
     super.init()
@@ -36,9 +37,9 @@ public final class ArtistSearchCoordinator: NSObject, Coordinator {
 
 // MARK: -- Factory Methods
 
-extension ArtistSearchCoordinator {
+extension ArtistSearchListCoordinator {
   private func artistSearchViewController() -> UIViewController {
-    featureFactory.makeArtistSearchViewController { [weak self] id in
+    artistSearchFactory.makeArtistSearchListViewController { [weak self] id in
       guard let self else { return }
       delegate?.didSelectArtist(withID: id)
     }
@@ -47,7 +48,7 @@ extension ArtistSearchCoordinator {
 
 // MARK: - UINavigationControllerDelegate
 
-extension ArtistSearchCoordinator: UINavigationControllerDelegate {
+extension ArtistSearchListCoordinator: UINavigationControllerDelegate {
   public func navigationController(
     _ navigationController: UINavigationController,
     didShow _: UIViewController,

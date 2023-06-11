@@ -28,8 +28,8 @@ final class MainCoordinator: Coordinator, FeatureFactory {
     coordinator.start()
   }
 
-  private func artistSearchCoordinator() -> ArtistSearchCoordinator {
-    ArtistSearchCoordinator(
+  private func artistSearchCoordinator() -> ArtistSearchListCoordinator {
+    ArtistSearchListCoordinator(
       navigationController: navigationController,
       featureFactory: self,
       removeCoordinatorWith: removeChild

@@ -2,7 +2,7 @@ import SharedIOS
 import SwiftUI
 import UI
 
-final class ArtistSearchListViewController: UIViewController {
+public final class ArtistSearchListViewController: UIViewController {
   private let screenTitle: String
   private let searchViewModel: SearchViewModel
   private let listViewModel: ArtistSearchListViewModel
@@ -18,7 +18,7 @@ final class ArtistSearchListViewController: UIViewController {
     super.init(nibName: nil, bundle: nil)
   }
 
-  override func viewDidLoad() {
+  public override func viewDidLoad() {
     super.viewDidLoad()
     embed(artistSearchListView())
   }
