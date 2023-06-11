@@ -3,7 +3,7 @@ import AlbumIOS
 import Core
 import Networking
 import Shared
-import UI
+import UIIOS
 import UIKit
 
 public final class MainCoordinator: Coordinator, FeatureFactory {

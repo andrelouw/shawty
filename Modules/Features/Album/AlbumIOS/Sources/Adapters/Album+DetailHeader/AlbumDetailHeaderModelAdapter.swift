@@ -1,6 +1,6 @@
 import Album
 import Shared
-import UI
+import UIIOS
 
 /// Adapt `AlbumLoader` output to provide an optional `DetailHeaderModel`
 struct AlbumDetailHeaderModelAdapter: ValueLoader {

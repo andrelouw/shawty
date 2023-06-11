@@ -1,9 +1,45 @@
 import ProjectDescription
 import ProjectDescriptionHelpers
 
-let project = Project.foundationModule(
-  name: "UI",
-  platform: .iOS.with(supportedPlatforms: .macOS),
-  // Main app platform needs to be base for now while tuist does not support multiplatform. After that we can pick and choose as we like
-  hasResources: true
+let name = "UI"
+
+let project = Project(
+  name: name,
+  options: .options(
+    automaticSchemesOptions: .disabled
+  ),
+  targets: [
+    .makeFrameworkTarget(
+      name: name,
+      platform: .iOS.with(supportedPlatforms: .macOS),
+      hasResources: true,
+      dependencies: [
+        .foundation("Core"),
+      ]
+    ),
+    .makeTestTarget(
+      name: name,
+      platform: .iOS.with(supportedPlatforms: .macOS),
+      dependencies: [
+        .target(name: name),
+      ]
+    ),
+    .makeFrameworkTarget(
+      name: "\(name)IOS",
+      platform: .iOS,
+      hasResources: false,
+      dependencies: [
+        .target(name: name),
+        .foundation("Core"),
+      ]
+    ),
+    .makeTestTarget(
+      name: "\(name)IOS",
+      platform: .iOS,
+      dependencies: [
+        .target(name: "\(name)IOS"),
+      ]
+    ),
+  ],
+  fileHeaderTemplate: .string("")
 )

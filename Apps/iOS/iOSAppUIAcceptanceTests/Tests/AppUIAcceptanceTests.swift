@@ -1,7 +1,7 @@
 import ArtistIOS
 import SharedIOS
 import Testing
-import UI
+import UIIOS
 import XCTest
 
 final class AppUIAcceptanceTests: UITestCase {

@@ -1,4 +1,4 @@
-import UI
+import UIIOS
 import UIKit
 
 final class AppCoordinator {

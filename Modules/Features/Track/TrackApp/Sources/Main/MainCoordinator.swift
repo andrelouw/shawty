@@ -4,7 +4,7 @@ import Shared
 import SharedIOS
 import Track
 import TrackIOS
-import UI
+import UIIOS
 import UIKit
 
 final class MainCoordinator: Coordinator, FeatureFactory {

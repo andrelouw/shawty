@@ -3,16 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0451A70906CBE83150A3DE43 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F191A515796244BC48608978 /* XCTestCase.swift */; };
 		05465957E58229EEA7A86AC9 /* Data+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAC72869B2F886C9F4C633B /* Data+Fixtures.swift */; };
 		0B1A8862A72D5D81914903F0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548202125B7E7FC7C8AF3E37 /* XCTest.framework */; };
+		1DD285B096912814D5B9921D /* XCUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3113483027832841F07AA0C8 /* XCUIElement.swift */; };
 		25130ACD23867E4E70EECD76 /* TimeoutTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0ABE2DFF021ECA9818FF94 /* TimeoutTaskTests.swift */; };
-		468021962A34910500155C37 /* XCUIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468021952A34910500155C37 /* XCUIElement.swift */; };
-		468021982A34919D00155C37 /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468021972A34919D00155C37 /* UITestCase.swift */; };
-		4680219C2A34962B00155C37 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4680219B2A34962B00155C37 /* XCTestCase.swift */; };
 		7B8D6C478D3A0484C7C5BD19 /* URL+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC8288AACE0D8A8FD51FDB3 /* URL+Fixtures.swift */; };
 		7E3737A2D489C6B9BDDA0A36 /* XCTest+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624AF633C99E06844B1EB4A9 /* XCTest+MemoryLeakTracking.swift */; };
 		8D60EB17018657C8E80C837F /* XCTest+TimeoutTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F162AC6C36A040EE12F9D02 /* XCTest+TimeoutTask.swift */; };
@@ -22,6 +21,7 @@
 		B3E991173CF06ADC6D49A887 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1806002CAA25758EE57F9186 /* Core.framework */; };
 		CF06966064A5BC42718466B8 /* TimeoutTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF70B57115D4907421D8E2E /* TimeoutTask.swift */; };
 		DDF794480CFF9456E7A4FB27 /* MemoryLeaksHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130F4C72C5AB9F4A63B590D7 /* MemoryLeaksHelperTests.swift */; };
+		EF35896EEA051DF2E5E01456 /* UITestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D057A2D37635B4EA0459B /* UITestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,11 +61,10 @@
 		130F4C72C5AB9F4A63B590D7 /* MemoryLeaksHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryLeaksHelperTests.swift; sourceTree = "<group>"; };
 		1806002CAA25758EE57F9186 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AAC72869B2F886C9F4C633B /* Data+Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Fixtures.swift"; sourceTree = "<group>"; };
+		2D4D057A2D37635B4EA0459B /* UITestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
 		2F162AC6C36A040EE12F9D02 /* XCTest+TimeoutTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+TimeoutTask.swift"; sourceTree = "<group>"; };
+		3113483027832841F07AA0C8 /* XCUIElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElement.swift; sourceTree = "<group>"; };
 		34DE4785E7BC4AA21D491603 /* TimeoutError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeoutError.swift; sourceTree = "<group>"; };
-		468021952A34910500155C37 /* XCUIElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUIElement.swift; sourceTree = "<group>"; };
-		468021972A34919D00155C37 /* UITestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestCase.swift; sourceTree = "<group>"; };
-		4680219B2A34962B00155C37 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		4AF70B57115D4907421D8E2E /* TimeoutTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeoutTask.swift; sourceTree = "<group>"; };
 		548202125B7E7FC7C8AF3E37 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		587F896E2472972FA6F0E7F8 /* TestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +75,7 @@
 		BD0ABE2DFF021ECA9818FF94 /* TimeoutTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeoutTaskTests.swift; sourceTree = "<group>"; };
 		CCC8288AACE0D8A8FD51FDB3 /* URL+Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Fixtures.swift"; sourceTree = "<group>"; };
 		E0B2055852E61400A2000BF4 /* Error+Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Fixtures.swift"; sourceTree = "<group>"; };
+		F191A515796244BC48608978 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,11 +118,11 @@
 		0C9EA51A08DE4C69C5698275 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				468021942A3490FA00155C37 /* Extensions */,
 				C983E61276F666BE40922493 /* AsyncTimeout */,
+				FDF644901ED442A0FA020D62 /* Extensions */,
 				FEE369F74424B75A5BD94566 /* Fixtures */,
 				766ED2121B1A073336EA8D47 /* MemoryLeaking */,
-				468021972A34919D00155C37 /* UITestCase.swift */,
+				2D4D057A2D37635B4EA0459B /* UITestCase.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -143,15 +143,6 @@
 				0C9EA51A08DE4C69C5698275 /* Sources */,
 			);
 			path = Testing;
-			sourceTree = "<group>";
-		};
-		468021942A3490FA00155C37 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				468021952A34910500155C37 /* XCUIElement.swift */,
-				4680219B2A34962B00155C37 /* XCTestCase.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		5F8F82EB31D423532F5B8B9D /* Project */ = {
@@ -241,6 +232,15 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		FDF644901ED442A0FA020D62 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F191A515796244BC48608978 /* XCTestCase.swift */,
+				3113483027832841F07AA0C8 /* XCUIElement.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FEE369F74424B75A5BD94566 /* Fixtures */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +300,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = D28845E020C85D395171587F /* Build configuration list for PBXProject "Testing" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -392,16 +394,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4680219C2A34962B00155C37 /* XCTestCase.swift in Sources */,
 				9E9564C43B2D959028F2987D /* TimeoutError.swift in Sources */,
 				CF06966064A5BC42718466B8 /* TimeoutTask.swift in Sources */,
-				468021982A34919D00155C37 /* UITestCase.swift in Sources */,
 				8D60EB17018657C8E80C837F /* XCTest+TimeoutTask.swift in Sources */,
+				0451A70906CBE83150A3DE43 /* XCTestCase.swift in Sources */,
+				1DD285B096912814D5B9921D /* XCUIElement.swift in Sources */,
 				05465957E58229EEA7A86AC9 /* Data+Fixtures.swift in Sources */,
 				8EBF2F7E06D75F4288E8A780 /* Error+Fixtures.swift in Sources */,
 				7B8D6C478D3A0484C7C5BD19 /* URL+Fixtures.swift in Sources */,
 				7E3737A2D489C6B9BDDA0A36 /* XCTest+MemoryLeakTracking.swift in Sources */,
-				468021962A34910500155C37 /* XCUIElement.swift in Sources */,
+				EF35896EEA051DF2E5E01456 /* UITestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
 import Core
 import SwiftUI
-import UI
+import UIIOS
 
 public final class ImageTitleRowViewModel<ID: Hashable>: ObservableObject, Identifiable, MainQueueUpdating {
   public typealias ImageLoader = (URL) -> AsyncStream<LoadingImage>

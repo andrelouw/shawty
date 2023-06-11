@@ -2,6 +2,7 @@ import Album
 import Core
 import Foundation
 import UI
+import UIIOS
 
 extension Album {
   /// Transforms `Album` to `DetailHeaderModel`

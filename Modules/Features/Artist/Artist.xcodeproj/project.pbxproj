@@ -25,11 +25,13 @@
 		4E6601DADBBC278FB8BA657A /* Shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C2372AF75C28967F06773D9D /* Shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		51E2BC7F99A751A9393D5DC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAAA6A69DBFF86C0C4560A46 /* Assets.xcassets */; };
 		52459E91B8E16A8752C68D46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9FC44A183327DE24EB74D4 /* LaunchScreen.storyboard */; };
+		554ECF3B011D4BD5A3848167 /* UIIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8637F062725AB2E8763D9A89 /* UIIOS.framework */; };
 		59075DF0E0016C9BF4402078 /* ArtistSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636F0C5C763FC370398F6B60 /* ArtistSearchCoordinator.swift */; };
 		5D9AB80B9DC5B483A09DE495 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 12D664E27E0FAD0500A11ECF /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5E1900A80182F12E02174E17 /* Testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 711179475A208C64BC0D4D05 /* Testing.framework */; };
 		6BBFAF89CC8D2DD5E5FFDA5E /* TuistBundle+ArtistIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D868B4E8FAD8C7FFDEA02D /* TuistBundle+ArtistIOS.swift */; };
 		745F4ABECB5857C123DBCF6F /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D0B128330D371D78F4397B8 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		808FA57AA0E5834D32BE2093 /* UIIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8637F062725AB2E8763D9A89 /* UIIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		85A711CAB21D0436A8ED51B0 /* FeatureFactory+ArtistSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9D36D03011958BAB8DB542 /* FeatureFactory+ArtistSearchViewController.swift */; };
 		8B38D27FD348E0688FC18462 /* RemoteArtistSearchLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F51529A82D3634641983295 /* RemoteArtistSearchLoader.swift */; };
 		8FE9BA54D4E822E9453A935E /* ArtistIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B268253FFD1B3463E1E4447A /* ArtistIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -117,6 +119,7 @@
 				4E6601DADBBC278FB8BA657A /* Shared.framework in Embed Frameworks */,
 				0165FDC3916144A256B6EAFB /* SharedIOS.framework in Embed Frameworks */,
 				5D9AB80B9DC5B483A09DE495 /* UI.framework in Embed Frameworks */,
+				808FA57AA0E5834D32BE2093 /* UIIOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +200,7 @@
 		7249CCFEA85652EBA81F0C95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Artist.strings; sourceTree = "<group>"; };
 		7DC5B2BA65560204BF71AA73 /* ArtistSearchLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchLoader.swift; sourceTree = "<group>"; };
 		7F51529A82D3634641983295 /* RemoteArtistSearchLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteArtistSearchLoader.swift; sourceTree = "<group>"; };
+		8637F062725AB2E8763D9A89 /* UIIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0DE7AA2FED2847C6646564 /* ArtistSearchListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSearchListViewController.swift; sourceTree = "<group>"; };
 		91086051ED3793767BC719A7 /* RemoteArtistSearchLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteArtistSearchLoaderTests.swift; sourceTree = "<group>"; };
 		9138B9DCEED884D993DC0FB0 /* WeakReferenceProxy+AlbumLIstCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeakReferenceProxy+AlbumLIstCoordinatorDelegate.swift"; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 				E7527C0EEBBE109068D8DCBB /* Shared.framework in Frameworks */,
 				CB2AF7DA212A1582B5077440 /* SharedIOS.framework in Frameworks */,
 				09AD9FFA5648BED85245FDBF /* UI.framework in Frameworks */,
+				554ECF3B011D4BD5A3848167 /* UIIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +596,7 @@
 				C2147B54BE7A4A5949218477 /* SharedIOS.framework */,
 				711179475A208C64BC0D4D05 /* Testing.framework */,
 				12D664E27E0FAD0500A11ECF /* UI.framework */,
+				8637F062725AB2E8763D9A89 /* UIIOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";

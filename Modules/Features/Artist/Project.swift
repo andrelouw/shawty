@@ -15,6 +15,7 @@ let project = Project.featureModule(
   ],
   additionalIOSDependencies: [
     .featureIOS("Shared"),
+    .foundationIOS("UI"),
   ],
   additionalTargets: [
     .makeTestTarget(

@@ -2,7 +2,7 @@ import Album
 import Core
 import SharedIOS
 import SwiftUI
-import UI
+import UIIOS
 
 public final class AlbumDetailViewModel: ObservableObject, MainQueueUpdating {
   public typealias DetailLoader = () async -> DetailHeaderModel?

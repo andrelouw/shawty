@@ -1,4 +1,5 @@
 import UI
+import UIIOS
 
 extension ScreenNoticeModel {
   public static let idle = ScreenNoticeModel(

@@ -4,7 +4,7 @@ import Core
 import Networking
 import Shared
 import SharedIOS
-import UI
+import UIIOS
 import UIKit
 
 final class MainCoordinator: Coordinator, FeatureFactory {
