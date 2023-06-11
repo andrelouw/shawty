@@ -19,6 +19,7 @@
 		5578E89EBCAB1DFEA359EFA2 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16769DCFC62E576F030B77B7 /* UIViewController.swift */; };
 		58861740E87942299B6AAF7C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6442C83D84FD1AC8AB990CA /* Coordinator.swift */; };
 		69F2B0BC68FFBA4A248FEF33 /* Color+Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F1B967B8988C984AEBC35AA /* Color+Status.swift */; };
+		6A18F95B80A797704DA03745 /* TuistBundle+UIIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7587B0AD09AA053DFFC1E9F4 /* TuistBundle+UIIOS.swift */; };
 		7C3385EA0F326F238222C9B8 /* TuistBundle+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CDCDF6E4282CD82B70FC00 /* TuistBundle+UI.swift */; };
 		7E443D80626CA9BB9A1E0802 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A1C9C9F198B162C645B7C84 /* UI.framework */; };
 		85146A9CBEB77A4EA7DB93A8 /* Color+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ED20DEE8B1BFB8E46F9B14 /* Color+Font.swift */; };
@@ -38,6 +39,7 @@
 		E9E26268B28AFCA1B07E4915 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A2690DF5A69CCC7638E76 /* Icon.swift */; };
 		FB1BBB5C7E897098A2158AB1 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11A7A0C2321E0A75D05FEFA8 /* Core.framework */; };
 		FBF233FCE4CF59AC401734A1 /* Testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3EA795EF46D821A1B4C09E /* Testing.framework */; };
+		FE56EE58BED4E1095F712AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0424C8E7C6DD798938398207 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0424C8E7C6DD798938398207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07BE3F8E62502AA6F9709790 /* LoadingImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingImage.swift; sourceTree = "<group>"; };
 		0CE48BEB9A5A3885BE3821EB /* ScreenNoticeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenNoticeModel.swift; sourceTree = "<group>"; };
 		0F1B967B8988C984AEBC35AA /* Color+Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Status.swift"; sourceTree = "<group>"; };
@@ -128,6 +131,7 @@
 		66CDCDF6E4282CD82B70FC00 /* TuistBundle+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+UI.swift"; sourceTree = "<group>"; };
 		6A1C9C9F198B162C645B7C84 /* UI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DBCA407AEA2A412DD68A6C9 /* Color+Brand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Brand.swift"; sourceTree = "<group>"; };
+		7587B0AD09AA053DFFC1E9F4 /* TuistBundle+UIIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+UIIOS.swift"; sourceTree = "<group>"; };
 		7CC56BB3BC1200FEDBED34A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		843D61175B8E9E49FA286133 /* DetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
 		89D0084635D6CE3F4E4B887B /* TuistAssets+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+UI.swift"; sourceTree = "<group>"; };
@@ -236,6 +240,14 @@
 			name = Project;
 			sourceTree = "<group>";
 		};
+		3D9B360BFB85304C717DA864 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0424C8E7C6DD798938398207 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		499E95BD9F7B390D24016412 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				D3C0F25ADFB75DD1D0AF226D /* Config */,
+				3D9B360BFB85304C717DA864 /* Resources */,
 				7DC907FEADB9CDF4BE37F8A5 /* Sources */,
 			);
 			path = UIIOS;
@@ -418,6 +431,7 @@
 			children = (
 				89D0084635D6CE3F4E4B887B /* TuistAssets+UI.swift */,
 				66CDCDF6E4282CD82B70FC00 /* TuistBundle+UI.swift */,
+				7587B0AD09AA053DFFC1E9F4 /* TuistBundle+UIIOS.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -588,6 +602,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE56EE58BED4E1095F712AC5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,6 +716,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A18F95B80A797704DA03745 /* TuistBundle+UIIOS.swift in Sources */,
 				5578E89EBCAB1DFEA359EFA2 /* UIViewController.swift in Sources */,
 				58861740E87942299B6AAF7C /* Coordinator.swift in Sources */,
 				C9DC16D1C7FD8021308D1482 /* AnimatingLoaderView.swift in Sources */,
