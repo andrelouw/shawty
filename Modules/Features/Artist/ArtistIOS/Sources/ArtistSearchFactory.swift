@@ -5,8 +5,22 @@ public protocol ArtistSearchCoordinatorFactory {
   func makeArtistSearchListCoordinator(
     navigationController: UINavigationController,
     viewControllerFactory: ArtistSearchViewControllerFactory,
-    removeCoordinatorWith: (Coordinator?) -> Void
+    removeCoordinatorWith: @escaping (Coordinator?) -> Void
   ) -> ArtistSearchListCoordinator
+}
+
+extension ArtistSearchCoordinatorFactory {
+  public func makeArtistSearchListCoordinator(
+    navigationController: UINavigationController,
+    viewControllerFactory: ArtistSearchViewControllerFactory,
+    removeCoordinatorWith: @escaping (Coordinator?) -> Void
+  ) -> ArtistSearchListCoordinator {
+    ArtistSearchListCoordinator(
+      navigationController: navigationController,
+      viewControllerFactory: viewControllerFactory,
+      removeCoordinatorWith: removeCoordinatorWith
+    )
+  }
 }
 
 public protocol ArtistSearchViewControllerFactory {
@@ -20,7 +34,7 @@ public protocol ArtistSearchFactory: ArtistSearchCoordinatorFactory, ArtistSearc
 extension ArtistSearchFactory {
   public func makeArtistSearchListCoordinator(
     navigationController: UINavigationController,
-    removeCoordinatorWith: (Coordinator?) -> Void
+    removeCoordinatorWith: @escaping (Coordinator?) -> Void
   ) -> ArtistSearchListCoordinator {
     makeArtistSearchListCoordinator(
       navigationController: navigationController,

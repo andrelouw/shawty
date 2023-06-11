@@ -5,7 +5,7 @@ import Shared
 final class LiveFeatureFactory: FeatureFactory {
   private init() { }
 
-  fileprivate static let shared = LiveFeatureFactory()
+  static let shared = LiveFeatureFactory()
 
   lazy var httpClient: HTTPClient = URLSessionHTTPClient(session: .shared)
 
@@ -13,10 +13,13 @@ final class LiveFeatureFactory: FeatureFactory {
   let baseURL = Config.baseURL
 
   private lazy var imageDataCacheStore: ImageDataStore = ImageDataCacheStore()
+
   private lazy var localImageDataLoader: any ImageDataLoader = LocalImageDataLoader(store: imageDataCacheStore)
+
   private lazy var remoteImageDataLoader: any ImageDataLoader = RemoteImageDataLoader(
     client: httpClient
   )
+
   private lazy var imageDataLoaderWithCache = ImageDataLoaderWithFallbackComposite(
     primary: localImageDataLoader,
     fallback: ImageDataLoaderCacheDecorator(
@@ -24,8 +27,4 @@ final class LiveFeatureFactory: FeatureFactory {
       cache: imageDataCacheStore
     )
   )
-}
-
-extension FeatureFactory where Self == LiveFeatureFactory {
-  static var live: Self { .shared }
 }

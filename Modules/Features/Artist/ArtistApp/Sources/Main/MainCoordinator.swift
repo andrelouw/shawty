@@ -37,18 +37,6 @@ final class MainCoordinator: Coordinator {
 }
 
 extension MainCoordinator: ArtistSearchFactory {
-  func makeArtistSearchListCoordinator(
-    navigationController: UINavigationController,
-    viewControllerFactory _: ArtistSearchViewControllerFactory,
-    removeCoordinatorWith _: (UIIOS.Coordinator?) -> Void
-  ) -> ArtistSearchListCoordinator {
-    ArtistSearchListCoordinator(
-      navigationController: navigationController,
-      viewControllerFactory: self,
-      removeCoordinatorWith: removeChild
-    )
-  }
-
   func makeArtistSearchListViewController(
     onArtistSelection: @escaping (Int) -> Void
   ) -> ArtistSearchListViewController {
