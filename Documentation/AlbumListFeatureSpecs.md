@@ -61,4 +61,4 @@ Data:
 ![Album Flow Chart](assets/AlbumListFLow.jpg)
 
 ## Architecture
-![Album Architecture](assets/AlbumArchitecture.jpg)
+![Album Architecture](assets/AlbumListArchitecture.jpg)
