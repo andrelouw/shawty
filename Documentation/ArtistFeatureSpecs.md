@@ -67,4 +67,4 @@ Data:
 ![Artist Flow Chart](assets/ArtistFlow.jpg)
 
 ## Architecture
-![Artist Architecture](assets/ArtistArchitecture.jpg)
+![Artist Architecture](assets/ArtistSearchArchitecture.jpg)
