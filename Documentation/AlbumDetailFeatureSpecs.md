@@ -116,4 +116,5 @@ Data:
 ![Album Flow Chart](assets/AlbumDetailFlow.jpg)
 
 ## Architecture
-![Album Architecture](assets/AlbumDetailArchitecture.jpg)
+![Album Detail Architecture](assets/AlbumDetailArhitecture.jpg)
+![Track List Architecture](assets/TrackListArchitecture.jpg)
