@@ -65,7 +65,7 @@ lint:
 unbootstrap:
 	@./Scripts/uninstall.sh
 
-mkdocs:
+docs:
 	@mkdocs serve
 
 --homebrew:
