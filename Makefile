@@ -10,15 +10,15 @@ ci_macos: --ci-bootstrap clean workspace build test_macos
 ci_ios: --ci-bootstrap clean workspace build test_ios
 test: test_macos test_ios
 
-bootstrap: --homebrew --mint --pyenv --hooks
+bootstrap: --homebrew --mint --pyenv --hooks --reload_shell
 
 rename:
 	@./Scripts/rename.sh
 
 build: --tuist
 	@tuist build --clean
+	run: --tuist
 
-run: --tuist
 	@tuist generate
 
 edit: --tuist
@@ -70,7 +70,7 @@ unbootstrap:
 
 --mint:
 	@./Scripts/mint.sh
-	
+
 --pyenv:
 	@./Scripts/pyenv.sh
 
@@ -79,5 +79,8 @@ unbootstrap:
 
 --hooks:
 	@./Scripts/hooks.sh
+
+--reload_shell:
+	@./Scripts/reload_shell.sh
 
 --ci-bootstrap: --mint --tuist
