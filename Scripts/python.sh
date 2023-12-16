@@ -15,7 +15,7 @@ install_pyenv_if_needed() {
         read -p "Do you wish to install pyenv? (y/n) " yn
         case $yn in
 				[Yy]* ) install_pyenv; break;;
-				[Nn]* ) echo "⚠️ pyenv required for certain tools to work!";;
+				[Nn]* ) echo "⚠️  pyenv required for certain tools to work!";;
 				* ) echo "Please answer y(yes) or n(no).";;
 			esac
 		done
@@ -62,7 +62,7 @@ install_python_if_needed() {
 			read -p "Do you wish to install python ${PYTHON_VERSION} ? (y/n) " yn
 			case $yn in
 				[Yy]* ) install_python; break;;
-				[Nn]* ) echo "⚠️  Python version ${PYTHON_VERSION} is recommended, certain tools might not work properly!";;
+				[Nn]* ) echo "⚠️  Python version ${PYTHON_VERSION} is recommended, certain tools might not work properly!"; break;;
 				* ) echo "Please answer y(yes) or n(no).";;
 			esac
 		done
@@ -75,6 +75,51 @@ install_python_if_needed() {
 	fi
 }
 
+update_pip() {
+	echo "⬇️  Updating pip ..."
+  pyenv exec pip install --upgrade pip
+}
+
+update_pip_if_needed() {
+  # check if it is required to update
+  if [[ -z "${CI}" ]]; then
+    while true; do
+      read -p "Do you wish to update pip to the latest version? (y/n) " yn
+      case $yn in
+        [Yy]* ) update_pip; break;;
+        [Nn]* ) echo "⚠️  It is recommended to install the latest version of pip!"; break;;
+        * ) echo "Please answer y(yes) or n(no).";;
+      esac
+    done
+  else
+    echo "⚙️ Running on CI, skipping confirmation step..."
+    update_pip
+  fi
+}
+
+install_pips() {
+	echo "⬇️  Installing required pip dependencies ..."
+  pyenv exec pip install -r .pips
+}
+
+install_pips_if_needed() {
+  if [[ -z "${CI}" ]]; then
+    while true; do
+      read -p "Do you wish to install the required pip dependencies? (y/n) " yn
+      case $yn in
+        [Yy]* ) install_pips; break;;
+        [Nn]* ) echo "⚠️  Some tools might not be available!"; break;;
+        * ) echo "Please answer y(yes) or n(no).";;
+      esac
+    done
+  else
+    echo "⚙️ Running on CI, skipping confirmation step..."
+    install_pips
+  fi
+}
+
 install_pyenv_if_needed
 bootstrap_pyenv_if_needed
 install_python_if_needed
+update_pip_if_needed
+install_pips_if_needed
