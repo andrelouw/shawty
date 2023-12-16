@@ -26,11 +26,25 @@ install_pre_commit_if_needed() {
 }
 
 bootstrap_hooks() {
-    echo "⬇️  Installing git hooks..."
-    pre-commit install -f -t pre-commit
-	pre-commit install -f -t pre-push
-    pre-commit run
+	echo "⬇️  Installing git hooks..."
+	pre-commit install
+	pre-commit run
+}
+
+bootstrap_hooks_if_needed() {
+		if [[ -z "${CI}" ]]; then
+			while true; do
+			read -p "Do you wish to install git hooks? (y/n) " yn
+			case $yn in
+				[Yy]* ) bootstrap_hooks; break;;
+				[Nn]* ) echo "⚠️  Some tools might not work properly before all git hooks are installed!"; break;;
+				* ) echo "Please answer y(yes) or n(no).";;
+			esac
+		done
+		else
+			echo "⚙️ Running on CI, not installing hooks..."
+		fi
 }
 
 install_pre_commit_if_needed
-bootstrap_hooks
+bootstrap_hooks_if_needed
