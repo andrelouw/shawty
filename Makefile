@@ -2,7 +2,7 @@ app_name := Shawty
 ios_device := iPhone 14
 ios_os := 16.4
 
-.PHONY: bootstrap build run workspace module test_ios test_macos rename clean format lint
+.PHONY: bootstrap build run workspace module test_ios test_macos rename clean format lint mkdocs
 
 all: bootstrap run
 ci: --ci-bootstrap clean workspace build test_macos test_ios
@@ -64,6 +64,9 @@ lint:
 
 unbootstrap:
 	@./Scripts/uninstall.sh
+
+mkdocs:
+	@mkdocs serve
 
 --homebrew:
 	@./Scripts/homebrew.sh
