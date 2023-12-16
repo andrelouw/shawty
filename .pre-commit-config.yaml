@@ -40,3 +40,5 @@ repos:
           entry: make test_local
           stages: [ pre-push ]
           require_serial: true
+# Which hooks should be installed when running pre-commit install
+default_install_hook_types: [pre-commit, pre-push]
