@@ -44,7 +44,7 @@ update_homebrew_if_needed() {
 
 install_brews_if_needed() {
 	while true; do
-		read -p "Do you wish to install the brew in the Brewfile? (y/n) " yn
+		read -p "Do you wish to install the brews in the Brewfile? (y/n) " yn
 		case $yn in
 			[Yy]* ) install_brews; break;;
 			[Nn]* ) echo "⏭️  Skipping install"; break;;

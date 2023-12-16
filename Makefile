@@ -10,7 +10,7 @@ ci_macos: --ci-bootstrap clean workspace build test_macos
 ci_ios: --ci-bootstrap clean workspace build test_ios
 test: test_macos test_ios
 
-bootstrap: --homebrew --mint --mint --hooks
+bootstrap: --homebrew --mint --pyenv --hooks
 
 rename:
 	@./Scripts/rename.sh
@@ -70,6 +70,9 @@ unbootstrap:
 
 --mint:
 	@./Scripts/mint.sh
+	
+--pyenv:
+	@./Scripts/pyenv.sh
 
 --tuist:
 	@./Scripts/tuist.sh
