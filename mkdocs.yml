@@ -4,3 +4,8 @@ nav:
   - About: about.md
 theme:
   name: material
+  palette:
+    scheme: slate
+    primary: custom
+extra_css:
+  - stylesheets/extra.css
