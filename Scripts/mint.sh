@@ -31,5 +31,21 @@ bootstrap_mint() {
     mint bootstrap
 }
 
+bootstrap_mint_if_needed() {
+		if [[ -z "${CI}" ]]; then
+			while true; do
+			read -p "Do you wish to install mints? (y/n) " yn
+			case $yn in
+				[Yy]* ) bootstrap_mint; break;;
+				[Nn]* ) echo "⚠️  Some tools might not work properly before all mints are installed!"; break;;
+				* ) echo "Please answer y(yes) or n(no).";;
+			esac
+		done
+		else
+			echo "⚙️ Running on CI, skipping confirmation step..."
+      bootstrap_mint
+		fi
+}
+
 install_mint_if_needed
-bootstrap_mint
+bootstrap_mint_if_needed
