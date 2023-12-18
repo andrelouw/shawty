@@ -1,11 +1,48 @@
 site_name: Shawty
+repo_url: https://github.com/squidfunk/mkdocs-material
+repo_name: squidfunk/mkdocs-material
 nav:
   - Home: index.md
   - About: about.md
 theme:
   name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    # - navigation.sections
+    - navigation.path # breadcrumbs
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - header.autohide
+    # - navigation.footer
   palette:
     scheme: slate
     primary: custom
+  icon:
+    repo: fontawesome/brands/github
+    tag:
+      compat: material/tag
+      html: fontawesome/brands/html5
+      js: fontawesome/brands/js
+      css:  fontawesome/brands/css3
+plugins:
+  - search
+  - tags:
+      tags_file: tags.md
 extra_css:
   - stylesheets/extra.css
+
+extra:
+  tags:
+    Compatibility: compat
+    HTML5: html
+    JavaScript: js
+    CSS: css
