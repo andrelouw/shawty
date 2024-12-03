@@ -4,14 +4,14 @@
 // Generated using tuist — https://github.com/tuist/tuist
 
 #if os(macOS)
-import AppKit
+  import AppKit
 #elseif os(iOS)
-import UIKit
+  import UIKit
 #elseif os(tvOS) || os(watchOS)
-import UIKit
+  import UIKit
 #endif
 #if canImport(SwiftUI)
-import SwiftUI
+  import SwiftUI
 #endif
 
 // swiftlint:disable superfluous_disable_command file_length implicit_return
@@ -124,7 +124,7 @@ public struct TrackAppImages {
 
 public extension TrackAppImages.Image {
   @available(macOS, deprecated,
-  message: "This initializer is unsafe on macOS, please use the TrackAppImages.image property")
+    message: "This initializer is unsafe on macOS, please use the TrackAppImages.image property")
   convenience init?(asset: TrackAppImages) {
     #if os(iOS) || os(tvOS)
     let bundle = TrackAppResources.bundle

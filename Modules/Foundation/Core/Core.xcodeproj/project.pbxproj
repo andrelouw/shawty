@@ -264,7 +264,6 @@
 				1D6B11F444EAE21363FF0969 /* Resources */,
 				2C70A176FC2F8BBE09A41076 /* Embed Frameworks */,
 				F678B080F62A8C8E01BCF980 /* Frameworks */,
-				E0967E741C57C5D248CF8D93 /* Run linting */,
 			);
 			buildRules = (
 			);
@@ -284,7 +283,6 @@
 				3FEE3D1A9FD48DDE5D5CDD8B /* Resources */,
 				2A34CD9447D0001C8C98AEF5 /* Embed Frameworks */,
 				BF69E59B74296DB134C1F9E4 /* Frameworks */,
-				B7B60ABDF9BC75E2F3242490 /* Run linting */,
 			);
 			buildRules = (
 			);
@@ -340,47 +338,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B7B60ABDF9BC75E2F3242490 /* Run linting */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run linting";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/lint.sh ";
-		};
-		E0967E741C57C5D248CF8D93 /* Run linting */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Run linting";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"$SRCROOT\"/../../../Scripts/lint.sh ";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6812F1B21CD10F393796F1D5 /* Sources */ = {

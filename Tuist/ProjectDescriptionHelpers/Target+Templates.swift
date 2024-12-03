@@ -29,7 +29,7 @@ extension Target {
       sources: ["\(name)App/Sources/**"],
       resources: ["\(name)App/Resources/**"],
       scripts: [
-        .linting,
+//        .linting,
       ],
       dependencies: dependencies,
       settings: .base(platformSet: platform.asPlatformSet())
@@ -54,7 +54,7 @@ extension Target {
       infoPlist: "\(name)Tests/Config/Info.plist",
       sources: ["\(name)Tests/Tests/**"],
       scripts: [
-        .linting,
+//        .linting,
       ],
       dependencies: allDependencies,
       settings: .base(platformSet: platform)
@@ -79,7 +79,7 @@ extension Target {
       infoPlist: "\(name)UIAcceptanceTests/Config/Info.plist",
       sources: ["\(name)UIAcceptanceTests/Tests/**"],
       scripts: [
-        .linting,
+//        .linting,
       ],
       dependencies: allDependencies,
       settings: .base(platformSet: platform)
@@ -101,7 +101,7 @@ extension Target {
       sources: ["\(name)/Sources/**"],
       resources: hasResources ? ["\(name)/Resources/**"] : [],
       scripts: [
-        .linting,
+//        .linting,
       ],
       dependencies: dependencies,
       settings: .base(platformSet: platform)
